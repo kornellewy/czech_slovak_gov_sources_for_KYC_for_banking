@@ -1,0 +1,36 @@
+{
+  "entity": {
+    "ico_registry": "06649114",
+    "company_name_registry": "Prusa Research a.s.",
+    "legal_form": "121",
+    "status": "active",
+    "registered_address": {
+      "street": "Partyzánská",
+      "city": "Praha",
+      "postal_code": "17000",
+      "country": "Česká republika",
+      "country_code": "CZ",
+      "full_address": "Partyzánská 188/7, 170 00 Praha"
+    },
+    "nace_codes": [
+      "46660"
+    ],
+    "vat_id": "CZ06649114",
+    "tax_id": "CZ06649114"
+  },
+  "holders": [],
+  "tax_info": {
+    "vat_id": "CZ06649114",
+    "vat_status": "inactive",
+    "tax_id": "CZ06649114"
+  },
+  "metadata": {
+    "source": "ARES_CZ",
+    "register_name": "Register of Economic Subjects (ARES)",
+    "retrieved_at": "2026-02-19T11:02:21.689755Z",
+    "level": 0,
+    "is_mock": false,
+    "register_url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/06649114"
+  },
+  "scraped_at": "2026-02-19T11:02:21.689952Z"
+}

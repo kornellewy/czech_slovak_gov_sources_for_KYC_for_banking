@@ -1,0 +1,238 @@
+{
+  "ico": "06649114",
+  "obchodniJmeno": "Prusa Research a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodOkresu": 3100,
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 78,
+    "nazevSpravnihoObvodu": "Praha 7",
+    "kodMestskehoObvodu": 78,
+    "nazevMestskehoObvodu": "Praha 7",
+    "kodMestskeCastiObvodu": 500186,
+    "kodUlice": 463647,
+    "nazevMestskeCastiObvodu": "Praha 7",
+    "nazevUlice": "Partyzánská",
+    "cisloDomovni": 188,
+    "kodCastiObce": 490067,
+    "cisloOrientacni": 7,
+    "cisloOrientacniPismeno": "a",
+    "nazevCastiObce": "Holešovice",
+    "kodAdresnihoMista": 22296964,
+    "psc": 17000,
+    "textovaAdresa": "Partyzánská 188/7a, Holešovice, 17000 Praha 7",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "2017-12-01",
+  "datumAktualizace": "2026-02-05",
+  "dic": "CZ06649114",
+  "icoId": "06649114",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Partyzánská 188/7a",
+    "radekAdresy2": "Holešovice",
+    "radekAdresy3": "17000 Praha 7"
+  },
+  "czNace2008": [
+    "46660"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Prusa Research a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 78,
+            "nazevSpravnihoObvodu": "Praha 7",
+            "kodMestskehoObvodu": 78,
+            "nazevMestskehoObvodu": "Praha 7",
+            "kodMestskeCastiObvodu": 500186,
+            "kodUlice": 463647,
+            "nazevMestskeCastiObvodu": "Praha 7",
+            "nazevUlice": "Partyzánská",
+            "cisloDomovni": 188,
+            "kodCastiObce": 490067,
+            "cisloOrientacni": 7,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Holešovice",
+            "kodAdresnihoMista": 22296964,
+            "psc": 17000,
+            "textovaAdresa": "Partyzánská 188/7a, Holešovice, 17000 Praha 7",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Prusa Research a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodOkresu": 3100,
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 78,
+            "nazevSpravnihoObvodu": "Praha 7",
+            "kodMestskehoObvodu": 78,
+            "nazevMestskehoObvodu": "Praha 7",
+            "kodMestskeCastiObvodu": 500186,
+            "kodUlice": 463647,
+            "nazevMestskeCastiObvodu": "Praha 7",
+            "nazevUlice": "Partyzánská",
+            "cisloDomovni": 188,
+            "kodCastiObce": 490067,
+            "cisloOrientacni": 7,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Holešovice",
+            "kodAdresnihoMista": 22296964,
+            "psc": 17000,
+            "textovaAdresa": "Partyzánská 188/7a, Holešovice, 17000 Praha 7",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Prusa Research a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 78,
+            "nazevSpravnihoObvodu": "Praha 7",
+            "kodMestskehoObvodu": 78,
+            "nazevMestskehoObvodu": "Praha 7",
+            "kodMestskeCastiObvodu": 500186,
+            "kodUlice": 463647,
+            "nazevMestskeCastiObvodu": "Praha 7",
+            "nazevUlice": "Partyzánská",
+            "cisloDomovni": 188,
+            "kodCastiObce": 490067,
+            "cisloOrientacni": 7,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Holešovice",
+            "kodAdresnihoMista": 22296964,
+            "psc": 17000,
+            "textovaAdresa": "Partyzánská 188/7a, Holešovice, 17000 Praha 7",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Prusa Research a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 78,
+            "nazevSpravnihoObvodu": "Praha 7",
+            "kodMestskehoObvodu": 78,
+            "nazevMestskehoObvodu": "Praha 7",
+            "kodMestskeCastiObvodu": 500186,
+            "kodUlice": 463647,
+            "nazevMestskeCastiObvodu": "Praha 7",
+            "nazevUlice": "Partyzánská",
+            "cisloDomovni": 188,
+            "kodCastiObce": 490067,
+            "cisloOrientacni": 7,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Holešovice",
+            "kodAdresnihoMista": 22296964,
+            "psc": 17000,
+            "textovaAdresa": "Partyzánská 188/7a, Holešovice, 17000 Praha 7",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 23056/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "46500"
+  ],
+  "subRegistrSzr": "szr"
+}

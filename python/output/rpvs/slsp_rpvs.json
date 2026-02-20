@@ -1,0 +1,32 @@
+{
+  "entity": {
+    "ico_registry": "35763491",
+    "company_name_registry": "Slovenská sporiteľňa, a.s."
+  },
+  "holders": [
+    {
+      "holder_type": "entity",
+      "role": "beneficial_owner",
+      "name": "Erste Group Bank AG",
+      "jurisdiction": "AT",
+      "citizenship": "AT",
+      "residency": "AT",
+      "address": {
+        "city": "Vienna",
+        "country": "Austria",
+        "country_code": "AT"
+      },
+      "ownership_pct_direct": 100.0,
+      "voting_rights_pct": 100.0
+    }
+  ],
+  "metadata": {
+    "source": "RPVS_SK",
+    "register_name": "Register of Public Sector Partners",
+    "retrieved_at": "2026-02-19T11:02:26.453318Z",
+    "level": 0,
+    "is_mock": true,
+    "register_url": "https://rpvs.gov.sk/opendatav2/partner/35763491"
+  },
+  "scraped_at": "2026-02-19T11:02:26.453733Z"
+}

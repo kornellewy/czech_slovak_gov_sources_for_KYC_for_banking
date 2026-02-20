@@ -1,0 +1,23 @@
+{
+  "source": "RPO_SK",
+  "ico": "35763491",
+  "name": "Slovenská sporiteľňa, a.s.",
+  "legal_form": "Akciová spoločnosť",
+  "legal_form_code": "112",
+  "status": "active",
+  "court": "Okresný súd Bratislava I",
+  "court_code": "OS1BA",
+  "section": "Sa",
+  "insert_number": "1234/B",
+  "date_registered": "1991-01-01",
+  "address": {
+    "street": "Tomášikova 48",
+    "city": "Bratislava",
+    "postal_code": "832 37",
+    "country": "Slovensko",
+    "full_address": "Tomášikova 48, 832 37 Bratislava"
+  },
+  "note": "Mock data for demonstration",
+  "mock": true,
+  "retrieved_at": "2026-02-19T08:50:42.159237Z"
+}

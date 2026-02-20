@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "QgFiJ6TGPm8=",
+  "success": true,
+  "projectFilePath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SimplePlaywrightTest.csproj",
+  "expectedPackageFiles": [
+    "/home/kornellewy-laptop/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/microsoft.playwright/1.40.0/microsoft.playwright.1.40.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/microsoft.netcore.app.ref/8.0.24/microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.24/microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
+    "/home/kornellewy-laptop/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.24/microsoft.netcore.app.host.linux-x64.8.0.24.nupkg.sha512"
+  ],
+  "logs": []
+}

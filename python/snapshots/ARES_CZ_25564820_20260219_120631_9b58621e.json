@@ -1,0 +1,226 @@
+{
+  "ico": "25564820",
+  "obchodniJmeno": "ŽELEZO MORAVA STŘECHY, s.r.o.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 116,
+    "nazevKraje": "Jihomoravský kraj",
+    "kodOkresu": 3713,
+    "nazevOkresu": "Znojmo",
+    "kodObce": 593711,
+    "nazevObce": "Znojmo",
+    "kodUlice": 649830,
+    "nazevUlice": "Hakenova",
+    "cisloDomovni": 3604,
+    "kodCastiObce": 412741,
+    "cisloOrientacni": 28,
+    "nazevCastiObce": "Znojmo",
+    "kodAdresnihoMista": 25946463,
+    "psc": 66902,
+    "textovaAdresa": "Hakenova 3604/28, 66902 Znojmo",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "112",
+  "pravniFormaRos": "112",
+  "financniUrad": "346",
+  "datumVzniku": "1999-05-21",
+  "datumAktualizace": "2026-02-04",
+  "dic": "CZ25564820",
+  "icoId": "25564820",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Hakenova 3604/28",
+    "radekAdresy2": "66902 Znojmo"
+  },
+  "czNace2008": [
+    "16230",
+    "25720",
+    "43910",
+    "471",
+    "96090",
+    "47250",
+    "45200",
+    "4120",
+    "G"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ŽELEZO MORAVA STŘECHY, s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 116,
+            "nazevKraje": "Jihomoravský kraj",
+            "kodOkresu": 3713,
+            "nazevOkresu": "Znojmo",
+            "kodObce": 593711,
+            "nazevObce": "Znojmo",
+            "kodUlice": 649830,
+            "nazevUlice": "Hakenova",
+            "cisloDomovni": 3604,
+            "kodCastiObce": 412741,
+            "cisloOrientacni": 28,
+            "nazevCastiObce": "Znojmo",
+            "kodAdresnihoMista": 25946463,
+            "psc": 66902,
+            "textovaAdresa": "Hakenova 3604/28, 66902 Znojmo",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "pravniFormaRos": "112",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ŽELEZO MORAVA STŘECHY, s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 116,
+            "nazevKraje": "Jihomoravský kraj",
+            "kodOkresu": 3713,
+            "nazevOkresu": "Znojmo",
+            "kodObce": 593711,
+            "nazevObce": "Znojmo",
+            "kodUlice": 649830,
+            "nazevUlice": "Hakenova",
+            "cisloDomovni": 3604,
+            "kodCastiObce": 412741,
+            "cisloOrientacni": 28,
+            "nazevCastiObce": "Znojmo",
+            "kodAdresnihoMista": 25946463,
+            "psc": 66902,
+            "textovaAdresa": "Hakenova 3604/28, 66902 Znojmo",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "112",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ŽELEZO MORAVA STŘECHY, s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 116,
+            "nazevKraje": "Jihomoravský kraj",
+            "kodOkresu": 3713,
+            "nazevOkresu": "Znojmo",
+            "kodObce": 593711,
+            "nazevObce": "Znojmo",
+            "kodUlice": 649830,
+            "nazevUlice": "Hakenova",
+            "cisloDomovni": 3604,
+            "kodCastiObce": 412741,
+            "cisloOrientacni": 28,
+            "nazevCastiObce": "Znojmo",
+            "kodAdresnihoMista": 25946463,
+            "psc": 66902,
+            "textovaAdresa": "Hakenova 3604/28, 66902 Znojmo",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ŽELEZO MORAVA STŘECHY, s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 116,
+            "nazevKraje": "Jihomoravský kraj",
+            "kodOkresu": 3713,
+            "nazevOkresu": "Znojmo",
+            "kodObce": 593711,
+            "nazevObce": "Znojmo",
+            "kodUlice": 649830,
+            "nazevUlice": "Hakenova",
+            "cisloDomovni": 3604,
+            "kodCastiObce": 412741,
+            "cisloOrientacni": 28,
+            "nazevCastiObce": "Znojmo",
+            "kodAdresnihoMista": 25946463,
+            "psc": 66902,
+            "textovaAdresa": "Hakenova 3604/28, 66902 Znojmo",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "spisovaZnacka": "C 34023/KSBR",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "G",
+    "471",
+    "25620",
+    "16230",
+    "43410",
+    "41000",
+    "47250",
+    "96910",
+    "95310"
+  ],
+  "subRegistrSzr": "szr"
+}

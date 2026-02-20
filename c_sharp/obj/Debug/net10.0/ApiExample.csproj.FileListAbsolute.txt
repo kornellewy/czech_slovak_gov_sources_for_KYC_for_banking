@@ -1,0 +1,14 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/ApiExample
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/ApiExample.deps.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/ApiExample.runtimeconfig.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/ApiExample.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/ApiExample.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/refint/ApiExample.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.genruntimeconfig.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ref/ApiExample.dll

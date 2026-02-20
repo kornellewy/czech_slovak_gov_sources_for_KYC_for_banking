@@ -1,0 +1,25 @@
+{
+  "source": "RPVS_SK",
+  "ico": "35763491",
+  "company_name": "Slovenská sporiteľňa, a.s.",
+  "ubos": [
+    {
+      "name": "Erste Group Bank AG",
+      "role": "ultimate_beneficial_owner",
+      "ownership_percentage": 100.0,
+      "voting_rights": 100.0,
+      "identification": {
+        "birth_date": null,
+        "citizenship": "AT",
+        "id_number": "FN 182081 v"
+      },
+      "address": {
+        "city": "Vienna",
+        "country": "Austria"
+      }
+    }
+  ],
+  "note": "Mock data for demonstration - majority owned by Erste Group",
+  "mock": true,
+  "retrieved_at": "2026-02-19T08:50:46.222837Z"
+}

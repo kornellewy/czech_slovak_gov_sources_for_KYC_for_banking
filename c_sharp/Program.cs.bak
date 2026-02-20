@@ -1,0 +1,255 @@
+using System;
+using System.Threading.Tasks;
+using Ares;
+using Orsr;
+using Rpo;
+using Rpvs;
+using Justice;
+using Esm;
+using FinancnaSprava;
+using UnifiedOutput;
+
+namespace SkCzScrapers
+{
+    /// <summary>
+    /// Example usage of SK/CZ Business Registry Scrapers.
+    /// Demonstrates all available clients and unified output format.
+    /// </summary>
+    class Program
+    {
+        static async Task Main(string[] args)
+        {
+            Console.WriteLine("\n" + new string('=', 60));
+            Console.WriteLine(" SK/CZ BUSINESS REGISTRY SCRAPERS - C# EXAMPLES");
+            Console.WriteLine(new string('=', 60));
+
+            // 1. ARES Czech - Working API
+            await TestAresClient();
+
+            // 2. ORSR Slovak - Web Scraper
+            await TestOrsrClient();
+
+            // 3. RPO Slovak - Mock Data
+            await TestRpoClient();
+
+            // 4. RPVS Slovak - UBO Data
+            await TestRpvsClient();
+
+            // 5. Justice Czech - Mock Data
+            await TestJusticeClient();
+
+            // 6. ESM Czech - Restricted
+            await TestEsmClient();
+
+            // 7. Finančná správa - Tax Info
+            await TestFinancnaSpravaClient();
+
+            // 8. Full JSON Output
+            await ShowFullJsonOutput();
+
+            Console.WriteLine("\n" + new string('=', 60));
+            Console.WriteLine(" EXAMPLES COMPLETE");
+            Console.WriteLine(new string('=', 60));
+        }
+
+        static async Task TestAresClient()
+        {
+            Console.WriteLine("\n[1] ARES Czech (Working API)");
+            try
+            {
+                using var client = new AresClient();
+                var result = await client.SearchByICOAsync("00006947");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Status: {result.Entity.Status}");
+                    Console.WriteLine($"VAT Status: {result.TaxInfo?.VatStatus}");
+                    Console.WriteLine($"Source: {result.Metadata.Source}");
+                    Console.WriteLine($"Is Mock: {result.Metadata.IsMock}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestOrsrClient()
+        {
+            Console.WriteLine("\n[2] ORSR Slovak (Web Scraper)");
+            try
+            {
+                using var client = new OrsrClient();
+                var result = await client.SearchByICOAsync("35763491");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Status: {result.Entity.Status}");
+                }
+                else
+                {
+                    Console.WriteLine("No result (company may not be found)");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestRpoClient()
+        {
+            Console.WriteLine("\n[3] RPO Slovak (Mock Data)");
+            try
+            {
+                using var client = new RpoClient();
+                var result = await client.SearchByICOAsync("35763491");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Legal Form: {result.Entity.LegalForm}");
+                    Console.WriteLine($"Is Mock: {result.Metadata.IsMock}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestRpvsClient()
+        {
+            Console.WriteLine("\n[4] RPVS Slovak (UBO Data - Mock)");
+            try
+            {
+                using var client = new RpvsClient();
+                var result = await client.SearchByICOAsync("35763491");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Holders: {result.Holders.Count}");
+
+                    foreach (var holder in result.Holders)
+                    {
+                        Console.WriteLine($"  - {holder.Name} ({holder.HolderType})");
+                        Console.WriteLine($"    Ownership: {holder.OwnershipPctDirect}%");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestJusticeClient()
+        {
+            Console.WriteLine("\n[5] Justice Czech (Mock Data)");
+            try
+            {
+                using var client = new JusticeClient();
+                var result = await client.SearchByICOAsync("06649114");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Holders: {result.Holders.Count}");
+
+                    var shareholders = result.Holders.Where(h => h.Role == "shareholder").ToList();
+                    var board = result.Holders.Where(h => h.Role == "statutory_body").ToList();
+
+                    Console.WriteLine($"  Shareholders: {shareholders.Count}");
+                    Console.WriteLine($"  Board Members: {board.Count}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestEsmClient()
+        {
+            Console.WriteLine("\n[6] ESM Czech (Restricted - Mock Data)");
+
+            // Check access requirements
+            var req = EsmClient.AccessRequirements;
+            Console.WriteLine($"Access Required: {req.Qualification}");
+            Console.WriteLine($"Website: {req.Website}");
+
+            try
+            {
+                using var client = new EsmClient();
+                var result = await client.SearchByICOAsync("06649114");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+                    Console.WriteLine($"Holders: {result.Holders.Count}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task TestFinancnaSpravaClient()
+        {
+            Console.WriteLine("\n[7] Finančná správa (Tax Info - Mock)");
+            try
+            {
+                using var client = new FinancnaSpravaClient();
+                var result = await client.SearchByICOAsync("35763491");
+
+                if (result != null)
+                {
+                    Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+
+                    var taxInfo = result.TaxInfo;
+                    if (taxInfo != null)
+                    {
+                        Console.WriteLine($"VAT ID: {taxInfo.VatId}");
+                        Console.WriteLine($"VAT Status: {taxInfo.VatStatus}");
+
+                        if (taxInfo.TaxDebtsInfo != null)
+                        {
+                            Console.WriteLine($"Has Debts: {taxInfo.TaxDebtsInfo.HasDebts}");
+                            Console.WriteLine($"Amount: {taxInfo.TaxDebtsInfo.AmountEur} EUR");
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        static async Task ShowFullJsonOutput()
+        {
+            Console.WriteLine("\n[8] Full JSON Output Example");
+            Console.WriteLine(new string('-', 60));
+
+            try
+            {
+                using var client = new AresClient();
+                var result = await client.SearchByICOAsync("00006947");
+
+                if (result != null)
+                {
+                    Console.WriteLine("ARES Full Output:");
+                    Console.WriteLine(result.ToJson(indent: true));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+    }
+}

@@ -1,0 +1,325 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Esm;
+using Ares;
+using Rpvs;
+using Rpo;
+
+namespace Recursive
+{
+    /// <summary>
+    /// Recursive ownership chain traversal client.
+    /// Traces parent company ownership to identify ultimate beneficial owners.
+    ///
+    /// Usage:
+    ///     var client = new RecursiveClient();
+    ///     var tree = await client.BuildOwnershipTreeAsync("06649114");
+    ///     client.PrintTree(tree, 0);
+    /// </summary>
+
+    #region Data Models
+
+    public class OwnershipNode
+    {
+        public string? Ico { get; set; }
+        public string? Name { get; set; }
+        public string? Country { get; set; }
+        public double OwnershipPercentage { get; set; }
+        public bool IsIndividual { get; set; }
+        public string? Source { get; set; }
+        public List<OwnershipNode> Children { get; set; } = new();
+    }
+
+    public class OwnershipSummary
+    {
+        public string? RootIco { get; set; }
+        public string? RootName { get; set; }
+        public int TotalUltimateOwners { get; set; }
+        public double TotalOwnershipTraced { get; set; }
+        public double UntracedOwnership { get; set; }
+        public int IndividualOwners { get; set; }
+        public int CorporateOwners { get; set; }
+        public string? RetrievedAt { get; set; }
+    }
+
+    internal class UboInfo
+    {
+        public string? Name { get; set; }
+        public string? Ico { get; set; }
+        public double OwnershipPercentage { get; set; }
+        public string? BirthDate { get; set; }
+    }
+
+    internal class UboDataResult
+    {
+        public string? CompanyName { get; set; }
+        public string? Source { get; set; }
+        public List<UboInfo> Owners { get; set; } = new();
+    }
+
+    #endregion
+
+    #region Client
+
+    public class RecursiveClient
+    {
+        private const double OwnershipThreshold = 25.0;
+        private const int MaxDepth = 5;
+
+        private readonly EsmClient _esmClient = new();
+        private readonly RpvsClient _rpvsClient = new();
+        private readonly AresClient _aresClient = new();
+        private readonly RpoClient _rpoClient = new();
+
+        private readonly HashSet<string> _visited = new();
+
+        public async Task<OwnershipNode?> BuildOwnershipTreeAsync(string ico, string country = "auto")
+        {
+            _visited.Clear();
+            return await BuildTreeRecursiveAsync(ico, country, 0, 100.0);
+        }
+
+        private async Task<OwnershipNode?> BuildTreeRecursiveAsync(
+            string ico,
+            string country,
+            int depth,
+            double accumulatedOwnership)
+        {
+            if (string.IsNullOrEmpty(ico) || _visited.Contains(ico))
+                return null;
+
+            if (depth > MaxDepth)
+                return null;
+
+            _visited.Add(ico);
+
+            if (country == "auto")
+                country = DetectCountry(ico);
+
+            // Get UBO data
+            var uboData = await GetUboDataAsync(ico, country);
+
+            var root = new OwnershipNode
+            {
+                Ico = ico,
+                Name = uboData?.CompanyName ?? "Unknown",
+                Country = country,
+                OwnershipPercentage = accumulatedOwnership,
+                IsIndividual = false,
+                Source = uboData?.Source
+            };
+
+            if (uboData == null)
+            {
+                var companyData = await GetCompanyDataAsync(ico, country);
+                if (companyData != null)
+                {
+                    root.Name = companyData.Name;
+                    root.Source = companyData.Source;
+                }
+                return root;
+            }
+
+            // Process beneficial owners
+            foreach (var owner in uboData.Owners)
+            {
+                var isIndividual = !string.IsNullOrEmpty(owner.BirthDate);
+
+                if (isIndividual)
+                {
+                    root.Children.Add(new OwnershipNode
+                    {
+                        Name = owner.Name,
+                        Country = "Unknown",
+                        OwnershipPercentage = owner.OwnershipPercentage * accumulatedOwnership / 100,
+                        IsIndividual = true,
+                        Source = uboData.Source
+                    });
+                }
+                else if (!string.IsNullOrEmpty(owner.Ico) && owner.OwnershipPercentage >= OwnershipThreshold)
+                {
+                    var ownerCountry = DetectCountry(owner.Ico);
+                    var child = await BuildTreeRecursiveAsync(
+                        owner.Ico,
+                        ownerCountry,
+                        depth + 1,
+                        owner.OwnershipPercentage * accumulatedOwnership / 100
+                    );
+
+                    if (child != null)
+                        root.Children.Add(child);
+                }
+            }
+
+            return root;
+        }
+
+        private async Task<UboDataResult?> GetUboDataAsync(string ico, string country)
+        {
+            try
+            {
+                if (country == "CZ")
+                {
+                    var esmEntity = await _esmClient.GetBeneficialOwnersAsync(ico);
+                    if (esmEntity == null) return null;
+
+                    var result = new UboDataResult
+                    {
+                        CompanyName = esmEntity.CompanyName,
+                        Source = esmEntity.Source
+                    };
+
+                    foreach (var owner in esmEntity.BeneficialOwners)
+                    {
+                        result.Owners.Add(new UboInfo
+                        {
+                            Name = owner.Name,
+                            Ico = null,
+                            OwnershipPercentage = owner.OwnershipPercentage,
+                            BirthDate = owner.BirthDate
+                        });
+                    }
+
+                    return result;
+                }
+                else
+                {
+                    var rpvsEntity = await _rpvsClient.GetUboDataAsync(ico);
+                    if (rpvsEntity == null) return null;
+
+                    var result = new UboDataResult
+                    {
+                        CompanyName = rpvsEntity.CompanyName,
+                        Source = rpvsEntity.Source
+                    };
+
+                    foreach (var owner in rpvsEntity.Ubos)
+                    {
+                        result.Owners.Add(new UboInfo
+                        {
+                            Name = owner.Name,
+                            Ico = null,
+                            OwnershipPercentage = owner.OwnershipPercentage,
+                            BirthDate = owner.Identification?.BirthDate
+                        });
+                    }
+
+                    return result;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private async Task<AresEntity?> GetCompanyDataAsync(string ico, string country)
+        {
+            try
+            {
+                if (country == "CZ")
+                    return await _aresClient.SearchByICOAsync(ico);
+                else
+                {
+                    var rpoEntity = await _rpoClient.SearchByICOAsync(ico);
+                    if (rpoEntity != null)
+                    {
+                        return new AresEntity
+                        {
+                            Source = rpoEntity.Source,
+                            Ico = rpoEntity.Ico,
+                            Name = rpoEntity.Name
+                        };
+                    }
+                    return null;
+                }
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private static string DetectCountry(string ico)
+        {
+            if (string.IsNullOrEmpty(ico)) return "CZ";
+            var cleanIco = ico.Replace(" ", "").Trim();
+            return cleanIco.StartsWith("0") ? "CZ" : "SK";
+        }
+
+        public List<Dictionary<string, object>> ExtractUltimateOwners(OwnershipNode? root)
+        {
+            var ubos = new List<Dictionary<string, object>>();
+
+            void Traverse(OwnershipNode node, double parentOwnership)
+            {
+                if (node.IsIndividual)
+                {
+                    ubos.Add(new Dictionary<string, object>
+                    {
+                        ["name"] = node.Name ?? "",
+                        ["ico"] = node.Ico ?? "",
+                        ["country"] = node.Country ?? "",
+                        ["ownership_percentage"] = node.OwnershipPercentage,
+                        ["source"] = node.Source ?? ""
+                    });
+                }
+                else
+                {
+                    foreach (var child in node.Children)
+                        Traverse(child, parentOwnership);
+                }
+            }
+
+            if (root != null)
+                Traverse(root, 100.0);
+
+            return ubos;
+        }
+
+        public void PrintTree(OwnershipNode? node, int indent = 0)
+        {
+            if (node == null)
+            {
+                Console.WriteLine("Empty tree");
+                return;
+            }
+
+            var prefix = new string(' ', indent * 2);
+            var treeChar = indent > 0 ? "└── " : "";
+
+            var ownerType = node.IsIndividual ? "[Individual]" : "[Company]";
+            Console.WriteLine($"{prefix}{treeChar}{node.Name} ({node.Country}) - {node.OwnershipPercentage:F1}% {ownerType}");
+
+            foreach (var child in node.Children)
+                PrintTree(child, indent + 1);
+        }
+
+        public OwnershipSummary GetSummary(OwnershipNode? root)
+        {
+            var ubos = ExtractUltimateOwners(root);
+            var totalOwnership = 0.0;
+
+            foreach (var ubo in ubos)
+            {
+                if (ubo.TryGetValue("ownership_percentage", out var pct))
+                    totalOwnership += Convert.ToDouble(pct);
+            }
+
+            return new OwnershipSummary
+            {
+                RootIco = root?.Ico,
+                RootName = root?.Name,
+                TotalUltimateOwners = ubos.Count,
+                TotalOwnershipTraced = totalOwnership,
+                UntracedOwnership = 100.0 - totalOwnership,
+                IndividualOwners = ubos.Count,
+                CorporateOwners = 0,
+                RetrievedAt = DateTime.UtcNow.ToString("o")
+            };
+        }
+    }
+
+    #endregion
+}

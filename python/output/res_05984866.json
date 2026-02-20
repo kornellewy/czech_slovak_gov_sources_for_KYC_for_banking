@@ -1,0 +1,22 @@
+{
+  "entity": {
+    "ico_registry": "05984866",
+    "company_name_registry": "DEVROCK a.s.",
+    "status": "active"
+  },
+  "holders": [],
+  "metadata": {
+    "source": "RES_CZ",
+    "register_name": "Resident Income Tax Register (Rezidentní poplatek daně z příjmů)",
+    "retrieved_at": "2026-02-19T12:51:11.778612Z",
+    "level": 0,
+    "is_mock": true,
+    "register_url": "https://adisepo.financnispraha.cz/dpf/z/zoznam?ico=05984866"
+  },
+  "tax_info": {
+    "tax_id": "05984866",
+    "tax_residency_status": "resident",
+    "is_tax_resident": true
+  },
+  "scraped_at": "2026-02-19T12:51:11.778774Z"
+}

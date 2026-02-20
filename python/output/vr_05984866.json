@@ -1,0 +1,21 @@
+{
+  "entity": {
+    "ico_registry": "05984866",
+    "company_name_registry": "DEVROCK a.s.",
+    "status": "active"
+  },
+  "holders": [],
+  "metadata": {
+    "source": "VR_CZ",
+    "register_name": "Vermont Register (Register oddělovaných nemovitostí)",
+    "retrieved_at": "2026-02-19T12:50:54.353022Z",
+    "level": 0,
+    "is_mock": true,
+    "register_url": "https://rpvs.gov.cz/openapi/v2/DssvzdyOvlastena?ico=05984866"
+  },
+  "property_info": {
+    "property_count": 0,
+    "properties": []
+  },
+  "scraped_at": "2026-02-19T12:50:54.353208Z"
+}

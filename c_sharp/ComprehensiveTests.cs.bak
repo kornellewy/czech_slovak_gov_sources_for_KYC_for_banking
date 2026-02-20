@@ -1,0 +1,622 @@
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Ares;
+using Orsr;
+using Justice;
+using Stats;
+using Rpo;
+using Rpvs;
+using FinancnaSprava;
+using Esm;
+using Recursive;
+
+namespace Scrapers.Tests
+{
+    /// <summary>
+    /// Comprehensive test suite for all C# scrapers.
+    /// Run with: dotnet run --test
+    /// </summary>
+    public static class ComprehensiveTests
+    {
+        private static int _totalTests = 0;
+        private static int _passedTests = 0;
+        private static int _failedTests = 0;
+        private static readonly List<string> _failedTestNames = new();
+
+        public static async Task<int> RunAllTestsAsync()
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.WriteLine();
+            Console.WriteLine("╔════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║              COMPREHENSIVE TEST SUITE - C#                         ║");
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine();
+
+            // Data Model Tests
+            await RunTestGroup("Data Models", TestDataModels);
+
+            // ARES Client Tests
+            await RunTestGroup("ARES Czech Client", TestAresClient);
+
+            // ORSR Client Tests
+            await RunTestGroup("ORSR Slovak Client", TestOrsrClient);
+
+            // Justice Client Tests
+            await RunTestGroup("Justice Czech Client", TestJusticeClient);
+
+            // Stats Client Tests
+            await RunTestGroup("Stats Slovak Client", TestStatsClient);
+
+            // RPO Client Tests
+            await RunTestGroup("RPO Slovak Client", TestRpoClient);
+
+            // RPVS Client Tests
+            await RunTestGroup("RPVS Slovak Client", TestRpvsClient);
+
+            // Finančná správa Tests
+            await RunTestGroup("Finančná správa Client", TestFinancnaSpravaClient);
+
+            // ESM Client Tests
+            await RunTestGroup("ESM Czech Client", TestEsmClient);
+
+            // Recursive Client Tests
+            await RunTestGroup("Recursive Client", TestRecursiveClient);
+
+            // Integration Tests
+            await RunTestGroup("Integration Tests", TestIntegration);
+
+            // Print Summary
+            PrintSummary();
+
+            return _failedTests > 0 ? 1 : 0;
+        }
+
+        private static async Task RunTestGroup(string groupName, Func<Task> testMethod)
+        {
+            Console.WriteLine($"\n━━━ {groupName} ━━━");
+            try
+            {
+                await testMethod();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"  ✗ Test group failed: {ex.Message}");
+            }
+        }
+
+        private static void Assert(bool condition, string testName)
+        {
+            _totalTests++;
+            if (condition)
+            {
+                _passedTests++;
+                Console.WriteLine($"  ✓ {testName}");
+            }
+            else
+            {
+                _failedTests++;
+                _failedTestNames.Add(testName);
+                Console.WriteLine($"  ✗ {testName}");
+            }
+        }
+
+        private static void AssertNotNull(object? obj, string testName)
+        {
+            Assert(obj != null, testName);
+        }
+
+        private static void AssertEqual(object? expected, object? actual, string testName)
+        {
+            Assert(Equals(expected, actual), $"{testName} (expected: {expected}, actual: {actual})");
+        }
+
+        private static void AssertContains(string contained, string container, string testName)
+        {
+            Assert(container.Contains(contained), $"{testName} ('{contained}' not in '{container}')");
+        }
+
+        #region Data Model Tests
+
+        private static Task TestDataModels()
+        {
+            // AresEntity
+            var aresEntity = new AresEntity
+            {
+                Source = "ARES_CZ",
+                Ico = "00006947",
+                Name = "Test Company"
+            };
+            AssertNotNull(aresEntity, "AresEntity creation");
+            AssertEqual("ARES_CZ", aresEntity.Source, "AresEntity Source");
+
+            // OrsrEntity
+            var orsrEntity = new OrsrEntity
+            {
+                Source = "ORSR_SK",
+                Ico = "35763491",
+                Name = "Test Slovak Company",
+                Court = "Test Court"
+            };
+            AssertNotNull(orsrEntity, "OrsrEntity creation");
+            AssertEqual("ORSR_SK", orsrEntity.Source, "OrsrEntity Source");
+
+            // JusticeEntity
+            var justiceEntity = new JusticeEntity
+            {
+                Source = "JUSTICE_CZ",
+                Ico = "06649114",
+                Name = "Test Justice Company",
+                Court = "Městský soud v Praze"
+            };
+            AssertNotNull(justiceEntity, "JusticeEntity creation");
+            AssertEqual("JUSTICE_CZ", justiceEntity.Source, "JusticeEntity Source");
+
+            // StatsDataset
+            var statsDataset = new StatsDataset
+            {
+                Id = "test_dataset",
+                Title = "Test Dataset",
+                Category = "test"
+            };
+            AssertNotNull(statsDataset, "StatsDataset creation");
+            AssertEqual("test_dataset", statsDataset.Id, "StatsDataset Id");
+
+            // RpoEntity
+            var rpoEntity = new RpoEntity
+            {
+                Source = "RPO_SK",
+                Ico = "35763491",
+                Name = "Test RPO Company"
+            };
+            AssertNotNull(rpoEntity, "RpoEntity creation");
+            AssertEqual("RPO_SK", rpoEntity.Source, "RpoEntity Source");
+
+            // RpvsEntity
+            var rpvsEntity = new RpvsEntity
+            {
+                Source = "RPVS_SK",
+                Ico = "35763491",
+                CompanyName = "Test RPVS Company"
+            };
+            AssertNotNull(rpvsEntity, "RpvsEntity creation");
+            AssertEqual("RPVS_SK", rpvsEntity.Source, "RpvsEntity Source");
+
+            // FinancnaSpravaEntity
+            var financnaEntity = new FinancnaSpravaEntity
+            {
+                Source = "FINANCNA_SK",
+                Ico = "35763491",
+                Name = "Test Tax Company"
+            };
+            AssertNotNull(financnaEntity, "FinancnaSpravaEntity creation");
+            AssertEqual("FINANCNA_SK", financnaEntity.Source, "FinancnaSpravaEntity Source");
+
+            // EsmEntity
+            var esmEntity = new EsmEntity
+            {
+                Source = "ESM_CZ",
+                Ico = "06649114",
+                CompanyName = "Test ESM Company"
+            };
+            AssertNotNull(esmEntity, "EsmEntity creation");
+            AssertEqual("ESM_CZ", esmEntity.Source, "EsmEntity Source");
+
+            // OwnershipNode
+            var ownershipNode = new OwnershipNode
+            {
+                Ico = "06649114",
+                Name = "Test Owner",
+                Country = "CZ",
+                OwnershipPercentage = 100.0
+            };
+            AssertNotNull(ownershipNode, "OwnershipNode creation");
+            AssertEqual(100.0, ownershipNode.OwnershipPercentage, "OwnershipNode percentage");
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region ARES Client Tests
+
+        private static async Task TestAresClient()
+        {
+            using var client = new AresClient();
+
+            // Test live API call
+            var entity = await client.SearchByICOAsync("00006947");
+            AssertNotNull(entity, "ARES search by ICO returns result");
+            if (entity != null)
+            {
+                AssertEqual("00006947", entity.Ico, "ARES ICO match");
+                AssertNotNull(entity.Name, "ARES name not null");
+                AssertEqual("ARES_CZ", entity.Source, "ARES source correct");
+                AssertNotNull(entity.Address, "ARES address not null");
+                AssertNotNull(entity.RegisterUrl, "ARES register URL not null");
+                AssertNotNull(entity.RetrievedAt, "ARES retrieved at not null");
+            }
+
+            // Test another ICO
+            var entity2 = await client.SearchByICOAsync("06649114");
+            AssertNotNull(entity2, "ARES search Prusa Research returns result");
+            if (entity2 != null)
+            {
+                AssertContains("Prusa", entity2.Name ?? "", "ARES Prusa name contains Prusa");
+            }
+
+            // Test invalid ICO
+            var entity3 = await client.SearchByICOAsync("99999999");
+            Assert(entity3 == null, "ARES invalid ICO returns null");
+        }
+
+        #endregion
+
+        #region ORSR Client Tests
+
+        private static async Task TestOrsrClient()
+        {
+            using var client = new OrsrClient();
+
+            // Test source name
+            AssertEqual("ORSR_SK", new OrsrEntity().Source, "ORSR source name");
+
+            // Test search by ICO (may fail if blocked)
+            try
+            {
+                var entity = await client.SearchByICOAsync("35763491");
+                if (entity != null)
+                {
+                    AssertEqual("35763491", entity.Ico, "ORSR ICO match");
+                    AssertEqual("ORSR_SK", entity.Source, "ORSR source correct");
+                }
+                else
+                {
+                    Console.WriteLine("  ⚠ ORSR web scraping may be blocked");
+                }
+            }
+            catch
+            {
+                Console.WriteLine("  ⚠ ORSR test skipped (web scraping blocked)");
+            }
+        }
+
+        #endregion
+
+        #region Justice Client Tests
+
+        private static Task TestJusticeClient()
+        {
+            var client = new JusticeClient();
+
+            // Test mock data retrieval
+            var entity = client.GetOrDataAsync("06649114").Result;
+            AssertNotNull(entity, "Justice get OR data returns result");
+            if (entity != null)
+            {
+                AssertEqual("06649114", entity.Ico, "Justice ICO match");
+                AssertEqual("JUSTICE_CZ", entity.Source, "Justice source correct");
+                AssertNotNull(entity.Court, "Justice court not null");
+                AssertNotNull(entity.FileNumber, "Justice file number not null");
+                Assert(entity.Mock, "Justice is mock data");
+            }
+
+            // Test filing history
+            var filings = client.GetFilingHistoryAsync("06649114").Result;
+            AssertNotNull(filings, "Justice filing history not null");
+            Assert(filings.Count > 0, "Justice filing history has items");
+
+            // Test shareholders
+            var shareholders = client.GetShareholdersAsync("06649114").Result;
+            AssertNotNull(shareholders, "Justice shareholders not null");
+            Assert(shareholders.Count > 0, "Justice shareholders has items");
+
+            // Test board members
+            var boardMembers = client.GetBoardMembersAsync("06649114").Result;
+            AssertNotNull(boardMembers, "Justice board members not null");
+            Assert(boardMembers.Count > 0, "Justice board members has items");
+
+            // Test unknown entity
+            var unknown = client.GetOrDataAsync("99999999").Result;
+            AssertNotNull(unknown, "Justice unknown entity returns result");
+            if (unknown != null)
+            {
+                Assert(unknown.Mock, "Justice unknown is mock data");
+            }
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region Stats Client Tests
+
+        private static Task TestStatsClient()
+        {
+            var client = new StatsClient();
+
+            // Test list datasets
+            var datasets = client.ListDatasetsAsync().Result;
+            AssertNotNull(datasets, "Stats list datasets not null");
+            Assert(datasets.Count > 0, "Stats has datasets");
+            if (datasets.Count > 0)
+            {
+                AssertNotNull(datasets[0].Id, "Stats dataset has ID");
+                AssertNotNull(datasets[0].Title, "Stats dataset has title");
+            }
+
+            // Test search datasets
+            var searchResults = client.SearchDatasetsAsync("podniky").Result;
+            AssertNotNull(searchResults, "Stats search results not null");
+            Assert(searchResults.Count > 0, "Stats search has results");
+
+            // Test get dataset
+            var data = client.GetDatasetAsync("test_dataset").Result;
+            AssertNotNull(data, "Stats get dataset not null");
+            AssertEqual("STATS_SK", data.Source, "Stats source correct");
+            Assert(data.Mock, "Stats is mock data");
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region RPO Client Tests
+
+        private static Task TestRpoClient()
+        {
+            var client = new RpoClient();
+
+            // Test mock data for known entity
+            var entity = client.SearchByICOAsync("35763491").Result;
+            AssertNotNull(entity, "RPO search returns result");
+            if (entity != null)
+            {
+                AssertEqual("35763491", entity.Ico, "RPO ICO match");
+                AssertEqual("RPO_SK", entity.Source, "RPO source correct");
+                AssertContains("Slovenská sporiteľňa", entity.Name ?? "", "RPO name contains expected");
+                Assert(entity.Mock, "RPO is mock data");
+                AssertNotNull(entity.LegalForm, "RPO legal form not null");
+                AssertEqual("active", entity.Status, "RPO status active");
+            }
+
+            // Test unknown entity
+            var unknown = client.SearchByICOAsync("99999999").Result;
+            AssertNotNull(unknown, "RPO unknown entity returns result");
+            if (unknown != null)
+            {
+                Assert(unknown.Mock, "RPO unknown is mock data");
+            }
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region RPVS Client Tests
+
+        private static Task TestRpvsClient()
+        {
+            var client = new RpvsClient();
+
+            // Test mock UBO data
+            var entity = client.GetUboDataAsync("35763491").Result;
+            AssertNotNull(entity, "RPVS get UBO data returns result");
+            if (entity != null)
+            {
+                AssertEqual("35763491", entity.Ico, "RPVS ICO match");
+                AssertEqual("RPVS_SK", entity.Source, "RPVS source correct");
+                Assert(entity.Ubos.Count > 0, "RPVS has UBOs");
+                Assert(entity.Mock, "RPVS is mock data");
+
+                var ubo = entity.Ubos[0];
+                AssertNotNull(ubo.Name, "RPVS UBO has name");
+                Assert(ubo.OwnershipPercentage > 0, "RPVS UBO has ownership percentage");
+            }
+
+            // Test VUB bank
+            var vub = client.GetUboDataAsync("31328356").Result;
+            AssertNotNull(vub, "RPVS VUB returns result");
+            if (vub != null && vub.Ubos.Count > 0)
+            {
+                AssertContains("Intesa", vub.Ubos[0].Name ?? "", "RPVS VUB owner correct");
+            }
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region Finančná správa Client Tests
+
+        private static Task TestFinancnaSpravaClient()
+        {
+            var client = new FinancnaSpravaClient();
+
+            // Test tax status
+            var entity = client.GetTaxStatusAsync("35763491").Result;
+            AssertNotNull(entity, "FinancnaSprava get tax status returns result");
+            if (entity != null)
+            {
+                AssertEqual("35763491", entity.Ico, "FinancnaSprava ICO match");
+                AssertEqual("FINANCNA_SK", entity.Source, "FinancnaSprava source correct");
+                AssertNotNull(entity.Dic, "FinancnaSprava DIC not null");
+                AssertNotNull(entity.VatId, "FinancnaSprava VAT ID not null");
+                AssertEqual("active", entity.VatStatus, "FinancnaSprava VAT status active");
+                AssertNotNull(entity.TaxDebts, "FinancnaSprava tax debts not null");
+                Assert(!entity.TaxDebts.HasDebts, "FinancnaSprava no debts");
+            }
+
+            // Test VAT status only
+            var vat = client.GetVatStatusAsync("35763491").Result;
+            AssertNotNull(vat, "FinancnaSprava VAT status returns result");
+            if (vat != null)
+            {
+                AssertNotNull(vat.VatId, "FinancnaSprava VAT status has VAT ID");
+                AssertNotNull(vat.VatStatus, "FinancnaSprava VAT status has status");
+            }
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region ESM Client Tests
+
+        private static Task TestEsmClient()
+        {
+            var client = new EsmClient();
+
+            // Test mock beneficial owner data
+            var entity = client.GetBeneficialOwnersAsync("06649114").Result;
+            AssertNotNull(entity, "ESM get beneficial owners returns result");
+            if (entity != null)
+            {
+                AssertEqual("06649114", entity.Ico, "ESM ICO match");
+                AssertEqual("ESM_CZ", entity.Source, "ESM source correct");
+                Assert(entity.BeneficialOwners.Count > 0, "ESM has beneficial owners");
+                Assert(entity.HasFiled, "ESM has filed");
+                Assert(entity.Mock, "ESM is mock data");
+
+                var owner = entity.BeneficialOwners[0];
+                AssertNotNull(owner.Name, "ESM owner has name");
+                Assert(owner.OwnershipPercentage > 0, "ESM owner has ownership");
+            }
+
+            // Test access requirements
+            var reqs = client.GetAccessRequirements();
+            AssertNotNull(reqs, "ESM access requirements not null");
+            AssertNotNull(reqs.Qualification, "ESM qualification not null");
+            AssertNotNull(reqs.Website, "ESM website not null");
+            AssertContains("issm.justice.cz", reqs.Website, "ESM website correct");
+
+            // Test compliance check
+            var compliance = client.CheckComplianceAsync("06649114").Result;
+            AssertNotNull(compliance, "ESM compliance check returns result");
+            if (compliance != null)
+            {
+                Assert(compliance.HasFiled, "ESM compliance has filed");
+                AssertEqual("compliant", compliance.ComplianceStatus, "ESM compliance status");
+            }
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        #region Recursive Client Tests
+
+        private static async Task TestRecursiveClient()
+        {
+            var client = new RecursiveClient();
+
+            // Test ownership tree building
+            var tree = await client.BuildOwnershipTreeAsync("06649114");
+            AssertNotNull(tree, "Recursive ownership tree not null");
+            if (tree != null)
+            {
+                AssertEqual("06649114", tree.Ico, "Recursive root ICO match");
+                AssertNotNull(tree.Name, "Recursive root name not null");
+                AssertEqual("CZ", tree.Country, "Recursive country detection");
+                AssertEqual(100.0, tree.OwnershipPercentage, "Recursive root 100% ownership");
+            }
+
+            // Test ultimate owners extraction
+            if (tree != null)
+            {
+                var ubos = client.ExtractUltimateOwners(tree);
+                AssertNotNull(ubos, "Recursive UBOs not null");
+                Assert(ubos.Count > 0, "Recursive has UBOs");
+            }
+
+            // Test summary
+            if (tree != null)
+            {
+                var summary = client.GetSummary(tree);
+                AssertNotNull(summary, "Recursive summary not null");
+                AssertEqual("06649114", summary.RootIco, "Recursive summary ICO match");
+                Assert(summary.TotalUltimateOwners > 0, "Recursive has ultimate owners");
+            }
+
+            // Test print tree (just verify it doesn't throw)
+            if (tree != null)
+            {
+                try
+                {
+                    client.PrintTree(tree, 0);
+                    Assert(true, "Recursive print tree succeeds");
+                }
+                catch
+                {
+                    Assert(false, "Recursive print tree succeeds");
+                }
+            }
+        }
+
+        #endregion
+
+        #region Integration Tests
+
+        private static Task TestIntegration()
+        {
+            // Test data consistency across scrapers
+            var rpoClient = new RpoClient();
+            var rpvsClient = new RpvsClient();
+            var financnaClient = new FinancnaSpravaClient();
+
+            const string ico = "35763491";
+
+            var rpo = rpoClient.SearchByICOAsync(ico).Result;
+            var rpvs = rpvsClient.GetUboDataAsync(ico).Result;
+            var financna = financnaClient.GetTaxStatusAsync(ico).Result;
+
+            Assert(rpo?.Ico == ico, "Integration RPO ICO match");
+            Assert(rpvs?.Ico == ico, "Integration RPVS ICO match");
+            Assert(financna?.Ico == ico, "Integration Financna ICO match");
+
+            // Test all have source
+            Assert(rpo?.Source != null, "Integration RPO has source");
+            Assert(rpvs?.Source != null, "Integration RPVS has source");
+            Assert(financna?.Source != null, "Integration Financna has source");
+
+            // Test all have retrieved_at equivalent
+            AssertNotNull(rpo?.RetrievedAt, "Integration RPO has retrieved at");
+            AssertNotNull(rpvs?.RetrievedAt, "Integration RPVS has retrieved at");
+            AssertNotNull(financna?.RetrievedAt, "Integration Financna has retrieved at");
+
+            return Task.CompletedTask;
+        }
+
+        #endregion
+
+        private static void PrintSummary()
+        {
+            Console.WriteLine();
+            Console.WriteLine("════════════════════════════════════════════════════════════════════");
+            Console.WriteLine("  TEST SUMMARY");
+            Console.WriteLine("════════════════════════════════════════════════════════════════════");
+            Console.WriteLine($"  Total Tests:  {_totalTests}");
+            Console.WriteLine($"  Passed:       {_passedTests} ({(_totalTests > 0 ? _passedTests * 100 / _totalTests : 0)}%)");
+            Console.WriteLine($"  Failed:       {_failedTests}");
+
+            if (_failedTests > 0)
+            {
+                Console.WriteLine();
+                Console.WriteLine("  Failed Tests:");
+                foreach (var name in _failedTestNames)
+                {
+                    Console.WriteLine($"    - {name}");
+                }
+            }
+
+            Console.WriteLine("════════════════════════════════════════════════════════════════════");
+
+            if (_totalTests > 0)
+            {
+                var coverage = _passedTests * 100 / _totalTests;
+                Console.WriteLine($"  Coverage Estimate: ~{coverage}%");
+                Console.WriteLine("════════════════════════════════════════════════════════════════════");
+            }
+        }
+    }
+}

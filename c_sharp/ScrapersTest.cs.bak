@@ -1,0 +1,251 @@
+using System;
+using System.Threading.Tasks;
+using Ares;
+using Orsr;
+using Justice;
+using Stats;
+using Rpo;
+using Rpvs;
+using FinancnaSprava;
+using Esm;
+using Recursive;
+using Scrapers.Tests;
+
+namespace Scrapers
+{
+    /// <summary>
+    /// Test program for all scrapers.
+    /// </summary>
+    class Program
+    {
+        static async Task<int> Main(string[] args)
+        {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+            // Check for test mode argument
+            if (args.Length > 0 && (args[0] == "--test" || args[0] == "--comprehensive"))
+            {
+                return await ComprehensiveTests.RunAllTestsAsync();
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("╔════════════════════════════════════════════════════════════════════╗");
+            Console.WriteLine("║              CZ/SK REGISTRY SCRAPERS - C# TEST                    ║");
+            Console.WriteLine("╚════════════════════════════════════════════════════════════════════╝");
+            Console.WriteLine();
+
+            // Test ARES Czech
+            await TestAresAsync();
+
+            // Test ORSR Slovak
+            await TestOrsrAsync();
+
+            // Test Justice Czech
+            TestJustice();
+
+            // Test Stats Slovak
+            await TestStatsAsync();
+
+            // Test RPO Slovak
+            await TestRpoAsync();
+
+            // Test RPVS Slovak
+            await TestRpvsAsync();
+
+            // Test Finančná správa
+            await TestFinancnaSpravaAsync();
+
+            // Test ESM Czech
+            TestEsm();
+
+            // Test Recursive
+            await TestRecursiveAsync();
+
+            Console.WriteLine();
+            Console.WriteLine("════════════════════════════════════════════════════════════════════");
+            Console.WriteLine("  All tests completed!");
+            Console.WriteLine("  Run 'dotnet run --test' for comprehensive test suite with coverage");
+            Console.WriteLine("════════════════════════════════════════════════════════════════════");
+
+            return 0;
+        }
+
+        static async Task TestAresAsync()
+        {
+            Console.WriteLine("\n━━━ ARES Czech (Register of Economic Subjects) ━━━");
+
+            var testIcos = new[] { "00006947", "00216305", "06649114" };
+
+            using var client = new AresClient();
+
+            foreach (var ico in testIcos)
+            {
+                var entity = await client.SearchByICOAsync(ico);
+                if (entity != null)
+                {
+                    Console.WriteLine($"  ✓ {entity.Name}");
+                    Console.WriteLine($"    ICO: {entity.Ico}");
+                    Console.WriteLine($"    Legal Form: {entity.LegalForm}");
+                    Console.WriteLine($"    Address: {entity.Address?.FullAddress}");
+                }
+                else
+                {
+                    Console.WriteLine($"  ✗ Not found: {ico}");
+                }
+            }
+        }
+
+        static async Task TestOrsrAsync()
+        {
+            Console.WriteLine("\n━━━ ORSR Slovak (Business Register) ━━━");
+            Console.WriteLine("  Note: Web scraping may be blocked");
+
+            using var client = new OrsrClient();
+
+            var entity = await client.SearchByICOAsync("35763491");
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.Name}");
+                Console.WriteLine($"    ICO: {entity.Ico}");
+                Console.WriteLine($"    Court: {entity.Court}");
+            }
+            else
+            {
+                Console.WriteLine($"  ⚠ Web scraping may be blocked");
+            }
+        }
+
+        static void TestJustice()
+        {
+            Console.WriteLine("\n━━━ Justice Czech (Commercial Register - Mock) ━━━");
+
+            var client = new JusticeClient();
+
+            var entity = client.GetOrDataAsync("06649114").Result;
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.Name}");
+                Console.WriteLine($"    Court: {entity.Court}");
+                Console.WriteLine($"    File Number: {entity.FileNumber}");
+                Console.WriteLine($"    Note: {entity.Note}");
+            }
+        }
+
+        static async Task TestStatsAsync()
+        {
+            Console.WriteLine("\n━━━ Stats Slovak (Statistics Office - Mock) ━━━");
+
+            var client = new StatsClient();
+
+            var datasets = await client.ListDatasetsAsync();
+            Console.WriteLine($"  ✓ Found {datasets.Count} datasets");
+
+            foreach (var ds in datasets)
+            {
+                Console.WriteLine($"    - {ds.Id}: {ds.Title}");
+            }
+        }
+
+        static async Task TestRpoAsync()
+        {
+            Console.WriteLine("\n━━━ RPO Slovak (Register of Legal Entities) ━━━");
+
+            var client = new RpoClient();
+
+            var entity = await client.SearchByICOAsync("35763491");
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.Name}");
+                Console.WriteLine($"    ICO: {entity.Ico}");
+                Console.WriteLine($"    Legal Form: {entity.LegalForm}");
+                Console.WriteLine($"    Note: {entity.Note}");
+            }
+        }
+
+        static async Task TestRpvsAsync()
+        {
+            Console.WriteLine("\n━━━ RPVS Slovak (Public Sector Partners - UBO) ━━━");
+
+            var client = new RpvsClient();
+
+            var entity = await client.GetUboDataAsync("35763491");
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.CompanyName}");
+                Console.WriteLine($"    UBOs: {entity.Ubos.Count}");
+
+                foreach (var ubo in entity.Ubos)
+                {
+                    Console.WriteLine($"      - {ubo.Name}: {ubo.OwnershipPercentage}%");
+                }
+
+                Console.WriteLine($"    Note: {entity.Note}");
+            }
+        }
+
+        static async Task TestFinancnaSpravaAsync()
+        {
+            Console.WriteLine("\n━━━ Finančná správa (Tax Office) ━━━");
+
+            var client = new FinancnaSpravaClient();
+
+            var entity = await client.GetTaxStatusAsync("35763491");
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.Name}");
+                Console.WriteLine($"    DIČ: {entity.Dic}");
+                Console.WriteLine($"    VAT ID: {entity.VatId}");
+                Console.WriteLine($"    VAT Status: {entity.VatStatus}");
+                Console.WriteLine($"    Tax Debts: {(entity.TaxDebts?.HasDebts ?? false ? "Yes" : "No")}");
+            }
+        }
+
+        static void TestEsm()
+        {
+            Console.WriteLine("\n━━━ ESM Czech (Beneficial Owners - RESTRICTED) ━━━");
+
+            var client = new EsmClient();
+
+            var entity = client.GetBeneficialOwnersAsync("06649114").Result;
+            if (entity != null)
+            {
+                Console.WriteLine($"  ✓ {entity.CompanyName}");
+                Console.WriteLine($"    Beneficial Owners: {entity.BeneficialOwners.Count}");
+
+                foreach (var owner in entity.BeneficialOwners)
+                {
+                    Console.WriteLine($"      - {owner.Name}: {owner.OwnershipPercentage}%");
+                }
+
+                Console.WriteLine($"    Note: {entity.Note}");
+            }
+
+            // Show access requirements
+            var req = client.GetAccessRequirements();
+            Console.WriteLine($"\n  Access Requirements:");
+            Console.WriteLine($"    Qualification: {req.Qualification}");
+            Console.WriteLine($"    Website: {req.Website}");
+        }
+
+        static async Task TestRecursiveAsync()
+        {
+            Console.WriteLine("\n━━━ Recursive Ownership Chain ━━━");
+
+            var client = new RecursiveClient();
+
+            Console.WriteLine("  Building ownership tree for Prusa Research (06649114)...");
+
+            var tree = await client.BuildOwnershipTreeAsync("06649114");
+
+            if (tree != null)
+            {
+                Console.WriteLine("\n  Ownership Tree:");
+                client.PrintTree(tree, 2);
+
+                var summary = client.GetSummary(tree);
+                Console.WriteLine($"\n  Summary:");
+                Console.WriteLine($"    Total Ultimate Owners: {summary.TotalUltimateOwners}");
+            }
+        }
+    }
+}

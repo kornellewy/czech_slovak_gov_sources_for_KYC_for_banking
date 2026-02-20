@@ -1,0 +1,62 @@
+{
+  "entity": {
+    "ico_registry": "25932910",
+    "company_name_registry": "AGROFERT a.s.",
+    "legal_form": "Akciová společnost",
+    "legal_form_code": "121",
+    "status": "active",
+    "status_effective_date": null,
+    "incorporation_date": "1995-01-01",
+    "registered_address": {
+      "street": "Palackého 1320/1",
+      "city": "Praha 2 - Nové Město",
+      "postal_code": "120 00",
+      "country": "Česká republika",
+      "country_code": "CZ",
+      "full_address": "Palackého 1320/1, 120 00 Praha 2"
+    },
+    "nace_codes": [
+      "01110",
+      "01610"
+    ],
+    "vat_id": "CZ25932910",
+    "tax_id": "25932910"
+  },
+  "holders": [
+    {
+      "holder_type": "entity",
+      "role": "shareholder",
+      "name": "Agrofert Holding a.s.",
+      "ico": "25755241",
+      "jurisdiction": "CZ",
+      "citizenship": null,
+      "date_of_birth": null,
+      "residency": null,
+      "address": null,
+      "ownership_pct_direct": 100.0,
+      "voting_rights_pct": 100.0,
+      "record_effective_from": "2017-02-01",
+      "record_effective_to": null
+    }
+  ],
+  "tax_info": {
+    "vat_id": "CZ25932910",
+    "vat_status": "active",
+    "tax_id": "25932910",
+    "tax_debts": {
+      "has_debts": false,
+      "amount_eur": 0.0,
+      "details": null
+    }
+  },
+  "metadata": {
+    "source": "ARES_CZ",
+    "register_name": "Register of Economic Subjects (ARES)",
+    "register_url": "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty/25932910",
+    "retrieved_at": "2026-02-19T12:00:00Z",
+    "snapshot_reference": "ARES_CZ_25932910_20260219",
+    "parent_entity_ico": null,
+    "level": 0,
+    "is_mock": true
+  }
+}

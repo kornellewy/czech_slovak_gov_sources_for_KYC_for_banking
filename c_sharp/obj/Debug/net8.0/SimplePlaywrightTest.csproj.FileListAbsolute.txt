@@ -1,0 +1,5 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net8.0/SimplePlaywrightTest.csproj.AssemblyReference.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net8.0/SimplePlaywrightTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net8.0/SimplePlaywrightTest.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net8.0/SimplePlaywrightTest.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net8.0/SimplePlaywrightTest.csproj.CoreCompileInputs.cache

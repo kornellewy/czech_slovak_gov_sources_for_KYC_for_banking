@@ -1,0 +1,32 @@
+{
+  "entity": {
+    "ico_registry": "06649114",
+    "company_name_registry": "Prusa Research a.s."
+  },
+  "holders": [
+    {
+      "holder_type": "individual",
+      "role": "beneficial_owner",
+      "name": "Josef Průša",
+      "citizenship": "CZ",
+      "date_of_birth": "1990-05-24",
+      "residency": "CZ",
+      "address": {
+        "city": "Praha",
+        "country": "Česká republika",
+        "country_code": "CZ"
+      },
+      "ownership_pct_direct": 100.0,
+      "voting_rights_pct": 100.0
+    }
+  ],
+  "metadata": {
+    "source": "ESM_CZ",
+    "register_name": "Register of Beneficial Owners (Evidence skutečných majitelů)",
+    "retrieved_at": "2026-02-19T11:02:26.460084Z",
+    "level": 0,
+    "is_mock": true,
+    "register_url": "https://issm.justice.cz/ubo/06649114"
+  },
+  "scraped_at": "2026-02-19T11:02:26.460396Z"
+}

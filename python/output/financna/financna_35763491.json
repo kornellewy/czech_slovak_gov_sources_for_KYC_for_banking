@@ -1,0 +1,16 @@
+{
+  "source": "FINANCNA_SK",
+  "ico": "35763491",
+  "name": "Slovenská sporiteľňa, a.s.",
+  "dic": "20357634911",
+  "vat_id": "SK20357634911",
+  "vat_status": "active",
+  "tax_office": "Daňový úrad Bratislava I",
+  "tax_debts": {
+    "has_debts": false,
+    "amount_eur": 0
+  },
+  "note": "Mock data for demonstration",
+  "mock": true,
+  "retrieved_at": "2026-02-19T08:50:52.322869Z"
+}

@@ -1,0 +1,24 @@
+{
+  "source": "ESM_CZ",
+  "ico": "06649114",
+  "company_name": "Prusa Research a.s.",
+  "has_filed": true,
+  "filing_date": "2021-06-01",
+  "beneficial_owners": [
+    {
+      "name": "Josef Průša",
+      "role": "beneficial_owner",
+      "ownership_percentage": 100.0,
+      "voting_rights": 100.0,
+      "birth_date": "1990-05-24",
+      "citizenship": "CZ",
+      "address": {
+        "city": "Praha",
+        "country": "Česká republika"
+      }
+    }
+  ],
+  "note": "Mock data for demonstration",
+  "mock": true,
+  "retrieved_at": "2026-02-19T08:50:52.326273Z"
+}

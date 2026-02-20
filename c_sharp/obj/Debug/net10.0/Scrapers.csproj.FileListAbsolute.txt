@@ -1,0 +1,14 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/Scrapers
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/Scrapers.deps.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/Scrapers.runtimeconfig.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/Scrapers.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/Scrapers.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/refint/Scrapers.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/Scrapers.genruntimeconfig.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ref/Scrapers.dll

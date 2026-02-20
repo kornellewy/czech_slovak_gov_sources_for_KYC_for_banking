@@ -1,0 +1,22 @@
+{
+  "entity": {
+    "ico_registry": "05984866",
+    "company_name_registry": "DEVROCK a.s.",
+    "status": "active"
+  },
+  "holders": [],
+  "tax_info": {
+    "vat_id": "CZ05984866",
+    "vat_status": "active",
+    "tax_id": "05984866"
+  },
+  "metadata": {
+    "source": "DPH_CZ",
+    "register_name": "VAT Register (Registr plátců DPH)",
+    "retrieved_at": "2026-02-19T12:50:30.486457Z",
+    "level": 0,
+    "is_mock": true,
+    "register_url": "https://adisepo.financnispraha.cz/dpf/hledani?dic=CZ05984866"
+  },
+  "scraped_at": "2026-02-19T12:50:30.486719Z"
+}

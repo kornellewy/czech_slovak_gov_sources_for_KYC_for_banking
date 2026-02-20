@@ -1,0 +1,4 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/SkCzScrapers.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/SkCzScrapers.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/SkCzScrapers.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/SkCzScrapers.csproj.CoreCompileInputs.cache

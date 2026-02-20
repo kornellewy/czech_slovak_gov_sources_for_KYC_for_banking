@@ -1,0 +1,14 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/TestAres
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/TestAres.deps.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/TestAres.runtimeconfig.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/TestAres.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/TestAres.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/refint/TestAres.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.genruntimeconfig.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ref/TestAres.dll

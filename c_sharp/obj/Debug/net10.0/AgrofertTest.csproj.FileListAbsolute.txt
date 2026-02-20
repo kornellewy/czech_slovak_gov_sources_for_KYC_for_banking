@@ -1,0 +1,14 @@
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/AgrofertTest
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/AgrofertTest.deps.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/AgrofertTest.runtimeconfig.json
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/AgrofertTest.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/bin/Debug/net10.0/AgrofertTest.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/refint/AgrofertTest.dll
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.pdb
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/AgrofertTest.genruntimeconfig.cache
+/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ref/AgrofertTest.dll
