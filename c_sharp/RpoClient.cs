@@ -30,6 +30,15 @@ namespace Rpo
     #region Response Models
 
     /// <summary>
+    /// RPO search response (wrapped in results).
+    /// </summary>
+    public class RpoSearchResponse
+    {
+        [JsonPropertyName("results")]
+        public List<RpoSearchResult>? Results { get; set; }
+    }
+
+    /// <summary>
     /// RPO search result item.
     /// </summary>
     public class RpoSearchResult
@@ -213,9 +222,9 @@ namespace Rpo
                 // Step 1: Search by identifier (ICO) to get internal ID
                 var searchUrl = $"{BaseUrl}/search?identifier={ico}";
                 var searchResponse = await _httpClient.GetStringAsync(searchUrl);
-                var searchResults = JsonSerializer.Deserialize<List<RpoSearchResult>>(searchResponse);
+                var searchWrapper = JsonSerializer.Deserialize<RpoSearchResponse>(searchResponse);
 
-                if (searchResults == null || searchResults.Count == 0)
+                if (searchWrapper?.Results == null || searchWrapper.Results.Count == 0)
                 {
                     return new UnifiedData
                     {
@@ -237,7 +246,7 @@ namespace Rpo
                 }
 
                 // Get internal ID from first result
-                var internalId = searchResults[0].Id;
+                var internalId = searchWrapper.Results[0].Id;
                 if (!internalId.HasValue)
                 {
                     return null;

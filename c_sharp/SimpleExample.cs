@@ -69,13 +69,19 @@ class SimpleExample
             Console.WriteLine($"ICO: {result.Entity.IcoRegistry}");
             Console.WriteLine($"Status: {result.Entity.Status}");
             Console.WriteLine($"Legal Form: {result.Entity.LegalForm}");
+            Console.WriteLine($"Legal Form Code: {result.Entity.LegalFormCode}");
             Console.WriteLine($"Incorporation Date: {result.Entity.IncorporationDate}");
+            Console.WriteLine($"VAT ID: {result.Entity.VatId}");
 
             if (result.Entity.RegisteredAddress != null)
             {
                 var addr = result.Entity.RegisteredAddress;
-                Console.WriteLine($"Address: {addr.Street}, {addr.City} {addr.PostalCode}");
-                Console.WriteLine($"Country: {addr.CountryCode}");
+                Console.WriteLine($"\nAddress:");
+                Console.WriteLine($"  Street: {addr.Street}");
+                Console.WriteLine($"  City: {addr.City}");
+                Console.WriteLine($"  Postal Code: {addr.PostalCode}");
+                Console.WriteLine($"  Country: {addr.CountryCode}");
+                Console.WriteLine($"  Full: {addr.FullAddress}");
             }
 
             if (result.Holders.Count > 0)
@@ -84,10 +90,20 @@ class SimpleExample
                 foreach (var holder in result.Holders)
                 {
                     Console.WriteLine($"  - [{holder.Role}] {holder.Name}");
+                    Console.WriteLine($"    Type: {holder.HolderType}");
+                    if (holder.OwnershipPctDirect > 0)
+                        Console.WriteLine($"    Ownership: {holder.OwnershipPctDirect}%");
+                    if (!string.IsNullOrEmpty(holder.Citizenship))
+                        Console.WriteLine($"    Citizenship: {holder.Citizenship}");
                 }
             }
 
-            Console.WriteLine($"\nIs Mock: {result.Metadata.IsMock}");
+            Console.WriteLine($"\nMetadata:");
+            Console.WriteLine($"  Source: {result.Metadata.Source}");
+            Console.WriteLine($"  Register: {result.Metadata.RegisterName}");
+            Console.WriteLine($"  URL: {result.Metadata.RegisterUrl}");
+            Console.WriteLine($"  Retrieved: {result.Metadata.RetrievedAt}");
+            Console.WriteLine($"  Is Mock: {result.Metadata.IsMock}");
         }
         else
         {
