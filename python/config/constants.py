@@ -10,12 +10,22 @@ OUTPUT_DIR = BASE_DIR / "output"
 # ARES Czech Configuration
 ARES_BASE_URL = "https://ares.gov.cz/ekonomicke-subjekty-v-be/rest/ekonomicke-subjekty"
 ARES_RATE_LIMIT = 500  # requests per minute
+ARES_MAINTENANCE_WINDOWS = " Sundays 02:00-06:00 CET (occasional)"  # Generally available 24/7
 
 # Justice Czech (Commercial Register / Obchodní rejstřík) Configuration
 # URL pattern: https://or.justice.cz/ias/ui/rejstrik-$firma?ico={ICO}
 JUSTICE_BASE_URL = "https://or.justice.cz"
 JUSTICE_SEARCH_URL = f"{JUSTICE_BASE_URL}/ias/ui/rejstrik-$firma"
 JUSTICE_RATE_LIMIT = 30  # Conservative limit for web scraping
+# Maintenance: Occurs periodically, check for "Momentálně probíhá údržba" in response
+# Typical maintenance: Sunday nights 02:00-06:00 CET (varies)
+JUSTICE_MAINTENANCE_INDICATORS = [
+    "Momentálně probíhá údržba",  # Czech
+    "Momentálně probíhá údržba",  # With HTML entities
+    "Maintenance Page",
+    "Právě probíhá údržba systému",  # "System maintenance is in progress"
+]
+JUSTICE_MAINTENANCE_URL = "https://insolvence.justice.cz/wp-content/uploads/under_construction.png"
 
 # ORSR Slovak Configuration
 ORSR_BASE_URL = "https://www.orsr.sk"
@@ -30,6 +40,7 @@ STATS_API_URL = f"{STATS_BASE_URL}/api"
 # RPO Slovak Configuration (Register of Legal Entities)
 RPO_BASE_URL = "https://api.statistics.sk/rpo/v1"
 RPO_SEARCH_URL = f"{RPO_BASE_URL}/search"
+RPO_ENTITY_URL_TEMPLATE = f"{RPO_BASE_URL}/entity/{{id}}"  # Uses internal RPO ID, not ICO
 RPO_RATE_LIMIT = 100
 
 # RPVS Slovak Configuration (Register of Public Sector Partners - UBO)
@@ -47,6 +58,10 @@ FINANCNA_RATE_LIMIT = 50
 ESM_BASE_URL = "https://issm.justice.cz"
 ESM_API_KEY = os.getenv("ESM_API_KEY")  # Required for access
 ESM_RATE_LIMIT = 20
+# Access: RESTRICTED - Requires AML certification from Czech Ministry of Finance
+# Website: https://issm.justice.cz/
+# Maintenance: Periodic maintenance Sundays 02:00-06:00 CET (follows Justice.cz schedule)
+ESM_RESTRICTION_NOTICE = "ESM requires AML certification. Contact: ufo@mfcr.cz"
 
 # DPH Czech Configuration (VAT Register - Daň z přidané hodnoty)
 DPH_BASE_URL = "https://adisepo.financnispraha.cz"
@@ -134,7 +149,7 @@ USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 ARES_ENTITY_URL_TEMPLATE = f"{ARES_BASE_URL}/{{ico}}"
 ORSR_ENTITY_URL_TEMPLATE = f"{ORSR_BASE_URL}/vypis.asp?lan=en&ID={{detail_id}}&SID={{court_id}}"
 ORSR_SEARCH_URL_TEMPLATE = f"{ORSR_BASE_URL}/hladaj_ico.asp?ICO={{ico}}&lan=en"
-RPO_ENTITY_URL_TEMPLATE = f"{RPO_BASE_URL}/entity/{{ico}}"
+RPO_ENTITY_URL_TEMPLATE = f"{RPO_BASE_URL}/entity/{{id}}"  # Uses internal RPO ID
 RPVS_ENTITY_URL_TEMPLATE = f"{RPVS_BASE_URL}/PartneriVerejnehoSektora?$filter=Ico eq '{{ico}}'"
 FINANCNA_ENTITY_URL_TEMPLATE = f"{FINANCNA_BASE_URL}/tax/{{ico}}"
 ESM_ENTITY_URL_TEMPLATE = f"{ESM_BASE_URL}/ubo/{{ico}}"

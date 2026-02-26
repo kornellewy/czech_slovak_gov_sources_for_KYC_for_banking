@@ -141,6 +141,8 @@ ROLE_MAPPINGS = {
     "akcionar": "shareholder",
     "spoločník": "shareholder",
     "spolocnik": "shareholder",
+    "spoločník v.o.s. / s.r.o.": "shareholder",  # RPO-specific
+    "spolocnik v.o.s. / s.r.o.": "shareholder",  # RPO-specific
     "statutory_body": "statutory_body",
     "štatutárny orgán": "statutory_body",
     "statutarny organ": "statutory_body",

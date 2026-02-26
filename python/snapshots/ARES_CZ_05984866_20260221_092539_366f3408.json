@@ -1,0 +1,192 @@
+{
+  "ico": "05984866",
+  "obchodniJmeno": "DEVROCK a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodOkresu": 3100,
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 19,
+    "nazevSpravnihoObvodu": "Praha 1",
+    "kodMestskehoObvodu": 19,
+    "nazevMestskehoObvodu": "Praha 1",
+    "kodMestskeCastiObvodu": 500054,
+    "kodUlice": 477265,
+    "nazevMestskeCastiObvodu": "Praha 1",
+    "nazevUlice": "Václavské náměstí",
+    "cisloDomovni": 2132,
+    "kodCastiObce": 490148,
+    "cisloOrientacni": 47,
+    "nazevCastiObce": "Nové Město",
+    "kodAdresnihoMista": 81227931,
+    "psc": 11000,
+    "textovaAdresa": "Václavské náměstí 2132/47, Nové Město, 11000 Praha 1",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "001",
+  "datumVzniku": "2017-04-03",
+  "datumAktualizace": "2024-11-03",
+  "dic": "CZ05984866",
+  "icoId": "05984866",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Václavské náměstí 2132/47",
+    "radekAdresy2": "Nové Město",
+    "radekAdresy3": "11000 Praha 1"
+  },
+  "czNace2008": [
+    "6820"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "NEEXISTUJICI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "DEVROCK a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 477265,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Václavské náměstí",
+            "cisloDomovni": 2132,
+            "kodCastiObce": 490148,
+            "cisloOrientacni": 47,
+            "nazevCastiObce": "Nové Město",
+            "kodAdresnihoMista": 81227931,
+            "psc": 11000,
+            "textovaAdresa": "Václavské náměstí 2132/47, Nové Město, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "DEVROCK a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodOkresu": 3100,
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 477265,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Václavské náměstí",
+            "cisloDomovni": 2132,
+            "kodCastiObce": 490148,
+            "cisloOrientacni": 47,
+            "nazevCastiObce": "Nové Město",
+            "kodAdresnihoMista": 81227931,
+            "psc": 11000,
+            "textovaAdresa": "Václavské náměstí 2132/47, Nové Město, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "DEVROCK a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 477265,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Václavské náměstí",
+            "cisloDomovni": 2132,
+            "kodCastiObce": 490148,
+            "cisloOrientacni": 47,
+            "nazevCastiObce": "Nové Město",
+            "kodAdresnihoMista": 81227931,
+            "psc": 11000,
+            "textovaAdresa": "Václavské náměstí 2132/47, Nové Město, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 22379/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "68200"
+  ]
+}

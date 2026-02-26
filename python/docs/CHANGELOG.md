@@ -2,6 +2,57 @@
 
 All notable changes to the SK/CZ Business Registry Scrapers project.
 
+## [1.1.0] - 2026-02-21
+
+### Added - ARES Sub-Source Extraction
+
+#### Modified Files
+- `python/src/scrapers/ares_czech.py` - Added sub-source extraction functionality
+
+#### New Methods
+
+**`ARESCzechScraper.search_by_id(ico, include_subsource=False)`**
+- Added `include_subsource` parameter
+- Returns `subsource` object in result when enabled
+
+**`ARESCzechScraper._extract_subsource(data)`**
+- Extracts sub-source registration information from ARES response
+- Returns dictionary with:
+  - `registrations` - Status of each sub-source (AKTIVNI/NEEXISTUJICI/HISTORICKY)
+  - `additional_data` - Detailed data from active sub-sources (dalsiUdaje)
+  - `active_count` - Number of active sub-sources
+  - `ros_legal_form` - Legal form from ROS registry
+
+#### Sub-Sources Supported
+| Code | Registry | Description |
+|------|----------|-------------|
+| RZP | Rejstřík osob | Commercial Register (Justice.cz) |
+| ROS | RES | Resident Income Tax |
+| VR | VR | Vermont Register (Real Estate) |
+| RES | RES | Resident Income Tax |
+| DPH | DPH | VAT Register |
+| RPSH | RPSH | Statistical Register |
+| SD | SD | Tax Debts Register |
+| IR | IR | Income Tax Register |
+| RS | RS | Synonyms Register |
+| RED | RED | Register of Entrepreneurs |
+
+#### Usage Example
+```python
+from src.scrapers.ares_czech import ARESCzechScraper
+
+scraper = ARESCzechScraper()
+result = scraper.search_by_id('05984866', include_subsource=True)
+
+# Check sub-source status
+subsource = result['subsource']
+print(f"Active sub-sources: {subsource['active_count']}")
+
+# Check if company is in Commercial Register
+if subsource['registrations']['RZP']['is_active']:
+    print("Company is in Commercial Register")
+```
+
 ## [Unreleased] - 2025-02-19
 
 ### Added - Recursive UBO/IBO Search

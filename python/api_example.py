@@ -175,7 +175,7 @@ def example_7_cross_border():
 
     companies = [
         ("06649114", Country.CZECH_REPUBLIC, "Prusa Research"),
-        ("35763491", Country.SLOVAKIA, "Slovenská sporiteľňa"),
+        ("31348262", Country.SLOVAKIA, "Wolters Kluwer SR"),  # In RPO
     ]
 
     for ico, country, expected_name in companies:
@@ -183,6 +183,47 @@ def example_7_cross_border():
         if result:
             name = result['entity']['company_name_registry']
             print(f"[{country.name}] {name} ({ico})")
+
+
+def example_8_rpo_slovak():
+    """Example 8: Query Slovak RPO (Register of Legal Entities)."""
+    print("\n" + "=" * 60)
+    print("Example 8: RPO Slovak (Real API)")
+    print("=" * 60)
+
+    from src.scrapers.rpo_slovak import RpoSlovakScraper
+
+    with RpoSlovakScraper() as scraper:
+        # ZELEX, s.r.o. - verified in RPO
+        result = scraper.search_by_id("47559870")
+
+        if result and 'entity' in result:
+            entity = result['entity']
+            holders = result.get('holders', [])
+            metadata = result.get('metadata', {})
+
+            print(f"Company: {entity['company_name_registry']}")
+            print(f"ICO: {entity['ico_registry']}")
+            print(f"Legal Form: {entity.get('legal_form')}")
+            print(f"Status: {entity.get('status')}")
+            print(f"Incorporation Date: {entity.get('incorporation_date')}")
+
+            if entity.get('registered_address'):
+                addr = entity['registered_address']
+                print(f"Address: {addr.get('street')}, {addr.get('city')} {addr.get('postal_code')}")
+                print(f"Country: {addr.get('country_code')}")
+
+            if holders:
+                print(f"\nHolders ({len(holders)}):")
+                for holder in holders:
+                    print(f"  - [{holder['role']}] {holder['name']}")
+
+            print(f"\nIs Mock: {metadata.get('is_mock')}")
+
+        elif result and result.get('error') == 'not_found':
+            print("Entity not found in RPO (banks/financial institutions may not be in RPO)")
+        else:
+            print("Error fetching data")
 
 
 def main():
@@ -198,6 +239,7 @@ def main():
     example_5_search_by_name()
     example_6_batch_processing()
     example_7_cross_border()
+    example_8_rpo_slovak()
 
     print("\n" + "=" * 60)
     print(" All examples completed!")

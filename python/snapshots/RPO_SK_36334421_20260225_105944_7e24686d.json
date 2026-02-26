@@ -1,0 +1,95 @@
+{
+  "id": 210372,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "36334421",
+      "validFrom": "2004-04-03"
+    }
+  ],
+  "fullNames": [],
+  "addresses": [],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "2004-04-03"
+    }
+  ],
+  "establishment": "2004-04-03",
+  "termination": "2014-10-08",
+  "activities": [],
+  "statutoryBodies": [],
+  "stakeholders": [],
+  "legalStatuses": [
+    {
+      "value": {
+        "value": "V likvidácii",
+        "code": "2",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2013-12-31"
+    },
+    {
+      "value": {
+        "value": "Zrušená spoločnosť na základe rozhodnutia spoločníkov alebo orgánu spoločnosti",
+        "code": "10",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2014-10-08"
+    },
+    {
+      "value": {
+        "value": "Zaniknutá spoločnosť",
+        "code": "17",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2014-10-08"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "Právny dôvod výmazu zapísanej osoby z obchodného registra: Zapísaná osoba vymazaná z obchodného registra od: 8.10.2014 Právny dôvod výmazu: dobrovoľný výmaz Ukončenie likvidácie spoločnosti s ručením obmedzeným podľa § 75 Obchodného zákonníka.",
+      "validFrom": "2014-10-08"
+    },
+    {
+      "value": "Zrušenie spoločnosti: Spoločnosť zrušená od: 31.12.2013 Právny dôvod zrušenia: Rozhodnutím spoločníkov o zrušení obchodnej spoločnosti podľa § 68 ods.3 písm. b) Obchodného zákonníka.",
+      "validFrom": "2014-10-08"
+    },
+    {
+      "value": "Likvidácia: Vstup do likvidácie - dátum: 31.12.2013",
+      "validFrom": "2014-02-15"
+    }
+  ],
+  "authorizations": [
+    {
+      "value": "samostatne, v mene spoločnosti robí len úkony smerujúce k likvidácii spoločnosti, pri tejto pôsobnosti plní záväzky spoločnosti, uplatňuje pohľadávky a prijíma plnenia, zastupuje spoločnosť pred súdmi a inými orgánmi, uzaviera zmiery a dohody o zmene a zániku práv a záväzkov, nové zmluvy môže uzatvárať len v súvislosti s ukončením nevybavených obchodov",
+      "validFrom": "2014-02-15"
+    }
+  ],
+  "equities": [],
+  "deposits": [],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Trenčín",
+        "validFrom": "2004-04-03"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/14517/R",
+        "validFrom": "2004-04-03"
+      }
+    ]
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

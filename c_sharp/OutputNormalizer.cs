@@ -201,6 +201,13 @@ namespace UnifiedOutput
         [JsonPropertyName("metadata")]
         public UnifiedMetadata Metadata { get; set; } = new UnifiedMetadata();
 
+        /// <summary>
+        /// Optional sub-source registration information (e.g., from ARES).
+        /// Contains data from multiple sub-registries like RZP, ROS, VR, RES, DPH, etc.
+        /// </summary>
+        [JsonPropertyName("subsource")]
+        public object? Subsource { get; set; }
+
         public string ToJson(bool indent = true)
         {
             var options = new JsonSerializerOptions

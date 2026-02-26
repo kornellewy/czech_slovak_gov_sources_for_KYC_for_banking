@@ -55,7 +55,7 @@ class RpvsSlovakScraper(BaseScraper):
         super().__init__(enable_snapshots=enable_snapshots)
         self.http_client = HTTPClient(rate_limit=RPVS_RATE_LIMIT)
         self.api_key = api_key or RPVS_API_KEY
-        self.logger.info(f"Initialized {self.SOURCE_NAME} scraper")
+        self.log_info(f"{self.SOURCE_NAME} scraper ready (rate limit: {RPVS_RATE_LIMIT} req/min)")
 
     def _get_headers(self) -> Dict[str, str]:
         """Get headers for API requests.
@@ -77,13 +77,21 @@ class RpvsSlovakScraper(BaseScraper):
         Returns:
             Dictionary with UBO data in unified format or None if not found
         """
-        self.logger.info(f"Searching RPVS by ICO: {ico}")
+        import time
+        self.log_search_start(identifier=ico, search_type="by_ICO")
 
         # Use OData filter syntax: $filter=Ico eq '35763491'
         url = f"{self.ODATA_ENDPOINT}?$filter=Ico eq '{ico}'"
 
         try:
+            self.log_request("GET", url)
+            start = time.time()
+
             response = self.http_client.get(url, headers=self._get_headers())
+
+            duration_ms = (time.time() - start) * 1000
+            self.log_response(url, response.status_code, duration_ms)
+
             data = response.json()
 
             # OData responses have a "value" array with results
@@ -92,18 +100,24 @@ class RpvsSlovakScraper(BaseScraper):
             if results:
                 # Take first matching result
                 result = results[0]
-                self.logger.info(f"Found RPVS data for {ico}")
+                self.log_info(f"Found RPVS data for {ico}")
 
                 if self.enable_snapshots:
                     self.save_snapshot(result, ico, self.SOURCE_NAME)
 
-                return self._parse_response(result, ico)
+                self.log_parse_start("OData")
+                parsed = self._parse_response(result, ico)
+                self.log_parse_complete("OData", items_found=1)
+                self.log_search_complete(results_count=1, identifier=ico)
+                return parsed
             else:
-                self.logger.warning(f"No RPVS data found for {ico}")
+                self.log_warning(f"No RPVS data found for {ico}")
+                self.log_mock_fallback("No data in RPVS database")
                 return self._get_mock_data(ico)
 
         except Exception as e:
-            self.logger.error(f"RPVS API request failed: {e}")
+            self.log_error("search_by_id", e, ico=ico)
+            self.log_mock_fallback(f"API unavailable: {e}")
             return self._get_mock_data(ico)
 
     def search_by_name(self, name: str) -> List[Dict[str, Any]]:

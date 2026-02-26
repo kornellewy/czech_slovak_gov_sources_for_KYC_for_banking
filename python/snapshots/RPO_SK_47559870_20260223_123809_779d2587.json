@@ -1,0 +1,253 @@
+{
+  "id": 322455,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "47559870",
+      "validFrom": "2013-12-05"
+    }
+  ],
+  "fullNames": [
+    {
+      "value": "ZELEX, s.r.o.",
+      "validFrom": "2013-12-05"
+    }
+  ],
+  "addresses": [
+    {
+      "validFrom": "2013-12-05",
+      "street": "Kuraľany",
+      "regNumber": 0,
+      "buildingNumber": "49",
+      "postalCodes": [
+        "93564"
+      ],
+      "municipality": {
+        "value": "Kuraľany",
+        "code": "SK0232502464",
+        "codelistCode": "CL000025"
+      },
+      "country": {
+        "value": "Slovenská republika",
+        "code": "703",
+        "codelistCode": "CL000086"
+      }
+    }
+  ],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "2013-12-05"
+    }
+  ],
+  "establishment": "2013-12-05",
+  "activities": [
+    {
+      "economicActivityDescription": "Kúpa tovaru na účely jeho predaja konečnému spotrebiteľovi (maloobchod) alebo iným prevádzkovateľom živnosti (veľkoobchod)",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Sprostredkovateľská činnosť v oblasti obchodu",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Sprostredkovateľská činnosť v oblasti služieb",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Poskytovanie služieb v poľnohospodárstve a záhradníctve",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Poskytovanie služieb rýchleho občerstvenia v spojení s predajom na priamu konzumáciu",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Nákladná cestná doprava vykonávaná vozidlami s celkovou hmotnosťou do 3,5 t vrátane prípojného vozidla",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Údržba motorových vozidiel bez zásahu do motorickej časti vozidla",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Poskytovanie služby vedenia cudzieho motorového vozidla",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Prenájom hnuteľných vecí",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Administratívne služby",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Vedenie účtovníctva",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Reklamné a marketingové služby",
+      "validFrom": "2013-12-05"
+    },
+    {
+      "economicActivityDescription": "Poľnohospodárstvo a lesníctvo včítane predaja nespracovaných poľnohospodárskych a lesných výrobkov za účelom spracovania alebo ďalšieho predaja.",
+      "validFrom": "2013-12-21"
+    }
+  ],
+  "statutoryBodies": [
+    {
+      "stakeholderType": {
+        "value": "Konateľ",
+        "code": "3",
+        "codelistCode": "CL010113"
+      },
+      "validFrom": "2013-12-05",
+      "address": {
+        "regNumber": 0,
+        "buildingNumber": "43",
+        "postalCodes": [
+          "935 64"
+        ],
+        "municipality": {
+          "value": "Kuraľany",
+          "code": "SK0232502464",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Rudolf Varga",
+        "familyNames": [
+          "Varga"
+        ],
+        "givenNames": [
+          "Rudolf"
+        ]
+      }
+    }
+  ],
+  "stakeholders": [
+    {
+      "stakeholderType": {
+        "value": "Spoločník v.o.s. / s.r.o.",
+        "code": "99",
+        "codelistCode": "CL010109"
+      },
+      "validFrom": "2022-05-23",
+      "address": {
+        "regNumber": 0,
+        "buildingNumber": "43",
+        "postalCodes": [
+          "93564"
+        ],
+        "municipality": {
+          "value": "Kuraľany",
+          "code": "SK0232502464",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Rudolf Varga",
+        "familyNames": [
+          "Varga"
+        ],
+        "givenNames": [
+          "Rudolf"
+        ]
+      }
+    }
+  ],
+  "authorizations": [
+    {
+      "value": "Konateľ koná v mene spoločnosti samostatne.",
+      "validFrom": "2013-12-05"
+    }
+  ],
+  "equities": [
+    {
+      "validFrom": "2013-12-05",
+      "value": 9000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    },
+    {
+      "validFrom": "2013-12-05",
+      "valuePaid": 9000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "deposits": [
+    {
+      "validFrom": "2013-12-05",
+      "personName": {
+        "formatedName": "Rudolf Varga",
+        "familyNames": [
+          "Varga"
+        ],
+        "givenNames": [
+          "Rudolf"
+        ]
+      },
+      "amount": 9000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Nitra",
+        "validFrom": "2013-12-05"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/36154/N",
+        "validFrom": "2013-12-05"
+      }
+    ]
+  },
+  "statisticalCodes": {
+    "statCodesActualization": "2026-01-01",
+    "mainActivity": {
+      "value": "Ostatné pomocné obchodné činnosti i. n.",
+      "code": "8299",
+      "codelistCode": "CL010579"
+    },
+    "esa2010": {
+      "value": "Národné súkromné nefinančné korporácie",
+      "code": "11002",
+      "codelistCode": "CL010010"
+    }
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

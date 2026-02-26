@@ -1,0 +1,245 @@
+{
+  "ico": "61672190",
+  "obchodniJmeno": "ORLEN Unipetrol a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 43,
+    "nazevSpravnihoObvodu": "Praha 4",
+    "kodMestskehoObvodu": 43,
+    "nazevMestskehoObvodu": "Praha 4",
+    "kodMestskeCastiObvodu": 500119,
+    "kodUlice": 456284,
+    "nazevMestskeCastiObvodu": "Praha 4",
+    "nazevUlice": "Milevská",
+    "cisloDomovni": 2095,
+    "kodCastiObce": 400165,
+    "cisloOrientacni": 5,
+    "nazevCastiObce": "Krč",
+    "kodAdresnihoMista": 77877616,
+    "psc": 14000,
+    "textovaAdresa": "Milevská 2095/5, Krč, 14000 Praha 4",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "1995-02-17",
+  "datumAktualizace": "2026-02-04",
+  "icoId": "61672190",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Milevská 2095/5",
+    "radekAdresy2": "Krč",
+    "radekAdresy3": "14000 Praha 4"
+  },
+  "czNace2008": [
+    "461",
+    "620",
+    "6820",
+    "70220",
+    "7219",
+    "74901",
+    "821",
+    "8559"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "NEEXISTUJICI",
+    "stavZdrojeSkDph": "AKTIVNI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ORLEN Unipetrol a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 456284,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Milevská",
+            "cisloDomovni": 2095,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 5,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 77877616,
+            "psc": 14000,
+            "textovaAdresa": "Milevská 2095/5, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ORLEN Unipetrol a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 456284,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Milevská",
+            "cisloDomovni": 2095,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 5,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 77877616,
+            "psc": 14000,
+            "textovaAdresa": "Milevská 2095/5, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ORLEN Unipetrol a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 456284,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Milevská",
+            "cisloDomovni": 2095,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 5,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 77877616,
+            "psc": 14000,
+            "textovaAdresa": "Milevská 2095/5, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "ORLEN Unipetrol a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 456284,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Milevská",
+            "cisloDomovni": 2095,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 5,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 77877616,
+            "psc": 14000,
+            "textovaAdresa": "Milevská 2095/5, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 3020/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "70200",
+    "74990",
+    "82100",
+    "8559",
+    "68200",
+    "62",
+    "72100",
+    "461"
+  ],
+  "subRegistrSzr": "szr",
+  "dicSkDph": "CZ699000139"
+}

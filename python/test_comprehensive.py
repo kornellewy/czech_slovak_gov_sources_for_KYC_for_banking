@@ -292,37 +292,64 @@ class TestJusticeCzechScraper(unittest.TestCase):
 
     def test_source_name(self):
         """Test source name."""
-        scraper = JusticeCzechScraper()
+        scraper = JusticeCzechScraper(use_playwright=False)
         self.assertEqual(scraper.SOURCE_NAME, "JUSTICE_CZ")
 
     def test_get_or_data_mock(self):
-        """Test get OR data with mock."""
-        scraper = JusticeCzechScraper()
+        """Test get OR data returns unified format."""
+        scraper = JusticeCzechScraper(use_playwright=False)
         result = scraper.get_or_data("06649114")
         self.assertIsNotNone(result)
-        self.assertEqual(result["ico"], "06649114")
+        # Unified format has ico in entity.ico_registry
+        self.assertIn("entity", result)
+        self.assertEqual(result["entity"]["ico_registry"], "06649114")
+
+    def test_get_or_data_structure(self):
+        """Test get OR data has unified format structure."""
+        scraper = JusticeCzechScraper(use_playwright=False)
+        result = scraper.get_or_data("06649114")
+        self.assertIsNotNone(result)
+        # Check unified format keys
+        self.assertIn("entity", result)
+        self.assertIn("holders", result)
+        self.assertIn("metadata", result)
+        # Check metadata
+        self.assertEqual(result["metadata"]["source"], "JUSTICE_CZ")
 
     def test_get_filing_history(self):
         """Test get filing history."""
-        scraper = JusticeCzechScraper()
+        scraper = JusticeCzechScraper(use_playwright=False)
         history = scraper.get_filing_history("06649114")
         self.assertIsInstance(history, list)
 
     def test_get_shareholders(self):
         """Test get shareholders."""
-        scraper = JusticeCzechScraper()
+        scraper = JusticeCzechScraper(use_playwright=False)
         shareholders = scraper.get_shareholders("06649114")
         self.assertIsInstance(shareholders, list)
 
     def test_get_board_members(self):
         """Test get board members."""
-        scraper = JusticeCzechScraper()
+        scraper = JusticeCzechScraper(use_playwright=False)
         members = scraper.get_board_members("06649114")
         self.assertIsInstance(members, list)
 
-    def test_supplement_ares_data(self):
-        """Test supplement ARES data."""
-        scraper = JusticeCzechScraper()
+    def test_supplement_ares_data_with_entity(self):
+        """Test supplement ARES data with entity structure."""
+        scraper = JusticeCzechScraper(use_playwright=False)
+        # ARES data may come with entity structure
+        ares_data = {
+            "entity": {"ico_registry": "06649114"},
+            "holders": [],
+            "metadata": {"source": "ARES_CZ"}
+        }
+        result = scraper.supplement_ares_data(ares_data)
+        self.assertIn("commercial_register", result)
+
+    def test_supplement_ares_data_with_top_level_ico(self):
+        """Test supplement ARES data with top-level ico."""
+        scraper = JusticeCzechScraper(use_playwright=False)
+        # ARES data may also have ico at top level
         ares_data = {"ico": "06649114", "name": "Test"}
         result = scraper.supplement_ares_data(ares_data)
         self.assertIn("commercial_register", result)

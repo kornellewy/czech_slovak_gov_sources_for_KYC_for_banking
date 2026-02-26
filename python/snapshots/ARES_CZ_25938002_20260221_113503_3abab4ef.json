@@ -1,0 +1,234 @@
+{
+  "ico": "25938002",
+  "obchodniJmeno": "FOXCONN CZ s.r.o.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 94,
+    "nazevKraje": "Pardubický kraj",
+    "kodOkresu": 3606,
+    "nazevOkresu": "Pardubice",
+    "kodObce": 555134,
+    "nazevObce": "Pardubice",
+    "kodMestskeCastiObvodu": 555096,
+    "kodUlice": 375225,
+    "nazevMestskeCastiObvodu": "Pardubice IV",
+    "nazevUlice": "U Zámečku",
+    "cisloDomovni": 27,
+    "kodCastiObce": 117820,
+    "nazevCastiObce": "Pardubičky",
+    "kodAdresnihoMista": 7724225,
+    "psc": 53003,
+    "textovaAdresa": "U Zámečku 27, Pardubičky, 53003 Pardubice",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "112",
+  "pravniFormaRos": "112",
+  "financniUrad": "013",
+  "datumVzniku": "2000-05-18",
+  "datumAktualizace": "2026-02-04",
+  "dic": "CZ25938002",
+  "icoId": "25938002",
+  "adresaDorucovaci": {
+    "radekAdresy1": "U Zámečku 27",
+    "radekAdresy2": "Pardubičky",
+    "radekAdresy3": "53003 Pardubice"
+  },
+  "czNace2008": [
+    "26200",
+    "52",
+    "52290",
+    "6820",
+    "683",
+    "69200",
+    "7490",
+    "952",
+    "G",
+    "J"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "FOXCONN CZ s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 94,
+            "nazevKraje": "Pardubický kraj",
+            "kodOkresu": 3606,
+            "nazevOkresu": "Pardubice",
+            "kodObce": 555134,
+            "nazevObce": "Pardubice",
+            "kodMestskeCastiObvodu": 555096,
+            "kodUlice": 375225,
+            "nazevMestskeCastiObvodu": "Pardubice IV",
+            "nazevUlice": "U Zámečku",
+            "cisloDomovni": 27,
+            "kodCastiObce": 117820,
+            "nazevCastiObce": "Pardubičky",
+            "kodAdresnihoMista": 7724225,
+            "psc": 53003,
+            "textovaAdresa": "U Zámečku 27, Pardubičky, 53003 Pardubice",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "pravniFormaRos": "112",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "FOXCONN CZ s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 94,
+            "nazevKraje": "Pardubický kraj",
+            "kodOkresu": 3606,
+            "nazevOkresu": "Pardubice",
+            "kodObce": 555134,
+            "nazevObce": "Pardubice",
+            "kodMestskeCastiObvodu": 555096,
+            "kodUlice": 375225,
+            "nazevMestskeCastiObvodu": "Pardubice IV",
+            "nazevUlice": "U Zámečku",
+            "cisloDomovni": 27,
+            "kodCastiObce": 117820,
+            "nazevCastiObce": "Pardubičky",
+            "kodAdresnihoMista": 7724225,
+            "psc": 53003,
+            "textovaAdresa": "U Zámečku 27, Pardubičky, 53003 Pardubice",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "112",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "FOXCONN CZ s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 94,
+            "nazevKraje": "Pardubický kraj",
+            "kodOkresu": 3606,
+            "nazevOkresu": "Pardubice",
+            "kodObce": 555134,
+            "nazevObce": "Pardubice",
+            "kodMestskeCastiObvodu": 555096,
+            "kodUlice": 375225,
+            "nazevMestskeCastiObvodu": "Pardubice IV",
+            "nazevUlice": "U Zámečku",
+            "cisloDomovni": 27,
+            "kodCastiObce": 117820,
+            "nazevCastiObce": "Pardubičky",
+            "kodAdresnihoMista": 7724225,
+            "psc": 53003,
+            "textovaAdresa": "U Zámečku 27, Pardubičky, 53003 Pardubice",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "FOXCONN CZ s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 94,
+            "nazevKraje": "Pardubický kraj",
+            "kodOkresu": 3606,
+            "nazevOkresu": "Pardubice",
+            "kodObce": 555134,
+            "nazevObce": "Pardubice",
+            "kodMestskeCastiObvodu": 555096,
+            "kodUlice": 375225,
+            "nazevMestskeCastiObvodu": "Pardubice IV",
+            "nazevUlice": "U Zámečku",
+            "cisloDomovni": 27,
+            "kodCastiObce": 117820,
+            "nazevCastiObce": "Pardubičky",
+            "kodAdresnihoMista": 7724225,
+            "psc": 53003,
+            "textovaAdresa": "U Zámečku 27, Pardubičky, 53003 Pardubice",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "spisovaZnacka": "C 16095/KSHK",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "68200",
+    "52",
+    "74990",
+    "69200",
+    "26200",
+    "G",
+    "K",
+    "683",
+    "952",
+    "52260"
+  ],
+  "subRegistrSzr": "szr"
+}

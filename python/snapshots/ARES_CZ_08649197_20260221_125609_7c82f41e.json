@@ -1,0 +1,240 @@
+{
+  "ico": "08649197",
+  "obchodniJmeno": "EP Group, a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 19,
+    "nazevSpravnihoObvodu": "Praha 1",
+    "kodMestskehoObvodu": 19,
+    "nazevMestskehoObvodu": "Praha 1",
+    "kodMestskeCastiObvodu": 500054,
+    "kodUlice": 463671,
+    "nazevMestskeCastiObvodu": "Praha 1",
+    "nazevUlice": "Pařížská",
+    "cisloDomovni": 130,
+    "kodCastiObce": 127001,
+    "cisloOrientacni": 26,
+    "nazevCastiObce": "Josefov",
+    "kodAdresnihoMista": 21693641,
+    "psc": 11000,
+    "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "2019-10-30",
+  "datumAktualizace": "2025-11-14",
+  "dic": "CZ08649197",
+  "icoId": "08649197",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Pařížská 130/26",
+    "radekAdresy2": "Josefov",
+    "radekAdresy3": "11000 Praha 1"
+  },
+  "czNace2008": [
+    "46900",
+    "47",
+    "6492",
+    "68320",
+    "70220",
+    "772"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "EP Group, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "EP Group, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "EP Group, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "EP Group, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 24846/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "64220",
+    "47",
+    "68320",
+    "772",
+    "46900",
+    "70200"
+  ]
+}

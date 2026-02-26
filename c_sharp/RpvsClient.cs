@@ -52,6 +52,8 @@ namespace Rpvs
             Timeout = TimeSpan.FromSeconds(30)
         };
 
+        private readonly ScraperLogger _logger = new ScraperLogger("RPVS", enableDebug: false);
+
         // Mock database for fallback when API is unavailable
         private static readonly Dictionary<string, (string CompanyName, List<Dictionary<string, object?>> Holders)> MockDatabase = new()
         {
@@ -122,12 +124,21 @@ namespace Rpvs
         /// </summary>
         public async Task<UnifiedData?> SearchByICOAsync(string ico)
         {
+            _logger.LogSearchStart(ico, "by_ICO");
+
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
+
             try
             {
                 // OData filter syntax: $filter=Ico eq '35763491'
                 string url = $"{ODataEndpoint}?$filter=Ico eq '{ico}'";
+                _logger.LogRequest("GET", url);
 
                 var response = await httpClient.GetAsync(url);
+
+                stopwatch.Stop();
+                _logger.LogResponse(url, (int)response.StatusCode, stopwatch.ElapsedMilliseconds);
+
                 if (response.IsSuccessStatusCode)
                 {
                     var json = await response.Content.ReadAsStringAsync();
@@ -137,13 +148,21 @@ namespace Rpvs
                     if (odataResponse?.Value != null && odataResponse.Value.Count > 0)
                     {
                         var entity = odataResponse.Value[0];
-                        return ParseODataResponse(entity, ico);
+                        _logger.LogParseStart("OData");
+                        var result = ParseODataResponse(entity, ico);
+                        _logger.LogParseComplete("OData", 1);
+                        _logger.LogSearchComplete(1, ico);
+                        return result;
                     }
                 }
+
+                _logger.LogMockFallback("No data found in RPVS");
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"RPVS API request failed: {ex.Message}");
+                _logger.LogResponse($"{ODataEndpoint}?$filter=Ico eq '{ico}'", 500, stopwatch.ElapsedMilliseconds);
+                _logger.LogError("SearchByICOAsync", ex, new { ico });
+                _logger.LogMockFallback($"API unavailable: {ex.Message}");
             }
 
             // Fall back to mock data

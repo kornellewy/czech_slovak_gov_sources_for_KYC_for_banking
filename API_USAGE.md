@@ -473,14 +473,129 @@ Both Python and C# return the same unified structure:
 
 ---
 
+## Advanced Features
+
+### ARES Sub-Source Extraction
+
+The ARES Czech scraper can extract data from multiple sub-registries embedded in the main ARES response. This includes data from:
+
+| Sub-source | Registry | Description |
+|------------|----------|-------------|
+| **RZP** | Commercial Register | Justice.cz (Obchodní rejstřík) |
+| **ROS** | RES | Resident Income Tax |
+| **VR** | Vermont | Separated Real Estate |
+| **RES** | RES | Resident Income Tax |
+| **DPH** | DPH | VAT Register |
+| **RPSH** | RPSH | Statistical Register |
+| **SD** | SD | Tax Debts Register |
+| **IR** | IR | Income Tax Register |
+
+#### Python Usage
+
+```python
+from src.scrapers.ares_czech import ARESCzechScraper
+
+scraper = ARESCzechScraper()
+
+# Basic search (without sub-sources)
+result = scraper.search_by_id('05984866')
+
+# Search with sub-source information
+result = scraper.search_by_id('05984866', include_subsource=True)
+
+if result and 'subsource' in result:
+    subsource = result['subsource']
+
+    # Check which registries have data
+    print(f"Active sub-sources: {subsource['active_count']}")
+
+    for code, info in subsource['registrations'].items():
+        if info['is_active']:
+            print(f"  ✅ {code}: {info['status']}")
+
+    # Access additional data from sub-sources
+    for source, data in subsource['additional_data'].items():
+        print(f"{source}: {data}")
+```
+
+#### C# Usage
+
+```csharp
+using Ares;
+using UnifiedOutput;
+
+var client = new AresClient();
+
+// Basic search (without sub-sources)
+var result = await client.SearchByICOAsync("05984866");
+
+// Search with sub-source information
+var result = await client.SearchByICOAsync("05984866", includeSubsource: true);
+
+if (result?.Subsource is AresSubsource subsource)
+{
+    // Check which registries have data
+    Console.WriteLine($"Active sub-sources: {subsource.ActiveCount}");
+
+    foreach (var reg in subsource.Registrations)
+    {
+        if (reg.Value.IsActive)
+        {
+            Console.WriteLine($"  ✅ {reg.Key}: {reg.Value.Status}");
+        }
+    }
+
+    // Access additional data from sub-sources
+    foreach (var data in subsource.AdditionalData)
+    {
+        Console.WriteLine($"{data.Key}: {data.Value.CompanyName}");
+    }
+}
+```
+
+#### Sub-Source Response Structure
+
+```json
+{
+  "subsource": {
+    "registrations": {
+      "RZP": {"status": "NEEXISTUJICI", "is_active": false, "name": "Rejstřík osob"},
+      "Ros": {"status": "AKTIVNI", "is_active": true, "name": "RES"},
+      "Vr": {"status": "AKTIVNI", "is_active": true, "name": "Vermont Register"},
+      "Dph": {"status": "AKTIVNI", "is_active": true, "name": "DPH"}
+    },
+    "additional_data": {
+      "VR": {
+        "company_name": "DEVROCK a.s.",
+        "address": {"street": "...", "city": "..."},
+        "legal_form": "121",
+        "file_reference": "B 22379/MSPH"
+      }
+    },
+    "active_count": 3,
+    "ros_legal_form": "121"
+  }
+}
+```
+
+#### Use Cases
+
+1. **Check if company is in Commercial Register (RZP)** before querying justice.cz
+2. **Get Vermont Register file references** for real estate records
+3. **Verify VAT status** from DPH registry
+4. **Identify all active registries** for a company
+
+---
+
 ## Best Practices
 
 1. **Always check for null/None** - Companies may not exist in the registry
 2. **Check `is_mock` flag** - Indicates if data is from a fallback source
-3. **Use `get_full_info()`** - Combines data from multiple sources
+3. **Use `include_subsource=True`** for ARES to get complete registry status
 4. **Handle rate limits** - Built-in rate limiting prevents blocking
 5. **Cache results** - Company data doesn't change frequently
 6. **Use appropriate country** - CZ and SK have different registries
+7. **Check RZP status before querying justice.cz** - Not all companies are in Commercial Register
 
 ---
 

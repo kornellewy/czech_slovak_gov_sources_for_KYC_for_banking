@@ -1,0 +1,245 @@
+{
+  "ico": "27433722",
+  "obchodniJmeno": "Livesport s.r.o.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 51,
+    "nazevSpravnihoObvodu": "Praha 5",
+    "kodMestskehoObvodu": 51,
+    "nazevMestskehoObvodu": "Praha 5",
+    "kodMestskeCastiObvodu": 539694,
+    "kodUlice": 503533,
+    "nazevMestskeCastiObvodu": "Praha 13",
+    "nazevUlice": "Bucharova",
+    "cisloDomovni": 2928,
+    "kodCastiObce": 490172,
+    "cisloOrientacni": 14,
+    "cisloOrientacniPismeno": "a",
+    "nazevCastiObce": "Stodůlky",
+    "kodAdresnihoMista": 77912926,
+    "psc": 15800,
+    "textovaAdresa": "Bucharova 2928/14a, Stodůlky, 15800 Praha 5",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "112",
+  "pravniFormaRos": "112",
+  "financniUrad": "013",
+  "datumVzniku": "2006-03-20",
+  "datumAktualizace": "2025-10-16",
+  "dic": "CZ27433722",
+  "icoId": "27433722",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Bucharova 2928/14a",
+    "radekAdresy2": "Stodůlky",
+    "radekAdresy3": "15800 Praha 5"
+  },
+  "czNace2008": [
+    "581",
+    "59",
+    "620",
+    "63",
+    "73110",
+    "6820"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Livesport s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 132,
+            "nazevSpravnihoObvodu": "Praha 13",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 539694,
+            "kodUlice": 503533,
+            "nazevMestskeCastiObvodu": "Praha 13",
+            "nazevUlice": "Bucharova",
+            "cisloDomovni": 2928,
+            "kodCastiObce": 490172,
+            "cisloOrientacni": 14,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Stodůlky",
+            "kodAdresnihoMista": 77912926,
+            "psc": 15800,
+            "textovaAdresa": "Bucharova 2928/14a, Stodůlky, 15800 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "pravniFormaRos": "112",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Livesport s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 539694,
+            "kodUlice": 503533,
+            "nazevMestskeCastiObvodu": "Praha 13",
+            "nazevUlice": "Bucharova",
+            "cisloDomovni": 2928,
+            "kodCastiObce": 490172,
+            "cisloOrientacni": 14,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Stodůlky",
+            "kodAdresnihoMista": 77912926,
+            "psc": 15800,
+            "textovaAdresa": "Bucharova 2928/14a, Stodůlky, 15800 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "112",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Livesport s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 539694,
+            "kodUlice": 503533,
+            "nazevMestskeCastiObvodu": "Praha 13",
+            "nazevUlice": "Bucharova",
+            "cisloDomovni": 2928,
+            "kodCastiObce": 490172,
+            "cisloOrientacni": 14,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Stodůlky",
+            "kodAdresnihoMista": 77912926,
+            "psc": 15800,
+            "textovaAdresa": "Bucharova 2928/14a, Stodůlky, 15800 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Livesport s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 539694,
+            "kodUlice": 503533,
+            "nazevMestskeCastiObvodu": "Praha 13",
+            "nazevUlice": "Bucharova",
+            "cisloDomovni": 2928,
+            "kodCastiObce": 490172,
+            "cisloOrientacni": 14,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Stodůlky",
+            "kodAdresnihoMista": 77912926,
+            "psc": 15800,
+            "textovaAdresa": "Bucharova 2928/14a, Stodůlky, 15800 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "spisovaZnacka": "C 113331/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "63",
+    "59",
+    "68200",
+    "581",
+    "62",
+    "73110"
+  ]
+}

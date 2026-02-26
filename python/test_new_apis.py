@@ -33,11 +33,11 @@ from src.scrapers.vr_czech import VrCzechScraper
 from src.scrapers.res_czech import ResCzechScraper
 
 
-# Test ICOs for Slovak entities
+# Test ICOs for Slovak entities (entities confirmed in RPO)
+# Note: Banks and financial institutions are NOT in RPO (they're in NBS register)
 TEST_ICOS_SLOVAK = {
-    "35763491": "Slovenská sporiteľňa",
-    "36246621": "Doprastav",
-    "44103755": "Slovak Telekom"
+    "31348262": "Wolters Kluwer SR s. r. o.",  # In RPO
+    "47559870": "ZELEX, s.r.o.",  # In RPO
 }
 
 # Test ICOs for Czech entities
@@ -54,33 +54,48 @@ def test_rpo_slovak(ico: str = None) -> bool:
     print("  Testing RPO Slovak (Register of Legal Entities)")
     print("=" * 70)
 
-    test_ico = ico or "35763491"
+    # Use entities confirmed in RPO (not banks - they're in NBS register)
+    test_ico = ico or "47559870"
     expected_name = TEST_ICOS_SLOVAK.get(test_ico, "Unknown")
 
     try:
         with RpoSlovakScraper() as scraper:
             print(f"\nSearching for ICO: {test_ico}")
-            entity = scraper.search_by_id(test_ico)
+            result = scraper.search_by_id(test_ico)
 
-            if entity:
-                print(f"  ✓ Found: {entity.get('name')}")
-                print(f"  ICO: {entity.get('ico')}")
+            # Check for not_found error
+            if result and result.get('error') == 'not_found':
+                print(f"  ✗ Entity not found in RPO (banks/financial institutions may not be in RPO)")
+                print("\nRPO Slovak: FAILED\n")
+                return False
+
+            if result and 'entity' in result:
+                entity = result['entity']
+                holders = result.get('holders', [])
+                metadata = result.get('metadata', {})
+
+                print(f"  ✓ Found: {entity.get('company_name_registry')}")
+                print(f"  ICO: {entity.get('ico_registry')}")
                 print(f"  Legal Form: {entity.get('legal_form')}")
+                print(f"  Legal Form Code: {entity.get('legal_form_code')}")
                 print(f"  Status: {entity.get('status')}")
-                print(f"  Court: {entity.get('court')}")
+                print(f"  Incorporation Date: {entity.get('incorporation_date')}")
+                print(f"  Is Mock: {metadata.get('is_mock')}")
 
-                if entity.get('address'):
-                    addr = entity['address']
-                    full = addr.get('full_address')
-                    if not full and addr.get('street'):
-                        full = f"{addr.get('street')}, {addr.get('city')}"
+                if entity.get('registered_address'):
+                    addr = entity['registered_address']
+                    parts = [addr.get('street'), addr.get('city'), addr.get('postal_code')]
+                    full = ', '.join(p for p in parts if p)
                     print(f"  Address: {full}")
+                    print(f"  Country: {addr.get('country_code')}")
 
-                if 'note' in entity:
-                    print(f"  Note: {entity['note']}")
+                if holders:
+                    print(f"  Holders ({len(holders)}):")
+                    for holder in holders:
+                        print(f"    - {holder.get('role')}: {holder.get('name')}")
 
                 # Save result
-                scraper.save_to_json(entity, f"rpo_{test_ico}.json")
+                scraper.save_to_json(result, f"rpo_{test_ico}.json")
                 print(f"  ✓ Saved to output/rpo/rpo_{test_ico}.json")
 
                 print("\nRPO Slovak: PASSED\n")

@@ -71,7 +71,7 @@ class ORSRSlovakScraper(BaseScraper):
         """
         super().__init__(enable_snapshots=enable_snapshots)
         self.http_client = HTTPClient(rate_limit=ORSR_RATE_LIMIT)
-        self.logger.info(f"Initialized {self.SOURCE_NAME} scraper")
+        self.log_info(f"{self.SOURCE_NAME} scraper ready (rate limit: {ORSR_RATE_LIMIT} req/min)")
 
     def search_by_id(self, ico: str) -> Optional[Dict[str, Any]]:
         """Search company by ICO (identification number).
@@ -82,29 +82,55 @@ class ORSRSlovakScraper(BaseScraper):
         Returns:
             Dictionary with company data or None if not found
         """
-        self.logger.info(f"Searching ORSR by ICO: {ico}")
+        import time
+        self.log_search_start(identifier=ico.strip(), search_type="by_ICO")
 
         try:
             # Search by ICO
             params = {"ICO": ico.strip(), "lan": "en"}
+            url = f"{ORSR_SEARCH_URL}?ICO={ico.strip()}&lan=en"
+
+            self.log_request("GET", url)
+            start = time.time()
+
             html = self.http_client.get_html(ORSR_SEARCH_URL, params=params)
+
+            duration_ms = (time.time() - start) * 1000
+            self.log_response(url, 200, duration_ms)
 
             # Save snapshot if enabled
             if self.enable_snapshots:
                 self.save_snapshot({"html": html}, ico, self.SOURCE_NAME)
 
             # Parse results
-            results = self._parse_search_results(html)
+            self.log_parse_start("HTML")
+            results = self._parse_search_results(html, ico=ico)
 
             if not results:
-                self.logger.warning(f"No entity found with ICO: {ico}")
+                self.log_warning(f"No entity found with ICO: {ico}")
                 return None
 
-            # Return first result with full details
-            return results[0]
+            first_result = results[0]
+            self.log_parse_complete("HTML", items_found=len(results))
+
+            # Try to fetch complete data from detail page
+            detail_url = first_result.get("detail_url")
+            if detail_url:
+                self.log_debug(f"Fetching detail page: {detail_url}")
+                detail_result = self.get_company_detail(detail_url)
+                if detail_result:
+                    self.log_search_complete(results_count=1, identifier=ico)
+                    return detail_result
+                else:
+                    self.log_warning("Failed to fetch detail page, using basic info")
+
+            self.log_search_complete(results_count=1, identifier=ico)
+
+            # Return first result (with or without detail data)
+            return first_result
 
         except Exception as e:
-            self.logger.error(f"Error searching ORSR for {ico}: {e}")
+            self.log_error("search_by_id", e, ico=ico)
             return None
 
     def search_by_name(self, name: str) -> List[Dict[str, Any]]:
@@ -130,11 +156,12 @@ class ORSRSlovakScraper(BaseScraper):
             self.logger.error(f"Error searching ORSR for {name}: {e}")
             return []
 
-    def _parse_search_results(self, html: str) -> List[Dict[str, Any]]:
+    def _parse_search_results(self, html: str, ico: Optional[str] = None) -> List[Dict[str, Any]]:
         """Parse search results HTML.
 
         Args:
             html: HTML content from search page
+            ico: Optional ICO (when searching by ID) to include in results
 
         Returns:
             List of company dictionaries
@@ -152,48 +179,80 @@ class ORSRSlovakScraper(BaseScraper):
             for row in rows:
                 cells = row.find_all('td')
                 if len(cells) >= 3:
-                    # Try to extract company data
-                    link = row.find('a')
-                    if link:
-                        company = self._parse_company_row(row)
+                    # Check if this is a data row (has vypis.asp link to detail page)
+                    # This filters out header rows and other non-result rows
+                    has_detail_link = False
+                    for cell in cells:
+                        links = cell.find_all('a')
+                        for link in links:
+                            href = link.get('href', '')
+                            if 'vypis.asp' in href and 'ID=' in href:
+                                has_detail_link = True
+                                break
+                        if has_detail_link:
+                            break
+
+                    if has_detail_link:
+                        company = self._parse_company_row(row, ico=ico)
                         if company:
                             results.append(company)
 
         return results
 
-    def _parse_company_row(self, row) -> Optional[Dict[str, Any]]:
+    def _parse_company_row(self, row, ico: Optional[str] = None) -> Optional[Dict[str, Any]]:
         """Parse a single company row from search results into unified format.
+
+        ORSR search results table structure:
+        - Cell 0: Row number (1., 2., etc.)
+        - Cell 1: Company name
+        - Cell 2: Extract links (Actual, Full)
+        - Cell 3: Document collection link
 
         Args:
             row: BeautifulSoup row element
+            ico: Optional ICO (when searching by ID) - if not provided, will try to extract from row
 
         Returns:
             Unified output dictionary or None
         """
         try:
             cells = row.find_all('td')
-            link = row.find('a')
 
-            if not link:
+            # Need at least 3 cells for a valid result row
+            if len(cells) < 3:
                 return None
-
-            # Extract detail URL
-            detail_url = link.get('href', '')
-            if detail_url:
-                detail_url = urljoin(self.BASE_URL, detail_url)
 
             # Extract text content from cells
             texts = [cell.get_text(strip=True) for cell in cells]
 
-            # Find ICO (8-digit number)
-            ico = None
-            for text in texts:
-                if text.isdigit() and len(text) == 8:
-                    ico = text
-                    break
+            # Find ICO (8-digit number) - use provided ICO or try to extract from row
+            if not ico:
+                for text in texts:
+                    if text.isdigit() and len(text) == 8:
+                        ico = text
+                        break
 
-            # Extract company name (usually the link text)
-            name = link.get_text(strip=True)
+            if not ico:
+                return None
+
+            # Extract company name from second cell (index 1)
+            # Company name is in a div with class "sbj"
+            name = cells[1].get_text(strip=True) if len(cells) > 1 else ""
+
+            # Extract detail URL from third cell (index 2) - look for "Actual" link
+            detail_url = None
+            if len(cells) > 2:
+                # Find all links in the extract column
+                links = cells[2].find_all('a')
+                for link in links:
+                    link_text = link.get_text(strip=True)
+                    href = link.get('href', '')
+                    # Prefer "Actual" link (P=0), fallback to "Full" link (P=1)
+                    if 'vypis.asp' in href and 'ID=' in href:
+                        detail_url = urljoin(self.BASE_URL, href)
+                        # Prefer Actual (P=0) over Full (P=1)
+                        if 'P=0' in href or 'Actual' in link_text:
+                            break
 
             # Extract court info
             court = None
@@ -203,9 +262,6 @@ class ORSRSlovakScraper(BaseScraper):
                     court = text
                     court_id = self.COURT_CODES.get(text)
                     break
-
-            if not ico:
-                return None
 
             # Parse address
             address_data = self._parse_address(texts)
@@ -243,7 +299,11 @@ class ORSRSlovakScraper(BaseScraper):
                 metadata=metadata,
             )
 
-            return output.to_dict()
+            result = output.to_dict()
+            # Include detail_url for fetching complete data
+            if detail_url:
+                result["detail_url"] = detail_url
+            return result
 
         except Exception as e:
             self.logger.debug(f"Error parsing company row: {e}")
@@ -289,6 +349,17 @@ class ORSRSlovakScraper(BaseScraper):
     def _parse_detail_page(self, html: str) -> Dict[str, Any]:
         """Parse company detail page into unified format.
 
+        The detail page HTML structure has nested tables. Each field is structured as:
+        <tr>
+            <td><span class="tl">Label:&nbsp;</span></td>
+            <td><table width="100%" border="0">
+                <tr>
+                    <td width="67%"> <span class='ra'> VALUE </span><br></td>
+                    <td width="33%" valign='top'>&nbsp; <span class='ra'>(from: DATE)</span></td>
+                </tr>
+                </table></td>
+        </tr>
+
         Args:
             html: HTML content from detail page
 
@@ -307,26 +378,55 @@ class ORSRSlovakScraper(BaseScraper):
             "legal_form": None,
         }
 
+        # Define label patterns (both English and Slovak)
+        # Order matters - more specific patterns first
+        label_patterns = {
+            "name": ["Business name", "Obchodné meno", "business name"],
+            "ico": ["Identification number (I", "Identification number (IČO)", "IČO:", "Identification number"],
+            "address": ["Registered seat", "Sídlo", "registered seat"],
+            "date_registered": ["Date of entry", "Dátum zápisu", "date of entry"],
+            "court": ["Court", "Súd", "District Court"],
+            "legal_form": ["Legal form", "Právna forma", "legal form"],
+        }
+
         # Extract key-value pairs from tables
         for table in soup.find_all('table'):
             for row in table.find_all('tr'):
                 cells = row.find_all('td')
                 if len(cells) >= 2:
                     key = cells[0].get_text(strip=True)
-                    value = cells[1].get_text(strip=True)
 
-                    if "Obchodné meno" in key:
-                        detail_data["name"] = value
-                    elif "IČO" in key:
-                        detail_data["ico"] = value
-                    elif "Sídlo" in key:
-                        detail_data["address"] = value
-                    elif "Dátum zápisu" in key:
-                        detail_data["date_registered"] = value
-                    elif "Súd" in key:
-                        detail_data["court"] = value
-                    elif "Právna forma" in key:
-                        detail_data["legal_form"] = value
+                    # Value might be directly in cell or in nested table
+                    # Find the value in the first nested table's first cell, or direct text
+                    value_cell = cells[1]
+                    nested_table = value_cell.find('table')
+                    if nested_table:
+                        # Value is in nested table structure
+                        nested_rows = nested_table.find_all('tr')
+                        if nested_rows:
+                            nested_cells = nested_rows[0].find_all('td')
+                            if nested_cells:
+                                value = nested_cells[0].get_text(strip=True)
+                            else:
+                                value = value_cell.get_text(strip=True)
+                        else:
+                            value = value_cell.get_text(strip=True)
+                    else:
+                        value = value_cell.get_text(strip=True)
+
+                    # Match key to field using patterns
+                    for field, patterns in label_patterns.items():
+                        if any(pattern.lower() in key.lower() for pattern in patterns):
+                            # Clean up the value (remove extra whitespace and date suffixes)
+                            value = value.split("(from:")[0].strip()
+                            if value:
+                                detail_data[field] = value
+                            break
+
+        # Clean up ICO (remove spaces and format)
+        if detail_data.get("ico"):
+            ico = detail_data["ico"].replace(" ", "").split("(from:")[0].strip()
+            detail_data["ico"] = ico
 
         ico = detail_data.get("ico", "")
 

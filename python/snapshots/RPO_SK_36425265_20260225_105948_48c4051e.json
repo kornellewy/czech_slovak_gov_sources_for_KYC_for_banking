@@ -1,0 +1,100 @@
+{
+  "id": 202802,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "36425265",
+      "validFrom": "2004-11-30"
+    }
+  ],
+  "fullNames": [],
+  "addresses": [],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "2004-11-30"
+    }
+  ],
+  "establishment": "2004-11-30",
+  "termination": "2011-10-07",
+  "activities": [],
+  "statutoryBodies": [],
+  "stakeholders": [],
+  "legalStatuses": [
+    {
+      "value": {
+        "value": "Zrušená spoločnosť na základe rozhodnutia spoločníkov alebo orgánu spoločnosti",
+        "code": "10",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2011-10-07"
+    },
+    {
+      "value": {
+        "value": "Zaniknutá spoločnosť",
+        "code": "17",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2011-10-07"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "Zrušenie spoločnosti: Spoločnosť zrušená od: 01.10.2011 Právny dôvod zrušenia: zrušenie rozdelením",
+      "validFrom": "2011-10-07"
+    },
+    {
+      "value": "Právny dôvod výmazu zapísanej osoby z obchodného registra: Zapísaná osoba vymazaná z obchodného registra od: 07.10.2011 Právny dôvod výmazu: dobrovoľný výmaz zrušenie s právnym nástupcom",
+      "validFrom": "2011-10-07"
+    }
+  ],
+  "authorizations": [],
+  "equities": [],
+  "deposits": [],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Trenčín",
+        "validFrom": "2004-11-30"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/25011/R",
+        "validFrom": "2004-11-30"
+      }
+    ]
+  },
+  "successors": [
+    {
+      "identifier": "36004111",
+      "fullName": "ROZMARÍN, a.s.",
+      "address": {
+        "street": "Rozmarínová",
+        "regNumber": 0,
+        "buildingNumber": "6",
+        "municipality": {
+          "value": "Trenčín",
+          "code": "SK0229505820",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "validFrom": "2011-10-07"
+    }
+  ],
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

@@ -1,0 +1,238 @@
+{
+  "ico": "27773035",
+  "obchodniJmeno": "Hyundai Motor Manufacturing Czech s.r.o.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 132,
+    "nazevKraje": "Moravskoslezský kraj",
+    "kodOkresu": 3802,
+    "nazevOkresu": "Frýdek-Místek",
+    "kodObce": 552526,
+    "nazevObce": "Nižní Lhoty",
+    "kodUlice": 1233785,
+    "nazevUlice": "Hyundai",
+    "cisloDomovni": 700,
+    "kodCastiObce": 104906,
+    "cisloOrientacni": 1,
+    "nazevCastiObce": "Nižní Lhoty",
+    "kodAdresnihoMista": 27787559,
+    "psc": 73951,
+    "textovaAdresa": "Hyundai 700/1, 73951 Nižní Lhoty",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "112",
+  "pravniFormaRos": "112",
+  "financniUrad": "013",
+  "datumVzniku": "2006-07-07",
+  "datumAktualizace": "2026-01-30",
+  "dic": "CZ27773035",
+  "icoId": "27773035",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Hyundai 700/1",
+    "radekAdresy2": "73951 Nižní Lhoty"
+  },
+  "czNace2008": [
+    "00",
+    "29100",
+    "29200",
+    "45200",
+    "461",
+    "46900",
+    "471",
+    "52100",
+    "52290",
+    "620",
+    "6820",
+    "68310",
+    "702",
+    "74300",
+    "855"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Hyundai Motor Manufacturing Czech s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 132,
+            "nazevKraje": "Moravskoslezský kraj",
+            "kodOkresu": 3802,
+            "nazevOkresu": "Frýdek-Místek",
+            "kodObce": 552526,
+            "nazevObce": "Nižní Lhoty",
+            "kodUlice": 1233785,
+            "nazevUlice": "Hyundai",
+            "cisloDomovni": 700,
+            "kodCastiObce": 104906,
+            "cisloOrientacni": 1,
+            "nazevCastiObce": "Nižní Lhoty",
+            "kodAdresnihoMista": 27787559,
+            "psc": 73951,
+            "textovaAdresa": "Hyundai 700/1, 73951 Nižní Lhoty",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "pravniFormaRos": "112",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Hyundai Motor Manufacturing Czech s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 132,
+            "nazevKraje": "Moravskoslezský kraj",
+            "kodOkresu": 3802,
+            "nazevOkresu": "Frýdek-Místek",
+            "kodObce": 552526,
+            "nazevObce": "Nižní Lhoty",
+            "kodUlice": 1233785,
+            "nazevUlice": "Hyundai",
+            "cisloDomovni": 700,
+            "kodCastiObce": 104906,
+            "cisloOrientacni": 1,
+            "nazevCastiObce": "Nižní Lhoty",
+            "kodAdresnihoMista": 27787559,
+            "psc": 73951,
+            "textovaAdresa": "Hyundai 700/1, 73951 Nižní Lhoty",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "112",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Hyundai Motor Manufacturing Czech s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 132,
+            "nazevKraje": "Moravskoslezský kraj",
+            "kodOkresu": 3802,
+            "nazevOkresu": "Frýdek-Místek",
+            "kodObce": 552526,
+            "nazevObce": "Nižní Lhoty",
+            "kodUlice": 1233785,
+            "nazevUlice": "Hyundai",
+            "cisloDomovni": 700,
+            "kodCastiObce": 104906,
+            "cisloOrientacni": 1,
+            "nazevCastiObce": "Nižní Lhoty",
+            "kodAdresnihoMista": 27787559,
+            "psc": 73951,
+            "textovaAdresa": "Hyundai 700/1, 73951 Nižní Lhoty",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Hyundai Motor Manufacturing Czech s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 132,
+            "nazevKraje": "Moravskoslezský kraj",
+            "kodOkresu": 3802,
+            "nazevOkresu": "Frýdek-Místek",
+            "kodObce": 552526,
+            "nazevObce": "Nižní Lhoty",
+            "kodUlice": 1233785,
+            "nazevUlice": "Hyundai",
+            "cisloDomovni": 700,
+            "kodCastiObce": 104906,
+            "cisloOrientacni": 1,
+            "nazevCastiObce": "Nižní Lhoty",
+            "kodAdresnihoMista": 27787559,
+            "psc": 73951,
+            "textovaAdresa": "Hyundai 700/1, 73951 Nižní Lhoty",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "spisovaZnacka": "C 41484/KSOS",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "29200",
+    "461",
+    "46900",
+    "855",
+    "29100",
+    "52100",
+    "95310",
+    "68310",
+    "00",
+    "52260",
+    "70200",
+    "471",
+    "68200",
+    "62",
+    "74300"
+  ],
+  "subRegistrSzr": "szr"
+}

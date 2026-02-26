@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using CompanyRegistry;
+using Rpo;
 using UnifiedOutput;
 
 /// <summary>
@@ -21,6 +22,7 @@ class ApiExample
         await Example4_FullInfo();
         await Example5_BatchProcessing();
         await Example6_CrossBorderQueries();
+        await Example7_RpoSlovak();
 
         Console.WriteLine("\n============================================================");
         Console.WriteLine(" All examples completed!");
@@ -199,7 +201,7 @@ class ApiExample
         var companies = new[]
         {
             (Ico: "06649114", Country: Country.CzechRepublic, Name: "Prusa Research"),
-            (Ico: "35763491", Country: Country.Slovakia, Name: "Slovenská sporiteľňa"),
+            (Ico: "31348262", Country: Country.Slovakia, Name: "Wolters Kluwer SR"), // In RPO
         };
 
         foreach (var (ico, country, expectedName) in companies)
@@ -213,9 +215,56 @@ class ApiExample
     }
 
     /// <summary>
-    /// Example 7: Using dependency injection
+    /// Example 7: RPO Slovak (Register of Legal Entities) - Real API
     /// </summary>
-    static void Example7_DependencyInjection()
+    static async Task Example7_RpoSlovak()
+    {
+        Console.WriteLine("\n" + new string('=', 60));
+        Console.WriteLine("Example 7: RPO Slovak (Real API)");
+        Console.WriteLine(new string('=', 60));
+
+        // Use the RPO client directly
+        using var client = new Rpo.RpoClient();
+
+        // Query ZELEX, s.r.o. - verified in RPO
+        var result = await client.SearchByICOAsync("47559870");
+
+        if (result != null)
+        {
+            Console.WriteLine($"Company: {result.Entity.CompanyNameRegistry}");
+            Console.WriteLine($"ICO: {result.Entity.IcoRegistry}");
+            Console.WriteLine($"Legal Form: {result.Entity.LegalForm}");
+            Console.WriteLine($"Status: {result.Entity.Status}");
+            Console.WriteLine($"Incorporation Date: {result.Entity.IncorporationDate}");
+
+            if (result.Entity.RegisteredAddress != null)
+            {
+                var addr = result.Entity.RegisteredAddress;
+                Console.WriteLine($"Address: {addr.Street}, {addr.City} {addr.PostalCode}");
+                Console.WriteLine($"Country: {addr.CountryCode}");
+            }
+
+            if (result.Holders.Count > 0)
+            {
+                Console.WriteLine($"\nHolders ({result.Holders.Count}):");
+                foreach (var holder in result.Holders)
+                {
+                    Console.WriteLine($"  - [{holder.Role}] {holder.Name}");
+                }
+            }
+
+            Console.WriteLine($"\nIs Mock: {result.Metadata.IsMock}");
+        }
+        else
+        {
+            Console.WriteLine("Entity not found in RPO (banks/financial institutions may not be in RPO)");
+        }
+    }
+
+    /// <summary>
+    /// Example 8: Using dependency injection
+    /// </summary>
+    static void Example8_DependencyInjection()
     {
         Console.WriteLine("\n" + new string('=', 60));
         Console.WriteLine("Example 7: Dependency Injection Setup");

@@ -5,6 +5,7 @@ Unified scrapers for Slovak and Czech business registries with **identical outpu
 ## Features
 
 - **7 Registry Sources**: ARES, ORSR, RPO, RPVS, Justice.cz, ESM, Finančná správa
+- **ARES Sub-Source Extraction**: Data from 10+ Czech sub-registries (RZP, ROS, VR, RES, DPH, etc.)
 - **Unified Output**: Same JSON structure for both Python and C#
 - **Type-Safe**: Dataclasses (Python) and classes (C#) for all data models
 - **Rate Limiting**: Built-in rate limiting for all API clients
@@ -43,8 +44,9 @@ pip install -r requirements.txt
 python -c "
 from src.scrapers.ares_czech import ARESCzechScraper
 with ARESCzechScraper() as scraper:
-    result = scraper.search_by_id('00006947')
-    print(result)
+    result = scraper.search_by_id('00006947', include_subsource=True)
+    print(result['entity']['company_name_registry'])
+    print('Active sub-sources:', result['subsource']['active_count'])
 "
 ```
 
@@ -317,21 +319,26 @@ List<UnifiedOutput> results = await client.SearchByNameAsync("Slovenská sporite
 
 ### 3. RPO Slovak
 
-**Source:** `RPO_SK` - Register of Legal Entities
+**Source:** `RPO_SK` - Register of Legal Entities (Register právnických osôb)
 
 | Property | Value |
 |----------|-------|
-| API | REST API (discovery needed) |
-| Status | ⚠️ Mock fallback |
+| API | REST API |
+| Status | ✅ Working |
 | Rate Limit | 100 req/min |
-| Data | Company info, legal form, status |
+| Data | Company info, legal form, statutory bodies, stakeholders |
+| Provider | Statistical Office of Slovak Republic (ŠÚ SR) |
+
+**Note:** Banks and financial institutions are NOT in RPO - they're registered with NBS (National Bank of Slovakia).
 
 #### Python
 ```python
 from src.scrapers.rpo_slovak import RpoSlovakScraper
 
 with RpoSlovakScraper() as scraper:
-    result = scraper.search_by_id("35763491")
+    result = scraper.search_by_id("47559870")  # ZELEX, s.r.o.
+    print(result['entity']['company_name_registry'])
+    print(f"Holders: {len(result['holders'])}")
 ```
 
 #### C#
@@ -340,8 +347,11 @@ using Rpo;
 using UnifiedOutput;
 
 using var client = new RpoClient();
-UnifiedOutput? result = await client.SearchByICOAsync("35763491");
+UnifiedData? result = await client.SearchByICOAsync("47559870");
+Console.WriteLine(result?.Entity?.CompanyNameRegistry);
 ```
+
+**Test ICOs:** `31348262` (Wolters Kluwer SR), `47559870` (ZELEX, s.r.o.)
 
 ---
 
@@ -575,15 +585,19 @@ File.WriteAllText("companies.json", $"[{string.Join(",", results)}]");
 
 ## API Status Summary
 
-| Source | Country | Status | Notes |
-|--------|---------|--------|-------|
-| ARES | CZ | ✅ Working | Official REST API |
-| ORSR | SK | ✅ Working | Web scraper |
-| RPO | SK | ⚠️ Mock | API format TBD |
-| RPVS | SK | ⚠️ Mock | May require API key |
-| Justice | CZ | ⚠️ Mock | No public API |
-| ESM | CZ | 🔒 Restricted | AML certification required |
-| Finančná správa | SK | ⚠️ Mock | API format TBD |
+| Source | Country | Status | Notes | Maintenance |
+|--------|---------|--------|-------|-------------|
+| ARES | CZ | ✅ Working | Official REST API | Sundays 02:00-06:00 CET (occasional) |
+| ORSR | SK | ✅ Working | Web scraper | None known |
+| RPO | SK | ✅ Working | Official REST API (ŠÚ SR) | None known |
+| RPVS | SK | ⚠️ Mock | May require API key | Unknown |
+| Justice | CZ | ⚠️ Maintenance | Under maintenance as of 2026-02-21 | **Periodic: Sun 02:00-06:00 CET** |
+| ESM | CZ | 🔒 Restricted | AML certification required | Follows Justice.cz schedule |
+| Finančná správa | SK | ⚠️ Mock | API format TBD | Unknown |
+
+**Maintenance Notes:**
+- **Justice.cz (Czech Commercial Register)**: Has periodic maintenance windows, typically Sunday nights 02:00-06:00 CET. The scraper detects maintenance pages and returns appropriate responses.
+- **ESM (UBO Register)**: Follows Justice.cz maintenance schedule. Access is RESTRICTED and requires AML certification.
 
 ---
 
@@ -638,10 +652,12 @@ sk_cz_sources_sraper/
 ### Slovak Entities
 | ICO | Name | Notes |
 |-----|------|-------|
-| `35763491` | Slovenská sporiteľňa, a.s. | Majority owned by Erste Group |
-| `31328356` | Všeobecná úverová banka, a.s. | Owned by Intesa Sanpaolo |
-| `44103755` | Slovak Telekom, a.s. | Owned by Deutsche Telekom |
-| `36246621` | Doprastav, a.s. | Construction company |
+| `31348262` | Wolters Kluwer SR s. r. o. | Publisher (in RPO) |
+| `47559870` | ZELEX, s.r.o. | Trading company (in RPO, verified in ORSR) |
+| `35763491` | Slovenská sporiteľňa, a.s. | Bank (in NBS register, NOT in RPO) |
+| `44103755` | Slovak Telekom, a.s. | Telecom (NOT in RPO) |
+
+**Note:** Banks and financial institutions are registered with NBS (National Bank of Slovakia), not RPO.
 
 ### Czech Entities
 | ICO | Name | Notes |

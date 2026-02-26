@@ -1,0 +1,74 @@
+{
+  "id": 224188,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "34115650",
+      "validFrom": "1995-02-08"
+    }
+  ],
+  "fullNames": [],
+  "addresses": [],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "1995-02-08"
+    }
+  ],
+  "establishment": "1995-02-08",
+  "termination": "1998-05-04",
+  "activities": [],
+  "statutoryBodies": [],
+  "stakeholders": [],
+  "legalStatuses": [
+    {
+      "value": {
+        "value": "Zaniknutá spoločnosť",
+        "code": "17",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2021-03-23"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "Právny dôvod výmazu zapísanej osoby z obchodného registra: Zapísaná osoba vymazaná z obchodného registra od: 4.5.1998 Právny dôvod výmazu: dobrovoľný výmaz",
+      "validFrom": "2021-03-23"
+    }
+  ],
+  "authorizations": [],
+  "equities": [],
+  "deposits": [],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Trenčín",
+        "validFrom": "1995-02-08"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/497/R",
+        "validFrom": "1995-02-08"
+      }
+    ]
+  },
+  "statisticalCodes": {
+    "statCodesActualization": "2026-01-01",
+    "esa2010": {
+      "value": "Nefinančné korporácie pod zahraničnou kontrolou",
+      "code": "11003",
+      "codelistCode": "CL010010"
+    }
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

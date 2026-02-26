@@ -1,0 +1,365 @@
+{
+  "id": 904842,
+  "dbModificationDate": "2026-02-19",
+  "identifiers": [
+    {
+      "value": "31348262",
+      "validFrom": "1993-04-26"
+    }
+  ],
+  "fullNames": [
+    {
+      "value": "Wolters Kluwer SR s. r. o.",
+      "validFrom": "2018-01-09"
+    }
+  ],
+  "addresses": [
+    {
+      "validFrom": "2013-01-26",
+      "street": "Mlynské nivy",
+      "regNumber": 0,
+      "buildingNumber": "48",
+      "postalCodes": [
+        "82109"
+      ],
+      "municipality": {
+        "value": "Bratislava"
+      },
+      "country": {
+        "value": "Slovenská republika",
+        "code": "703",
+        "codelistCode": "CL000086"
+      }
+    }
+  ],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "1993-04-26"
+    }
+  ],
+  "establishment": "1993-04-27",
+  "activities": [
+    {
+      "economicActivityDescription": "- vydavateľská činnosť v oblasti odbornej literatúry,",
+      "validFrom": "1993-04-26"
+    },
+    {
+      "economicActivityDescription": "- technicko - organizačné zabezpečenie školení a seminárov,",
+      "validFrom": "1993-04-26"
+    },
+    {
+      "economicActivityDescription": "- nákup a predaj odbornej literatúry,",
+      "validFrom": "1993-04-26"
+    },
+    {
+      "economicActivityDescription": "- poskytovanie software - predaj hotových programov na základe zmluvy s autormi, alebo vyhotovovnie programov na zákazku,",
+      "validFrom": "1993-04-26"
+    },
+    {
+      "economicActivityDescription": "prevádzkovanie miesta a uloženia písomností nearchívnej povahy,",
+      "validFrom": "2000-11-09"
+    },
+    {
+      "economicActivityDescription": "reklamná a propagačná činnosť v rozsahu voľnej živnosti,",
+      "validFrom": "2000-11-09"
+    },
+    {
+      "economicActivityDescription": "redakčná úprava rukopisov po úroveň prípravy pre sadzbu,",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "economicActivityDescription": "marketing v oblasti vydávania periodických a neperiodických publikácií,",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "economicActivityDescription": "poradenstvo v oblasti vydávania periodických a neperiodických publikácií",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "economicActivityDescription": "kúpa tovaru na účely jeho predaja konečnému spotrebiteľovi (maloobchod) v rozsahu voľnej živnosti,",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "economicActivityDescription": "sprostredkovateľská činnosť v oblasti obchodu a služieb,",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "economicActivityDescription": "Vykonávanie mimoškolskej vzdelávacej činnosti",
+      "validFrom": "2014-01-25"
+    }
+  ],
+  "statutoryBodies": [
+    {
+      "stakeholderType": {
+        "value": "Konateľ",
+        "code": "3",
+        "codelistCode": "CL010113"
+      },
+      "validFrom": "2013-04-12",
+      "address": {
+        "street": "Cesta na Klanec",
+        "regNumber": 0,
+        "buildingNumber": "4620/75",
+        "postalCodes": [
+          "84103"
+        ],
+        "municipality": {
+          "value": "Bratislava"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Igor Masár",
+        "familyNames": [
+          "Masár"
+        ],
+        "givenNames": [
+          "Igor"
+        ]
+      }
+    },
+    {
+      "stakeholderType": {
+        "value": "Konateľ",
+        "code": "3",
+        "codelistCode": "CL010113"
+      },
+      "validFrom": "2023-01-10",
+      "address": {
+        "street": "Iľjušinova",
+        "regNumber": 0,
+        "buildingNumber": "1030/6",
+        "postalCodes": [
+          "851 01"
+        ],
+        "municipality": {
+          "value": "Bratislava - mestská časť Petržalka",
+          "code": "SK0105529460",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Ing. Klára Rábel Glosíková",
+        "familyNames": [
+          "Rábel",
+          "Glosíková"
+        ],
+        "givenNames": [
+          "Klára"
+        ]
+      }
+    }
+  ],
+  "stakeholders": [
+    {
+      "stakeholderType": {
+        "value": "Spoločník v.o.s. / s.r.o.",
+        "code": "99",
+        "codelistCode": "CL010109"
+      },
+      "validFrom": "2025-10-22",
+      "address": {
+        "validFrom": "2025-10-22",
+        "street": "Zuidpoolsingel",
+        "regNumber": 0,
+        "buildingNumber": "2",
+        "postalCodes": [
+          "2408ZE"
+        ],
+        "municipality": {
+          "value": "Alphen aan den Rijn"
+        },
+        "country": {
+          "value": "Holandské kráľovstvo",
+          "code": "528",
+          "codelistCode": "CL000086"
+        }
+      },
+      "identifier": "Neuvedené",
+      "fullName": "Wolters Kluwer International Holding B.V.",
+      "establishment": "1800-01-01"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "Predaj časti podniku: Predaj časti podniku (predajňa odbornej literatúry) na základe zmluvy o predaji časti podniku v zmysle § 476 a nasl. zákona č. 513/1991 Zb. Obchodný zákonník, uzavretej medzi obchodnou spoločnosťou Wolters Kluwer SR s. r. o. ako predávajúcim a obchodnou spoločnosťou BOOKNET SLOVAKIA, s. r. o., so sídlom Padlých hrdinov 60, 821 06 Bratislava, IČO: 45 930 546, ako kupujúcim. Účinky prevodu časti podniku nastali v zmysle uzavretej zmluvy dňa 27.09.2020.",
+      "validFrom": "2020-12-05"
+    },
+    {
+      "value": "Spoločnosť s ručením obmedzeným bola založená spol. zmluvou zo dňa 1. 3. 1993 v zmysle ust. § 24, § 105 Obchodného zákonníka č. 513/ 1991 Zb. Stary spis: S.r.o. 10004",
+      "validFrom": "1993-04-26"
+    },
+    {
+      "value": "Dodatok č. 1 k spoločenskej zmluve zo dňa 9.5.1994. Zápis z valného zhromaždenia zo dňa 5.9.1994. Stary spis: S.r.o. 10004",
+      "validFrom": "1994-11-21"
+    },
+    {
+      "value": "Zápisnica z valného zhromaždenia zo dňa 19.9.1995, na ktorom bol schválený prevod obchodného podielu. Zápis z mimoriadného valného zhromaždenia zo dňa 10.11.1995, na ktorom bol schválený prevod obchodného podielu. Stary spis: S.r.o. 10004",
+      "validFrom": "1996-02-15"
+    },
+    {
+      "value": "Výňatok zo zápisnice Výkonnej rady Wolters Kluwer NV zo dňa 08.01.1997. Prevod obchodných podielov odsúhlasený na valnom zhromaždení konanom dňa 13.11.1996 Stary spis: S.r.o. 10004",
+      "validFrom": "1997-07-31"
+    },
+    {
+      "value": "Notárska zápisnica N 2/98, Nz 2/98 spísaná dňa 19.1.1998 notárkou JUDr. Janou Mikušovou osvedčujúca priebeh mimoriadneho valného zhromaždenia, na ktorom bola schválená zmena sídla a zmena spoločenskej zmluvy. Stary spis: S.r.o. 10004",
+      "validFrom": "1998-03-26"
+    },
+    {
+      "value": "Notárska zápisnica č. N 284/98, Nz 253/98 zo dňa 23.12.1998 osvedčujúca zvýšenie základného imania spoločnosti.",
+      "validFrom": "1999-06-29"
+    },
+    {
+      "value": "Notárska zápisnica N 108/2000, Nz 100/2000 zo dňa 4.5.2000. Notárska zápisnica N 127/2000, Nz 117/2000 zo dňa 1.6.2000.",
+      "validFrom": "2000-11-09"
+    },
+    {
+      "value": "Dodatok k spoločenskej zmluve spísaný do notárskej zápisnice č. N 300/00, Nz 274/00 z 30.11.2000 - zvýšenie základného imania na 17 143 000,- Sk. Dodatok k spoločenskej zmluve spísaný do notárskej zápisnice č. N 358/01, Nz 380/01 z 17.12.2001 - zvýšenie základného imania na 44 000 000,-Sk.",
+      "validFrom": "2002-05-14"
+    },
+    {
+      "value": "Rozhodnutie spoločníka zo dňa 11.3.2002. Rozhodnutie spoločníka zo dňa 5.4.2002. Dohoda o prevode podielu zo dňa 5.4.2002. Uznesením valného zhromaždenia zo dňa 07.10.2002 spísaného ako rozhodnutie jediného spoločníka vo forme notárskej zápisnice č.N 247/02, Nz 245/02 a N 248/02, Nz 246/02 bolo rozhodnuté o zrušení spoločnosti COMPRIS software, s.r.o., Horná 21, 974 01 Banská Bystrica, IČO: 31 641 733 zlúčením ku dňu 31.12.2002. K uvedenému dátumu sa spoločnosť IURA EDITION, spol. s r.o. stáva právnym nástupcom spoločnosti COMPRIS Software, s.r.o. a preberá na seba všetky práva a povinnosti z toho vyplývajúce.",
+      "validFrom": "2003-03-03"
+    },
+    {
+      "value": "Rozhodnutie jediného spoločníka spísané do notárskej zápisnice č. N 282/2003, NZ XXXXXX/XXXX dňa 23.12.2003. Zmluva o prevode obchodného podielu z 23.12.2003.",
+      "validFrom": "2004-05-28"
+    },
+    {
+      "value": "Rozhodnutie spoločníkov mimo valného zhromaždenia zo dňa 07.07.2004.",
+      "validFrom": "2004-08-26"
+    },
+    {
+      "value": "Zápisnica z valného zhromaždenia zo dňa 06.03.2008. Dodatok č. 4 k spoločenskej zmluve zo dňa 10.03.2008. Zmena obchodného mena z pôvodného IURA EDITION spol. s r. o., IURA EDITION GmbH na nové IURA EDITION spol. s r. o.",
+      "validFrom": "2008-06-11"
+    },
+    {
+      "value": "Zápisnica z valného zhromaždenia zo dňa 21.03.2011.",
+      "validFrom": "2011-04-07"
+    },
+    {
+      "value": "Zápisnica z valného zhromaždenia konaného dňa 28.12.2012.",
+      "validFrom": "2013-01-26"
+    },
+    {
+      "value": "Zápisnica zo zasadnutia valného zhromaždenia spoločnosti zo dňa 07.11.2013.",
+      "validFrom": "2014-01-01"
+    },
+    {
+      "value": "Zápisnica z vaôného zhromaždenia zo dňa 07.11.2013.",
+      "validFrom": "2014-01-25"
+    },
+    {
+      "value": "Zápisnica z vaôného zhromaždenia zo dňa 14.04.2014.",
+      "validFrom": "2014-05-27"
+    }
+  ],
+  "authorizations": [
+    {
+      "value": "Štatutárnym orgánom spoločnosti tak navonok, ako aj dovnútra je konateľ. Ak má spoločnosť len jedného konateľa, zastupuje tento spoločnosť samostatne; ak má spoločnosť viacerých konateľov, zastupujú títo spoločnosť samostatne.",
+      "validFrom": "2006-01-17"
+    }
+  ],
+  "equities": [
+    {
+      "validFrom": "2020-04-25",
+      "value": 100000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    },
+    {
+      "validFrom": "2020-04-25",
+      "valuePaid": 100000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "deposits": [
+    {
+      "validFrom": "2025-10-22",
+      "fullName": "Wolters Kluwer International Holding B.V.",
+      "type": "(peňažný vklad)",
+      "amount": 100000.0,
+      "currency": {
+        "value": "euro",
+        "code": "EUR",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Mestský súd Bratislava III",
+        "validFrom": "1993-04-26"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/4868/B",
+        "validFrom": "1993-04-26"
+      }
+    ]
+  },
+  "predecessors": [
+    {
+      "identifier": "45234469",
+      "fullName": "INISOFT s. r. o.",
+      "address": {
+        "street": "Kapitulská",
+        "regNumber": 0,
+        "buildingNumber": "8",
+        "municipality": {
+          "value": "Banská Bystrica",
+          "code": "SK0321508438",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "validFrom": "2026-03-01"
+    }
+  ],
+  "statisticalCodes": {
+    "statCodesActualization": "2026-01-01",
+    "mainActivity": {
+      "value": "Ostatné nakladateľstvo v oblasti softvéru",
+      "code": "5829",
+      "codelistCode": "CL010579"
+    },
+    "esa2010": {
+      "value": "Nefinančné korporácie pod zahraničnou kontrolou",
+      "code": "11003",
+      "codelistCode": "CL010010"
+    }
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

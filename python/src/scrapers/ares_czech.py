@@ -53,40 +53,64 @@ class ARESCzechScraper(BaseScraper):
         """
         super().__init__(enable_snapshots=enable_snapshots)
         self.http_client = HTTPClient(rate_limit=ARES_RATE_LIMIT)
-        self.logger.info(f"Initialized {self.SOURCE_NAME} scraper")
+        self.log_info(f"{self.SOURCE_NAME} scraper ready (rate limit: {ARES_RATE_LIMIT} req/min)")
 
-    def search_by_id(self, ico: str) -> Optional[Dict[str, Any]]:
+    def search_by_id(self, ico: str, include_subsource: bool = False) -> Optional[Dict[str, Any]]:
         """Search company by IČO (identification number).
 
         Args:
             ico: Czech company identification number (8 digits)
+            include_subsource: Whether to include sub-source registration details
 
         Returns:
             Dictionary with company data or None if not found
         """
-        self.logger.info(f"Searching ARES by IČO: {ico}")
+        self.log_search_start(identifier=ico.strip(), search_type="by_ICO")
 
         # ARES API uses path parameter: /ekonomicke-subjekty/{ico}
         url = f"{self.BASE_URL}/{ico.strip()}"
 
         try:
+            import time
+            start = time.time()
             response = self.http_client.get(url)
+            duration_ms = (time.time() - start) * 1000
+
             data = response.json()
+
+            # Log response
+            self.log_response(url, response.status_code, duration_ms)
 
             # Check for error response
             if "kod" in data and data["kod"] != "OK":
-                self.logger.warning(f"No entity found with IČO: {ico} - {data.get('popis', 'Unknown error')}")
+                error_msg = data.get('popis', 'Unknown error')
+                self.log_warning(f"No entity found with IČO: {ico} - {error_msg}")
                 return None
+
+            self.log_info(f"Found entity for IČO: {ico} - {data.get('obchodniJmeno', 'Unknown')}", extra={'ico': ico})
 
             # Save snapshot if enabled
             if self.enable_snapshots:
                 self.save_snapshot(data, ico, self.SOURCE_NAME)
 
             # Parse and standardize response
-            return self._parse_response(data)
+            self.log_parse_start("ARES_API")
+            result = self._parse_response(data)
+
+            # Add sub-source information if requested
+            if include_subsource and result:
+                self.log_debug("Extracting sub-source data")
+                result["subsource"] = self._extract_subsource(data)
+                active_count = result["subsource"]["active_count"]
+                self.log_info(f"Sub-sources: {active_count} active registries")
+
+            self.log_parse_complete("ARES_API", items_found=1)
+            self.log_search_complete(results_count=1, identifier=ico)
+
+            return result
 
         except Exception as e:
-            self.logger.error(f"Error searching ARES for {ico}: {e}")
+            self.log_error("search_by_id", e, ico=ico)
             return None
 
     def search_by_name(self, name: str) -> List[Dict[str, Any]]:
@@ -233,3 +257,85 @@ class ARESCzechScraper(BaseScraper):
             Absolute path to saved file
         """
         return self.json_handler.save(data, filename, source="ares")
+
+    def _extract_subsource(self, data: Dict[str, Any]) -> Dict[str, Any]:
+        """Extract sub-source registration information from ARES response.
+
+        ARES includes data from multiple sub-registries (RZP, ROS, VR, RES, DPH, etc.)
+        embedded in the main response via seznamRegistraci and dalsiUdaje.
+
+        Args:
+            data: Raw ARES API response
+
+        Returns:
+            Dictionary with sub-source information
+        """
+        subsource = {
+            "registrations": {},
+            "additional_data": {},
+            "active_count": 0
+        }
+
+        # Extract seznamRegistraci (sub-source statuses)
+        registrace = data.get("seznamRegistraci", {})
+        for key, value in registrace.items():
+            # Remove 'stavZdroje' prefix for cleaner keys
+            clean_key = key.replace("stavZdroje", "")
+            subsource["registrations"][clean_key] = {
+                "status": value,  # AKTIVNI, NEEXISTUJICI, HISTORICKY
+                "is_active": value == "AKTIVNI"
+            }
+
+            if value == "AKTIVNI":
+                subsource["active_count"] += 1
+
+        # Extract dalsiUdaje (detailed data from sub-sources)
+        dalsi = data.get("dalsiUdaje", [])
+        for source_data in dalsi:
+            source = source_data.get("datovyZdroj", "")
+
+            if source:
+                extracted = {}
+
+                # Extract key fields from this source
+                for key, value in source_data.items():
+                    if key == "datovyZdroj":
+                        continue
+
+                    elif key == "obchodniJmeno" and isinstance(value, list) and value:
+                        name_data = value[0]
+                        if isinstance(name_data, dict):
+                            extracted["company_name"] = name_data.get("obchodniJmeno")
+
+                    elif key == "sidlo" and isinstance(value, list) and value:
+                        address_data = value[0]
+                        if isinstance(address_data, dict) and "sidlo" in address_data:
+                            sidlo = address_data["sidlo"]
+                            if isinstance(sidlo, dict):
+                                extracted["address"] = {
+                                    "street": sidlo.get("nazevUlice"),
+                                    "city": sidlo.get("nazevObce"),
+                                    "postal_code": str(sidlo.get("psc")) if sidlo.get("psc") else None,
+                                    "country": sidlo.get("nazevStatu"),
+                                }
+
+                    elif key == "spisovaZnacka":
+                        extracted["file_reference"] = value
+
+                    elif key == "pravniForma":
+                        extracted["legal_form"] = value
+
+                    elif key == "datumZapisu":
+                        extracted["registration_date"] = value
+
+                    elif key == "datumVymazu":
+                        extracted["deletion_date"] = value
+
+                if extracted:
+                    subsource["additional_data"][source] = extracted
+
+        # Add specific sub-source fields
+        if "pravniFormaRos" in data:
+            subsource["ros_legal_form"] = data.get("pravniFormaRos")
+
+        return subsource

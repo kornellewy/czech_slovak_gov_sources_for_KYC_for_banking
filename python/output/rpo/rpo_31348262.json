@@ -1,0 +1,39 @@
+{
+  "entity": {
+    "ico_registry": "31348262",
+    "company_name_registry": "Wolters Kluwer SR s. r. o.",
+    "legal_form": "Spoločnosť s ručením obmedzeným",
+    "legal_form_code": "112",
+    "status": "active",
+    "incorporation_date": "1993-04-27",
+    "registered_address": {
+      "street": "Mlynské nivy 48",
+      "city": "Bratislava",
+      "postal_code": "82109",
+      "country_code": "SK"
+    }
+  },
+  "holders": [
+    {
+      "holder_type": "individual",
+      "role": "statutory_body",
+      "name": "Igor Masár",
+      "ownership_pct_direct": 0.0
+    },
+    {
+      "holder_type": "individual",
+      "role": "statutory_body",
+      "name": "Ing. Klára Rábel Glosíková",
+      "ownership_pct_direct": 0.0
+    }
+  ],
+  "metadata": {
+    "source": "RPO_SK",
+    "register_name": "Register of Legal Entities (Register právnických osôb)",
+    "retrieved_at": "2026-02-23T11:38:29.313401Z",
+    "level": 0,
+    "is_mock": false,
+    "register_url": "https://api.statistics.sk/rpo/v1/entity/904842"
+  },
+  "scraped_at": "2026-02-23T11:38:29.314358Z"
+}

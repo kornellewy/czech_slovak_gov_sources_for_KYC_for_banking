@@ -1,0 +1,197 @@
+{
+  "ico": "45244782",
+  "obchodniJmeno": "Česká spořitelna, a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 43,
+    "nazevSpravnihoObvodu": "Praha 4",
+    "kodMestskehoObvodu": 43,
+    "nazevMestskehoObvodu": "Praha 4",
+    "kodMestskeCastiObvodu": 500119,
+    "kodUlice": 463043,
+    "nazevMestskeCastiObvodu": "Praha 4",
+    "nazevUlice": "Olbrachtova",
+    "cisloDomovni": 1929,
+    "kodCastiObce": 400165,
+    "cisloOrientacni": 62,
+    "nazevCastiObce": "Krč",
+    "kodAdresnihoMista": 22731423,
+    "psc": 14000,
+    "textovaAdresa": "Olbrachtova 1929/62, Krč, 14000 Praha 4",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "1991-12-30",
+  "datumAktualizace": "2026-02-11",
+  "icoId": "45244782",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Olbrachtova 1929/62",
+    "radekAdresy2": "Krč",
+    "radekAdresy3": "14000 Praha 4"
+  },
+  "czNace2008": [
+    "64190",
+    "649",
+    "661",
+    "66190",
+    "74"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "HISTORICKY",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "NEEXISTUJICI",
+    "stavZdrojeSkDph": "AKTIVNI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Česká spořitelna, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 463043,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Olbrachtova",
+            "cisloDomovni": 1929,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 62,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 22731423,
+            "psc": 14000,
+            "textovaAdresa": "Olbrachtova 1929/62, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Česká spořitelna, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 463043,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Olbrachtova",
+            "cisloDomovni": 1929,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 62,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 22731423,
+            "psc": 14000,
+            "textovaAdresa": "Olbrachtova 1929/62, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Česká spořitelna, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 43,
+            "nazevSpravnihoObvodu": "Praha 4",
+            "kodMestskehoObvodu": 43,
+            "nazevMestskehoObvodu": "Praha 4",
+            "kodMestskeCastiObvodu": 500119,
+            "kodUlice": 463043,
+            "nazevMestskeCastiObvodu": "Praha 4",
+            "nazevUlice": "Olbrachtova",
+            "cisloDomovni": 1929,
+            "kodCastiObce": 400165,
+            "cisloOrientacni": 62,
+            "nazevCastiObce": "Krč",
+            "kodAdresnihoMista": 22731423,
+            "psc": 14000,
+            "textovaAdresa": "Olbrachtova 1929/62, Krč, 14000 Praha 4",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 1171/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "649",
+    "74",
+    "64190",
+    "66190",
+    "661"
+  ],
+  "subRegistrSzr": "szr",
+  "dicSkDph": "CZ699001261"
+}

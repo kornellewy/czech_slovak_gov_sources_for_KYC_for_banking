@@ -65,6 +65,9 @@ namespace Justice
     /// <summary>
     /// Justice Czech Commercial Register client with web scraping and unified output format.
     /// Based on parser-justice-cz PHP implementation.
+    ///
+    /// Maintenance: Justice.cz has periodic maintenance windows (typically Sunday nights 02:00-06:00 CET).
+    /// During maintenance, the site returns a maintenance page with the text "Momentálně probíhá údržba".
     /// </summary>
     public class JusticeClient : IDisposable
     {
@@ -74,8 +77,20 @@ namespace Justice
         private const string Source = "JUSTICE_CZ";
         private const int RequestsPerMinute = 30;
 
+        // Maintenance detection
+        private static readonly string[] MaintenanceIndicators = new[]
+        {
+            "Momentálně probíhá údržba",
+            "Momentálně probíhá údržba",  // With HTML entities
+            "Maintenance Page",
+            "Právě probíhá údržba systému"  // "System maintenance is in progress"
+        };
+
+        private const string MaintenanceImageUrl = "https://insolvence.justice.cz/wp-content/uploads/under_construction.png";
+
         private readonly HttpClient _httpClient;
         private readonly SemaphoreSlim _rateLimiter;
+        private readonly ScraperLogger _logger;
         private DateTime _lastRequestTime = DateTime.MinValue;
         private readonly object _lockObject = new();
 
@@ -112,6 +127,8 @@ namespace Justice
             SetupBrowserHeaders();
 
             _rateLimiter = new SemaphoreSlim(1, 1);
+            _logger = new ScraperLogger("JUSTICE", enableDebug: false);
+            _logger.Info($"JUSTICE Client initialized (rate limit: {RequestsPerMinute} req/min)");
         }
 
         /// <summary>
@@ -141,35 +158,111 @@ namespace Justice
         /// </summary>
         public async Task<UnifiedData?> SearchByICOAsync(string ico)
         {
+            var cleanIco = Regex.Replace(ico ?? "", @"[^\d]", "");
+            _logger.LogSearchStart(cleanIco, "by_ICO");
+
             await ApplyRateLimitAsync();
+
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
 
             try
             {
-                var cleanIco = Regex.Replace(ico ?? "", @"[^\d]", "");
-
                 if (!Regex.IsMatch(cleanIco, @"^\d{8}$"))
                 {
+                    _logger.Warning($"Invalid IČO format: {cleanIco}");
                     return null;
                 }
 
                 // Exact pattern from parser-justice-cz: URL_SERVER.'?ico='.$ico
                 var url = $"{SearchUrl}?ico={cleanIco}";
+                _logger.LogRequest("GET", url);
+
                 var html = await _httpClient.GetStringAsync(url);
 
+                stopwatch.Stop();
+                _logger.LogResponse(url, 200, stopwatch.ElapsedMilliseconds);
+
+                // Check for maintenance page
+                if (CheckMaintenance(html))
+                {
+                    _logger.LogMaintenance("Justice.cz");
+                    return CreateMaintenanceResponse(cleanIco);
+                }
+
+                _logger.LogParseStart("HTML");
                 var results = ExtractSubjects(html);
 
                 if (results.Count > 0)
                 {
+                    _logger.LogParseComplete("HTML", results.Count);
+                    _logger.LogSearchComplete(1, cleanIco);
                     return results[0];
                 }
 
                 // Fallback to mock data
+                _logger.LogMockFallback("No results found");
                 return GetMockData(cleanIco);
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException ex)
             {
-                return GetMockData(ico);
+                stopwatch.Stop();
+                _logger.LogResponse($"{SearchUrl}?ico={cleanIco}", 500, stopwatch.ElapsedMilliseconds);
+                _logger.LogError("SearchByICOAsync", ex, new { ico = cleanIco });
+                _logger.LogMockFallback($"HTTP error: {ex.Message}");
+                return GetMockData(cleanIco);
             }
+        }
+
+        /// <summary>
+        /// Check if Justice.cz is showing a maintenance page.
+        /// </summary>
+        private static bool CheckMaintenance(string html)
+        {
+            if (string.IsNullOrEmpty(html))
+                return false;
+
+            // Check for known maintenance indicators
+            foreach (var indicator in MaintenanceIndicators)
+            {
+                if (html.Contains(indicator, StringComparison.OrdinalIgnoreCase))
+                    return true;
+            }
+
+            // Check for maintenance background image
+            if (html.Contains(MaintenanceImageUrl, StringComparison.OrdinalIgnoreCase))
+                return true;
+
+            return false;
+        }
+
+        /// <summary>
+        /// Create a maintenance response when Justice.cz is under maintenance.
+        /// </summary>
+        private static UnifiedData CreateMaintenanceResponse(string? ico)
+        {
+            return new UnifiedData
+            {
+                Entity = new UnifiedEntity
+                {
+                    IcoRegistry = ico,
+                    CompanyNameRegistry = null,
+                    Status = "maintenance"
+                },
+                Holders = new List<UnifiedHolder>(),
+                TaxInfo = new UnifiedTaxInfo
+                {
+                    VatId = null,
+                    VatStatus = null
+                },
+                Metadata = new UnifiedMetadata
+                {
+                    Source = Source,
+                    RegisterName = OutputNormalizer.GetRegisterName(Source),
+                    RegisterUrl = BaseUrl,
+                    RetrievedAt = DateTime.UtcNow.ToString("o"),
+                    IsMock = false
+                }
+            };
         }
 
         /// <summary>

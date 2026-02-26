@@ -1,0 +1,154 @@
+{
+  "35814501": {
+    "entity": {
+      "ico_registry": "35814501",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "2001-06-18"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:41.980053Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/221601"
+    }
+  },
+  "31615287": {
+    "entity": {
+      "ico_registry": "31615287",
+      "company_name_registry": "PTS Consulting, s.r.o.",
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "1994-09-27",
+      "registered_address": {
+        "street": "Námestie Andreja Hlinku 29/34",
+        "city": "Považská Bystrica",
+        "postal_code": "01701",
+        "country_code": "SK"
+      }
+    },
+    "holders": [
+      {
+        "holder_type": "individual",
+        "role": "statutory_body",
+        "name": "Ing. Marián Hunčík",
+        "ownership_pct_direct": 0.0
+      },
+      {
+        "holder_type": "individual",
+        "role": "statutory_body",
+        "name": "Ing. Marián Múka",
+        "ownership_pct_direct": 0.0
+      }
+    ],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:43.388270Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/223073"
+    }
+  },
+  "36334421": {
+    "entity": {
+      "ico_registry": "36334421",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "2004-04-03"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:44.666191Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/210372"
+    }
+  },
+  "31355561": {
+    "entity": {
+      "ico_registry": "31355561",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "1993-08-01"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:47.078211Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/855250"
+    }
+  },
+  "36425265": {
+    "entity": {
+      "ico_registry": "36425265",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "2004-11-30"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:48.646062Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/202802"
+    }
+  },
+  "34115650": {
+    "entity": {
+      "ico_registry": "34115650",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "1995-02-08"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:54.557812Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/224188"
+    }
+  },
+  "31340491": {
+    "entity": {
+      "ico_registry": "31340491",
+      "company_name_registry": null,
+      "legal_form": "Spoločnosť s ručením obmedzeným",
+      "legal_form_code": "112",
+      "status": "active",
+      "incorporation_date": "1993-01-25"
+    },
+    "holders": [],
+    "metadata": {
+      "source": "RPO_SK",
+      "register_name": "Register of Legal Entities (Register právnických osôb)",
+      "retrieved_at": "2026-02-25T09:59:56.508450Z",
+      "level": 0,
+      "is_mock": false,
+      "register_url": "https://api.statistics.sk/rpo/v1/entity/386994"
+    }
+  }
+}

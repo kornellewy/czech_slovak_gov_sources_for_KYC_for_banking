@@ -1,0 +1,247 @@
+{
+  "ico": "26168685",
+  "obchodniJmeno": "Seznam.cz, a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 51,
+    "nazevSpravnihoObvodu": "Praha 5",
+    "kodMestskehoObvodu": 51,
+    "nazevMestskehoObvodu": "Praha 5",
+    "kodMestskeCastiObvodu": 500143,
+    "kodUlice": 467359,
+    "nazevMestskeCastiObvodu": "Praha 5",
+    "nazevUlice": "Radlická",
+    "cisloDomovni": 3294,
+    "kodCastiObce": 400301,
+    "cisloOrientacni": 10,
+    "nazevCastiObce": "Smíchov",
+    "kodAdresnihoMista": 41064666,
+    "psc": 15000,
+    "textovaAdresa": "Radlická 3294/10, Smíchov, 15000 Praha 5",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "2000-04-05",
+  "datumAktualizace": "2026-01-04",
+  "dic": "CZ26168685",
+  "icoId": "26168685",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Radlická 3294/10",
+    "radekAdresy2": "Smíchov",
+    "radekAdresy3": "15000 Praha 5"
+  },
+  "czNace2008": [
+    "461",
+    "46900",
+    "581",
+    "62090",
+    "63120",
+    "6820",
+    "69200",
+    "731",
+    "73120",
+    "791"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "AKTIVNI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Seznam.cz, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 500143,
+            "kodUlice": 467359,
+            "nazevMestskeCastiObvodu": "Praha 5",
+            "nazevUlice": "Radlická",
+            "cisloDomovni": 3294,
+            "kodCastiObce": 400301,
+            "cisloOrientacni": 10,
+            "nazevCastiObce": "Smíchov",
+            "kodAdresnihoMista": 41064666,
+            "psc": 15000,
+            "textovaAdresa": "Radlická 3294/10, Smíchov, 15000 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Seznam.cz, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 500143,
+            "kodUlice": 467359,
+            "nazevMestskeCastiObvodu": "Praha 5",
+            "nazevUlice": "Radlická",
+            "cisloDomovni": 3294,
+            "kodCastiObce": 400301,
+            "cisloOrientacni": 10,
+            "nazevCastiObce": "Smíchov",
+            "kodAdresnihoMista": 41064666,
+            "psc": 15000,
+            "textovaAdresa": "Radlická 3294/10, Smíchov, 15000 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Seznam.cz, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 500143,
+            "kodUlice": 467359,
+            "nazevMestskeCastiObvodu": "Praha 5",
+            "nazevUlice": "Radlická",
+            "cisloDomovni": 3294,
+            "kodCastiObce": 400301,
+            "cisloOrientacni": 10,
+            "nazevCastiObce": "Smíchov",
+            "kodAdresnihoMista": 41064666,
+            "psc": 15000,
+            "textovaAdresa": "Radlická 3294/10, Smíchov, 15000 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Seznam.cz, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 51,
+            "nazevSpravnihoObvodu": "Praha 5",
+            "kodMestskehoObvodu": 51,
+            "nazevMestskehoObvodu": "Praha 5",
+            "kodMestskeCastiObvodu": 500143,
+            "kodUlice": 467359,
+            "nazevMestskeCastiObvodu": "Praha 5",
+            "nazevUlice": "Radlická",
+            "cisloDomovni": 3294,
+            "kodCastiObce": 400301,
+            "cisloOrientacni": 10,
+            "nazevCastiObce": "Smíchov",
+            "kodAdresnihoMista": 41064666,
+            "psc": 15000,
+            "textovaAdresa": "Radlická 3294/10, Smíchov, 15000 Praha 5",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 6493/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "46900",
+    "791",
+    "69200",
+    "63910",
+    "73120",
+    "68200",
+    "461",
+    "731",
+    "581",
+    "62900"
+  ],
+  "subRegistrSzr": "szr"
+}

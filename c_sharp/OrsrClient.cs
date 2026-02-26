@@ -37,6 +37,7 @@ namespace Orsr
 
         private readonly HttpClient _httpClient;
         private readonly SemaphoreSlim _rateLimiter;
+        private readonly ScraperLogger _logger;
         private DateTime _lastRequestTime = DateTime.MinValue;
         private readonly object _lockObject = new();
 
@@ -68,6 +69,8 @@ namespace Orsr
             _httpClient.DefaultRequestHeaders.Add("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
 
             _rateLimiter = new SemaphoreSlim(1, 1);
+            _logger = new ScraperLogger("ORSR", enableDebug: false);
+            _logger.Info($"ORSR Client initialized (rate limit: {RequestsPerMinute} req/min)");
         }
 
         /// <summary>
@@ -75,17 +78,37 @@ namespace Orsr
         /// </summary>
         public async Task<UnifiedData?> SearchByICOAsync(string ico)
         {
+            _logger.LogSearchStart(ico?.Trim(), "by_ICO");
             await ApplyRateLimitAsync();
+
+            var stopwatch = System.Diagnostics.Stopwatch.StartNew();
 
             try
             {
                 var url = $"{SearchUrl}?ICO={Uri.EscapeDataString(ico.Trim())}&lan=en";
+                _logger.LogRequest("GET", url);
+
                 var html = await GetStringWindows1250Async(url);
 
-                return ParseSearchResult(html, ico);
+                stopwatch.Stop();
+                _logger.LogResponse(url, 200, stopwatch.ElapsedMilliseconds);
+
+                _logger.LogParseStart("HTML");
+                var result = ParseSearchResult(html, ico);
+
+                if (result != null)
+                {
+                    _logger.LogParseComplete("HTML", 1);
+                    _logger.LogSearchComplete(1, ico);
+                }
+
+                return result;
             }
-            catch (HttpRequestException)
+            catch (HttpRequestException ex)
             {
+                stopwatch.Stop();
+                _logger.LogResponse($"{SearchUrl}?ICO={ico}", 500, stopwatch.ElapsedMilliseconds);
+                _logger.LogError("SearchByICOAsync", ex, new { ico });
                 return null;
             }
         }
@@ -134,65 +157,219 @@ namespace Orsr
                     foreach (var row in rows)
                     {
                         var cells = row.Descendants("td").ToList();
-                        if (cells.Count >= 2)
+                        // Need at least 3 cells for a valid result row
+                        if (cells.Count >= 3)
                         {
-                            var link = row.Descendants("a").FirstOrDefault();
-                            if (link != null)
+                            // Check if this is a data row (has vypis.asp link to detail page)
+                            var detailLink = cells[2].Descendants("a")
+                                .FirstOrDefault(a => a.Value != null && a.Attribute("href") != null &&
+                                                   a.Attribute("href").Value.Contains("vypis.asp") &&
+                                                   a.Attribute("href").Value.Contains("ID="));
+
+                            if (detailLink != null)
                             {
-                                var name = link.Value;
-                                var text = row.Value;
+                                // Extract company name from second cell (index 1)
+                                // Company name is the text content, not the link text
+                                var name = cells[1].Value.Trim();
 
-                                if (text.Contains(ico))
+                                // Build detail URL
+                                var href = detailLink.Attribute("href").Value;
+                                var detailUrl = href.StartsWith("http") ? href : $"{BaseUrl}/{href}";
+
+                                // Try to fetch complete data from detail page
+                                var detailResult = GetCompanyDetailAsync(detailUrl).GetAwaiter().GetResult();
+                                if (detailResult != null)
                                 {
-                                    // Find address in text
-                                    string? fullAddress = null;
-                                    foreach (var cell in cells)
-                                    {
-                                        var cellText = cell.Value;
-                                        if (cellText.Contains(",") && cellText.Any(char.IsDigit))
-                                        {
-                                            fullAddress = cellText.Trim();
-                                            break;
-                                        }
-                                    }
-
-                                    var address = new UnifiedAddress
-                                    {
-                                        FullAddress = fullAddress,
-                                        Country = "Slovensko",
-                                        CountryCode = "SK"
-                                    };
-
-                                    var entity = new UnifiedEntity
-                                    {
-                                        IcoRegistry = ico,
-                                        CompanyNameRegistry = name,
-                                        Status = "active",
-                                        RegisteredAddress = address
-                                    };
-
-                                    var metadata = new UnifiedMetadata
-                                    {
-                                        Source = Source,
-                                        RegisterName = OutputNormalizer.GetRegisterName(Source),
-                                        RegisterUrl = $"{SearchUrl}?ICO={ico}&lan=en",
-                                        RetrievedAt = DateTime.UtcNow.ToString("o"),
-                                        IsMock = false
-                                    };
-
-                                    return new UnifiedData
-                                    {
-                                        Entity = entity,
-                                        Holders = new List<UnifiedHolder>(),
-                                        Metadata = metadata
-                                    };
+                                    return detailResult;
                                 }
+
+                                // Fallback: return basic info
+                                var address = new UnifiedAddress
+                                {
+                                    FullAddress = ExtractAddress(cells),
+                                    Country = "Slovensko",
+                                    CountryCode = "SK"
+                                };
+
+                                var entity = new UnifiedEntity
+                                {
+                                    IcoRegistry = ico,
+                                    CompanyNameRegistry = name,
+                                    Status = "active",
+                                    RegisteredAddress = address
+                                };
+
+                                var metadata = new UnifiedMetadata
+                                {
+                                    Source = Source,
+                                    RegisterName = OutputNormalizer.GetRegisterName(Source),
+                                    RegisterUrl = $"{SearchUrl}?ICO={ico}&lan=en",
+                                    RetrievedAt = DateTime.UtcNow.ToString("o"),
+                                    IsMock = false
+                                };
+
+                                return new UnifiedData
+                                {
+                                    Entity = entity,
+                                    Holders = new List<UnifiedHolder>(),
+                                    Metadata = metadata
+                                };
                             }
                         }
                     }
                 }
 
                 return null;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private string? ExtractAddress(List<XElement> cells)
+        {
+            foreach (var cell in cells)
+            {
+                var cellText = cell.Value.Trim();
+                // Look for address pattern (contains comma and digits)
+                if (cellText.Contains(",") && cellText.Any(char.IsDigit))
+                {
+                    return cellText;
+                }
+            }
+            return null;
+        }
+
+        private async Task<UnifiedData?> GetCompanyDetailAsync(string detailUrl)
+        {
+            try
+            {
+                await ApplyRateLimitAsync();
+                var html = await GetStringWindows1250Async(detailUrl);
+                return ParseDetailPage(html, detailUrl);
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        private UnifiedData? ParseDetailPage(string html, string detailUrl)
+        {
+            try
+            {
+                var doc = XDocument.Parse(PreprocessHtml(html));
+
+                var detailData = new Dictionary<string, string?>
+                {
+                    ["name"] = null,
+                    ["ico"] = null,
+                    ["address"] = null,
+                    ["date_registered"] = null,
+                    ["court"] = null,
+                    ["legal_form"] = null
+                };
+
+                // Define label patterns (both English and Slovak)
+                var labelPatterns = new Dictionary<string, string[]>
+                {
+                    ["name"] = new[] { "Business name", "Obchodné meno" },
+                    ["ico"] = new[] { "Identification number (IČO)", "Identification number (I", "IČO:" },
+                    ["address"] = new[] { "Registered seat", "Sídlo" },
+                    ["date_registered"] = new[] { "Date of entry", "Dátum zápisu" },
+                    ["court"] = new[] { "Court", "Súd" },
+                    ["legal_form"] = new[] { "Legal form", "Právna forma" }
+                };
+
+                // Extract key-value pairs from tables
+                foreach (var table in doc.Descendants("table"))
+                {
+                    foreach (var row in table.Descendants("tr"))
+                    {
+                        var cells = row.Descendants("td").ToList();
+                        if (cells.Count >= 2)
+                        {
+                            var key = cells[0].Value.Trim();
+                            var valueCell = cells[1];
+
+                            // Value might be in nested table
+                            var nestedTable = valueCell.Descendants("table").FirstOrDefault();
+                            string value;
+                            if (nestedTable != null)
+                            {
+                                var nestedRows = nestedTable.Descendants("tr").ToList();
+                                if (nestedRows.Any())
+                                {
+                                    var nestedCells = nestedRows[0].Descendants("td").ToList();
+                                    value = nestedCells.Any() ? nestedCells[0].Value.Trim() : valueCell.Value.Trim();
+                                }
+                                else
+                                {
+                                    value = valueCell.Value.Trim();
+                                }
+                            }
+                            else
+                            {
+                                value = valueCell.Value.Trim();
+                            }
+
+                            // Match key to field using patterns
+                            foreach (var kvp in labelPatterns)
+                            {
+                                var field = kvp.Key;
+                                var patterns = kvp.Value;
+                                if (patterns.Any(p => key.IndexOf(p, StringComparison.OrdinalIgnoreCase) >= 0))
+                                {
+                                    // Clean up the value (remove "(from: DATE)" suffix)
+                                    value = value.Split(new[] { "(from:" }, StringSplitOptions.None)[0].Trim();
+                                    if (!string.IsNullOrEmpty(value))
+                                    {
+                                        detailData[field] = value;
+                                    }
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Clean up ICO
+                var ico = detailData["ico"]?.Replace(" ", "").Split(new[] { "(from:" }, StringSplitOptions.None)[0].Trim() ?? "";
+
+                // Build address
+                var address = new UnifiedAddress
+                {
+                    FullAddress = detailData["address"],
+                    Country = "Slovensko",
+                    CountryCode = "SK"
+                };
+
+                var entity = new UnifiedEntity
+                {
+                    IcoRegistry = ico,
+                    CompanyNameRegistry = detailData["name"],
+                    LegalForm = detailData["legal_form"],
+                    Status = "active",
+                    IncorporationDate = detailData["date_registered"],
+                    RegisteredAddress = address
+                };
+
+                var metadata = new UnifiedMetadata
+                {
+                    Source = Source,
+                    RegisterName = OutputNormalizer.GetRegisterName(Source),
+                    RegisterUrl = detailUrl,
+                    RetrievedAt = DateTime.UtcNow.ToString("o"),
+                    IsMock = false
+                };
+
+                return new UnifiedData
+                {
+                    Entity = entity,
+                    Holders = new List<UnifiedHolder>(),
+                    Metadata = metadata
+                };
             }
             catch
             {

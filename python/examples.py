@@ -36,7 +36,7 @@ def main():
     # 1. ARES Czech - Working API
     print("\n[1] ARES Czech (Working API)")
     with ARESCzechScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("00006947")  # Ministry of Finance
+        result = scraper.search_by_id("06649114")  # Prusa Research
         if result:
             print(f"Company: {result['entity']['company_name_registry']}")
             print(f"Status: {result['entity']['status']}")
@@ -47,26 +47,30 @@ def main():
     # 2. ORSR Slovak - Web Scraper
     print("\n[2] ORSR Slovak (Web Scraper)")
     with ORSRSlovakScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("35763491")  # Slovenská sporiteľňa
+        result = scraper.search_by_id("47559870")  # ZELEX, s.r.o. - verified in ORSR
         if result:
             print(f"Company: {result['entity']['company_name_registry']}")
             print(f"Status: {result['entity'].get('status')}")
         else:
             print("No result (company may not be found)")
 
-    # 3. RPO Slovak - Mock Data
-    print("\n[3] RPO Slovak (Mock Data)")
+    # 3. RPO Slovak - Real API
+    print("\n[3] RPO Slovak (Real API)")
     with RpoSlovakScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("35763491")
-        if result:
+        result = scraper.search_by_id("47559870")  # ZELEX, s.r.o. - verified in RPO
+        if result and 'entity' in result:
             print(f"Company: {result['entity']['company_name_registry']}")
             print(f"Legal Form: {result['entity'].get('legal_form')}")
+            print(f"Incorporation: {result['entity'].get('incorporation_date')}")
+            print(f"Holders: {len(result.get('holders', []))}")
             print(f"Is Mock: {result['metadata']['is_mock']}")
+        elif result and result.get('error') == 'not_found':
+            print("Not found (banks/financial institutions not in RPO)")
 
     # 4. RPVS Slovak - UBO Data
     print("\n[4] RPVS Slovak (UBO Data - Mock)")
     with RpvsSlovakScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("35763491")
+        result = scraper.search_by_id("35763491")  # Slovenská sporiteľňa
         if result:
             print(f"Company: {result['entity']['company_name_registry']}")
             print(f"Holders: {len(result.get('holders', []))}")
@@ -102,7 +106,7 @@ def main():
     # 7. Finančná správa - Tax Info
     print("\n[7] Finančná správa (Tax Info - Mock)")
     with FinancnaSpravaScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("35763491")
+        result = scraper.search_by_id("35763491")  # Slovenská sporiteľňa
         if result:
             print(f"Company: {result['entity']['company_name_registry']}")
             tax_info = result.get("tax_info", {})
@@ -115,7 +119,7 @@ def main():
     # 8. Full JSON Output Example
     print("\n[8] Full JSON Output Example")
     with ARESCzechScraper(enable_snapshots=False) as scraper:
-        result = scraper.search_by_id("00006947")
+        result = scraper.search_by_id("06649114")
         if result:
             print_result("ARES Full Output", result)
 

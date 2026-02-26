@@ -1,0 +1,293 @@
+{
+  "id": 223073,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "31615287",
+      "validFrom": "1994-09-27"
+    }
+  ],
+  "fullNames": [
+    {
+      "value": "PTS Consulting, s.r.o.",
+      "validFrom": "1998-02-10"
+    }
+  ],
+  "addresses": [
+    {
+      "validFrom": "1998-02-10",
+      "street": "Námestie Andreja Hlinku",
+      "regNumber": 0,
+      "buildingNumber": "29/34",
+      "postalCodes": [
+        "01701"
+      ],
+      "municipality": {
+        "value": "Považská Bystrica",
+        "code": "SK0226512842",
+        "codelistCode": "CL000025"
+      },
+      "country": {
+        "value": "Slovenská republika",
+        "code": "703",
+        "codelistCode": "CL000086"
+      }
+    }
+  ],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "1994-09-27"
+    }
+  ],
+  "establishment": "1994-09-27",
+  "activities": [
+    {
+      "economicActivityDescription": "- činnosť organizačných a ekonomických poradcov",
+      "validFrom": "1994-09-27"
+    },
+    {
+      "economicActivityDescription": "- prieskum trhu",
+      "validFrom": "1994-09-27"
+    },
+    {
+      "economicActivityDescription": "- prenájom nebytových priestorov",
+      "validFrom": "1994-09-27"
+    },
+    {
+      "economicActivityDescription": "- poradenská činnosť v oblasti podnikania",
+      "validFrom": "1994-09-27"
+    },
+    {
+      "economicActivityDescription": "- kúpa tovaru za účelom jeho predaja konečnému spotrebiteľovi v rozsahu voľnej živnosti",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- kúpa tovaru za účelom jeho predaja iným prevádzkovateľom živnosti v rozsahu voľnej živnosti",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- organizovanie výstav a valných zhromaždení, sprostredkovanie školení a kurzov",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- odkupovania a vymáhanie pohľadávok : faktoring a forfaiting",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- poskytovanie software - predaj hotových programov na základe zmluvy s autorom",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- sprostredkovanie kúpy a predaj nehnuteľností",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "economicActivityDescription": "- prenájom výpočtovej techniky",
+      "validFrom": "1996-06-03"
+    },
+    {
+      "economicActivityDescription": "- prenájom motorových vozidiel",
+      "validFrom": "1996-06-03"
+    },
+    {
+      "economicActivityDescription": "- činnosť účtovných poradcov",
+      "validFrom": "1996-06-03"
+    },
+    {
+      "economicActivityDescription": "- vedenie účtovníctva",
+      "validFrom": "1996-06-03"
+    },
+    {
+      "economicActivityDescription": "- sprostredkovanie obchodu a služieb v rozsahu voľnej živnosti",
+      "validFrom": "1996-06-03"
+    }
+  ],
+  "statutoryBodies": [
+    {
+      "stakeholderType": {
+        "value": "Konateľ",
+        "code": "3",
+        "codelistCode": "CL010113"
+      },
+      "validFrom": "1995-10-12",
+      "address": {
+        "street": "Bernolákova",
+        "regNumber": 0,
+        "buildingNumber": "3",
+        "municipality": {
+          "value": "Nové Mesto nad Váhom",
+          "code": "SK0224506338",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Ing. Marián Hunčík",
+        "familyNames": [
+          "Hunčík"
+        ],
+        "givenNames": [
+          "Marián"
+        ]
+      }
+    },
+    {
+      "stakeholderType": {
+        "value": "Konateľ",
+        "code": "3",
+        "codelistCode": "CL010113"
+      },
+      "validFrom": "1997-02-27",
+      "address": {
+        "street": "Sitnianska",
+        "regNumber": 0,
+        "buildingNumber": "31",
+        "municipality": {
+          "value": "Banská Bystrica",
+          "code": "SK0321508438",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "personName": {
+        "formatedName": "Ing. Marián Múka",
+        "familyNames": [
+          "Múka"
+        ],
+        "givenNames": [
+          "Marián"
+        ]
+      }
+    }
+  ],
+  "stakeholders": [
+    {
+      "stakeholderType": {
+        "value": "Spoločník v.o.s. / s.r.o.",
+        "code": "99",
+        "codelistCode": "CL010109"
+      },
+      "validFrom": "1998-02-10",
+      "address": {
+        "validFrom": "1998-02-10",
+        "street": "Rudlovská cesta",
+        "regNumber": 0,
+        "buildingNumber": "85",
+        "municipality": {
+          "value": "Banská Bystrica",
+          "code": "SK0321508438",
+          "codelistCode": "CL000025"
+        },
+        "country": {
+          "value": "Slovenská republika",
+          "code": "703",
+          "codelistCode": "CL000086"
+        }
+      },
+      "identifier": "30225639",
+      "fullName": "PTS, s.r.o. Banská Bystrica,",
+      "establishment": "1800-01-01"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "poločník schválil dňa 29.1.1998 Dodatok č. 6 k zakladateľskej listine vo forme notárskej zápisnice č. NZ 21/98. Spis odstúpený na základe miestnej príslušnosti na Okresný súd Trenčín dňa 26.03.1998-zmena sídla.",
+      "validFrom": "1998-02-10"
+    },
+    {
+      "value": "Spoločnosť s ručením obmedzeným bola založená zakladateľskou listinou vyhotovenou vo forme notárskej zápisnice č. NZ 285/94 zo dňa 26.9.1994 podľa §§ 24, 105 a nasl. zák.č. 513/91 Zb. Stary spis: S.r.o. 6094",
+      "validFrom": "1994-09-27"
+    },
+    {
+      "value": "Spoločník dňa 14.3.1995 schválil formou notárskej zápisnice č. NZ 30/95 Dodatok č. 1 k zakladateľskej listine. Spoločník dňa 17.3.1995 schválil formou notárskej zápisnice č. NZ 32/95 Dodatok č. 2 k zakladateľskej listine.",
+      "validFrom": "1995-03-21"
+    },
+    {
+      "value": "Spoločník dňa 5.9.1995 schválil formou notárskej zápisnice č. NZ 115/95 Dodatok č. 3 k zakladateľskej listine.",
+      "validFrom": "1995-10-12"
+    },
+    {
+      "value": "Na zasadnutí valného zhromaždenia konanom dňa 23.11.1995 bol schválený Dodatok č. 4 k zakladateľskej listine.",
+      "validFrom": "1996-01-15"
+    },
+    {
+      "value": "Spoločník dňa 18.04.1996 schválil Dodatok č. 5 k zakladateľskej listine vo forme notárskej zápisnice č. NZ 36/96 Stary spis: S.r.o. 6094",
+      "validFrom": "1996-06-03"
+    }
+  ],
+  "authorizations": [
+    {
+      "value": "Spoločnosť zastupujú a za ňu podpisujú konatelia, každý samostatne.",
+      "validFrom": "1995-10-12"
+    }
+  ],
+  "equities": [
+    {
+      "validFrom": "1994-09-27",
+      "value": 100000.0,
+      "currency": {
+        "value": "slovenská koruna",
+        "code": "SKK",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "deposits": [
+    {
+      "validFrom": "1998-02-10",
+      "fullName": "PTS, s.r.o. Banská Bystrica,",
+      "amount": 100000.0,
+      "currency": {
+        "value": "slovenská koruna",
+        "code": "SKK",
+        "codelistCode": "CL000083"
+      }
+    }
+  ],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Banská Bystrica",
+        "validFrom": "1994-09-27"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/2209/S",
+        "validFrom": "1994-09-27"
+      }
+    ]
+  },
+  "statisticalCodes": {
+    "statCodesActualization": "2026-01-01",
+    "mainActivity": {
+      "value": "Účtovnícke a audítorské činnosti, vedenie účtovných kníh; daňové poradenstvo",
+      "code": "6920",
+      "codelistCode": "CL010579"
+    },
+    "esa2010": {
+      "value": "Národné súkromné nefinančné korporácie",
+      "code": "11002",
+      "codelistCode": "CL010010"
+    }
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

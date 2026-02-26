@@ -1,0 +1,239 @@
+{
+  "ico": "27592502",
+  "obchodniJmeno": "J&T FINANCE GROUP SE",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 86,
+    "nazevSpravnihoObvodu": "Praha 8",
+    "kodMestskehoObvodu": 86,
+    "nazevMestskehoObvodu": "Praha 8",
+    "kodMestskeCastiObvodu": 500208,
+    "kodUlice": 469718,
+    "nazevMestskeCastiObvodu": "Praha 8",
+    "nazevUlice": "Sokolovská",
+    "cisloDomovni": 700,
+    "kodCastiObce": 400637,
+    "cisloOrientacni": 113,
+    "cisloOrientacniPismeno": "a",
+    "nazevCastiObce": "Karlín",
+    "kodAdresnihoMista": 81033427,
+    "psc": 18600,
+    "textovaAdresa": "Sokolovská 700/113a, Karlín, 18600 Praha 8",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "932",
+  "pravniFormaRos": "932",
+  "financniUrad": "013",
+  "datumVzniku": "2006-08-24",
+  "datumAktualizace": "2025-12-24",
+  "icoId": "27592502",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Sokolovská 700/113a",
+    "radekAdresy2": "Karlín",
+    "radekAdresy3": "18600 Praha 8"
+  },
+  "czNace2008": [
+    "64200",
+    "66190",
+    "702"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "NEEXISTUJICI",
+    "stavZdrojeSkDph": "AKTIVNI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "J&T FINANCE GROUP SE",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 700,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 113,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 81033427,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 700/113a, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "932",
+      "pravniFormaRos": "932",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "J&T FINANCE GROUP SE",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 700,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 113,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 81033427,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 700/113a, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "932",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "J&T FINANCE GROUP SE",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 700,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 113,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 81033427,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 700/113a, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "932",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "J&T FINANCE GROUP SE",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 700,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 113,
+            "cisloOrientacniPismeno": "a",
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 81033427,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 700/113a, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "932",
+      "spisovaZnacka": "H 1317/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "66190",
+    "70200",
+    "64210"
+  ],
+  "dicSkDph": "CZ699000619"
+}

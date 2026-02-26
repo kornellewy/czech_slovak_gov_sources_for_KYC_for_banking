@@ -1,0 +1,238 @@
+{
+  "ico": "28645065",
+  "obchodniJmeno": "Accolade Holding, a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodOkresu": 3100,
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 86,
+    "nazevSpravnihoObvodu": "Praha 8",
+    "kodMestskehoObvodu": 86,
+    "nazevMestskehoObvodu": "Praha 8",
+    "kodMestskeCastiObvodu": 500208,
+    "kodUlice": 469718,
+    "nazevMestskeCastiObvodu": "Praha 8",
+    "nazevUlice": "Sokolovská",
+    "cisloDomovni": 394,
+    "kodCastiObce": 400637,
+    "cisloOrientacni": 17,
+    "nazevCastiObce": "Karlín",
+    "kodAdresnihoMista": 27119327,
+    "psc": 18600,
+    "textovaAdresa": "Sokolovská 394/17, Karlín, 18600 Praha 8",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "2010-12-23",
+  "datumAktualizace": "2024-11-07",
+  "dic": "CZ28645065",
+  "icoId": "28645065",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Sokolovská 394/17",
+    "radekAdresy2": "Karlín",
+    "radekAdresy3": "18600 Praha 8"
+  },
+  "czNace2008": [
+    "68",
+    "70220",
+    "749",
+    "64200"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Accolade Holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 394,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 17,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 27119327,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 394/17, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Accolade Holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodOkresu": 3100,
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 394,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 17,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 27119327,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 394/17, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Accolade Holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 394,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 17,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 27119327,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 394/17, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Accolade Holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 469718,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Sokolovská",
+            "cisloDomovni": 394,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 17,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 27119327,
+            "psc": 18600,
+            "textovaAdresa": "Sokolovská 394/17, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 19102/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "64210",
+    "70200",
+    "74990",
+    "68"
+  ]
+}

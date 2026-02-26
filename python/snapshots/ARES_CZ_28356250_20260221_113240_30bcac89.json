@@ -1,0 +1,240 @@
+{
+  "ico": "28356250",
+  "obchodniJmeno": "Energetický a průmyslový holding, a.s.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 19,
+    "nazevSpravnihoObvodu": "Praha 1",
+    "kodMestskehoObvodu": 19,
+    "nazevMestskehoObvodu": "Praha 1",
+    "kodMestskeCastiObvodu": 500054,
+    "kodUlice": 463671,
+    "nazevMestskeCastiObvodu": "Praha 1",
+    "nazevUlice": "Pařížská",
+    "cisloDomovni": 130,
+    "kodCastiObce": 127001,
+    "cisloOrientacni": 26,
+    "nazevCastiObce": "Josefov",
+    "kodAdresnihoMista": 21693641,
+    "psc": 11000,
+    "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "121",
+  "pravniFormaRos": "121",
+  "financniUrad": "013",
+  "datumVzniku": "2009-08-10",
+  "datumAktualizace": "2025-11-14",
+  "dic": "CZ28356250",
+  "icoId": "28356250",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Pařížská 130/26",
+    "radekAdresy2": "Josefov",
+    "radekAdresy3": "11000 Praha 1"
+  },
+  "czNace2008": [
+    "47",
+    "46190",
+    "620",
+    "46",
+    "6820",
+    "70100"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "ros",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Energetický a průmyslový holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "pravniFormaRos": "121",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Energetický a průmyslový holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "121",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Energetický a průmyslový holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "Energetický a průmyslový holding, a.s.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 19,
+            "nazevSpravnihoObvodu": "Praha 1",
+            "kodMestskehoObvodu": 19,
+            "nazevMestskehoObvodu": "Praha 1",
+            "kodMestskeCastiObvodu": 500054,
+            "kodUlice": 463671,
+            "nazevMestskeCastiObvodu": "Praha 1",
+            "nazevUlice": "Pařížská",
+            "cisloDomovni": 130,
+            "kodCastiObce": 127001,
+            "cisloOrientacni": 26,
+            "nazevCastiObce": "Josefov",
+            "kodAdresnihoMista": 21693641,
+            "psc": 11000,
+            "textovaAdresa": "Pařížská 130/26, Josefov, 11000 Praha 1",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "121",
+      "spisovaZnacka": "B 21747/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "47",
+    "46190",
+    "46",
+    "68200",
+    "70100",
+    "62"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "ico": "03024130",
+  "obchodniJmeno": "VELKÁ PECKA s.r.o.",
+  "sidlo": {
+    "kodStatu": "CZ",
+    "nazevStatu": "Česká republika",
+    "kodKraje": 19,
+    "nazevKraje": "Hlavní město Praha",
+    "kodObce": 554782,
+    "nazevObce": "Praha",
+    "kodSpravnihoObvodu": 86,
+    "nazevSpravnihoObvodu": "Praha 8",
+    "kodMestskehoObvodu": 86,
+    "nazevMestskehoObvodu": "Praha 8",
+    "kodMestskeCastiObvodu": 500208,
+    "kodUlice": 722626,
+    "nazevMestskeCastiObvodu": "Praha 8",
+    "nazevUlice": "Karolinská",
+    "cisloDomovni": 654,
+    "kodCastiObce": 400637,
+    "cisloOrientacni": 2,
+    "nazevCastiObce": "Karlín",
+    "kodAdresnihoMista": 26210134,
+    "psc": 18600,
+    "textovaAdresa": "Karolinská 654/2, Karlín, 18600 Praha 8",
+    "standardizaceAdresy": true,
+    "typCisloDomovni": 1
+  },
+  "pravniForma": "112",
+  "pravniFormaRos": "112",
+  "financniUrad": "008",
+  "datumVzniku": "2014-05-21",
+  "datumAktualizace": "2025-12-08",
+  "dic": "CZ03024130",
+  "icoId": "03024130",
+  "adresaDorucovaci": {
+    "radekAdresy1": "Karolinská 654/2",
+    "radekAdresy2": "Karlín",
+    "radekAdresy3": "18600 Praha 8"
+  },
+  "czNace2008": [
+    "00",
+    "107",
+    "20",
+    "46",
+    "461",
+    "471",
+    "47220",
+    "47250",
+    "52100",
+    "620",
+    "6820",
+    "68320",
+    "70220",
+    "821",
+    "82920"
+  ],
+  "seznamRegistraci": {
+    "stavZdrojeRos": "AKTIVNI",
+    "stavZdrojeVr": "AKTIVNI",
+    "stavZdrojeRes": "AKTIVNI",
+    "stavZdrojeRzp": "AKTIVNI",
+    "stavZdrojeNrpzs": "NEEXISTUJICI",
+    "stavZdrojeRpsh": "NEEXISTUJICI",
+    "stavZdrojeRcns": "NEEXISTUJICI",
+    "stavZdrojeSzr": "NEEXISTUJICI",
+    "stavZdrojeDph": "AKTIVNI",
+    "stavZdrojeSkDph": "NEEXISTUJICI",
+    "stavZdrojeSd": "NEEXISTUJICI",
+    "stavZdrojeIr": "NEEXISTUJICI",
+    "stavZdrojeCeu": "NEEXISTUJICI",
+    "stavZdrojeRs": "NEEXISTUJICI",
+    "stavZdrojeRed": "NEEXISTUJICI",
+    "stavZdrojeMonitor": "NEEXISTUJICI"
+  },
+  "primarniZdroj": "rzp",
+  "dalsiUdaje": [
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "VELKÁ PECKA s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 722626,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Karolinská",
+            "cisloDomovni": 654,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 2,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 26210134,
+            "psc": 18600,
+            "textovaAdresa": "Karolinská 654/2, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "pravniFormaRos": "112",
+      "datovyZdroj": "res"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "VELKÁ PECKA s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 722626,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Karolinská",
+            "cisloDomovni": 654,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 2,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 26210134,
+            "psc": 18600,
+            "textovaAdresa": "Karolinská 654/2, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniFormaRos": "112",
+      "datovyZdroj": "ros"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "VELKÁ PECKA s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 722626,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Karolinská",
+            "cisloDomovni": 654,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 2,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 26210134,
+            "psc": 18600,
+            "textovaAdresa": "Karolinská 654/2, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "datovyZdroj": "rzp"
+    },
+    {
+      "obchodniJmeno": [
+        {
+          "obchodniJmeno": "VELKÁ PECKA s.r.o.",
+          "primarniZaznam": true
+        }
+      ],
+      "sidlo": [
+        {
+          "sidlo": {
+            "kodStatu": "CZ",
+            "nazevStatu": "Česká republika",
+            "kodKraje": 19,
+            "nazevKraje": "Hlavní město Praha",
+            "kodObce": 554782,
+            "nazevObce": "Praha",
+            "kodSpravnihoObvodu": 86,
+            "nazevSpravnihoObvodu": "Praha 8",
+            "kodMestskehoObvodu": 86,
+            "nazevMestskehoObvodu": "Praha 8",
+            "kodMestskeCastiObvodu": 500208,
+            "kodUlice": 722626,
+            "nazevMestskeCastiObvodu": "Praha 8",
+            "nazevUlice": "Karolinská",
+            "cisloDomovni": 654,
+            "kodCastiObce": 400637,
+            "cisloOrientacni": 2,
+            "nazevCastiObce": "Karlín",
+            "kodAdresnihoMista": 26210134,
+            "psc": 18600,
+            "textovaAdresa": "Karolinská 654/2, Karlín, 18600 Praha 8",
+            "standardizaceAdresy": true,
+            "typCisloDomovni": 1
+          },
+          "primarniZaznam": true
+        }
+      ],
+      "pravniForma": "112",
+      "spisovaZnacka": "C 226550/MSPH",
+      "datovyZdroj": "vr"
+    }
+  ],
+  "czNace": [
+    "471",
+    "68200",
+    "461",
+    "47250",
+    "70200",
+    "82100",
+    "107",
+    "52100",
+    "68320",
+    "82920",
+    "00",
+    "46",
+    "47220",
+    "20",
+    "62"
+  ],
+  "subRegistrSzr": "szr"
+}

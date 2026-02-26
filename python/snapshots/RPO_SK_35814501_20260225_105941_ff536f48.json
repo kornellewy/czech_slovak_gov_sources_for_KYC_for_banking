@@ -1,0 +1,83 @@
+{
+  "id": 221601,
+  "dbModificationDate": "2025-07-07",
+  "identifiers": [
+    {
+      "value": "35814501",
+      "validFrom": "2001-06-18"
+    }
+  ],
+  "fullNames": [],
+  "addresses": [],
+  "legalForms": [
+    {
+      "value": {
+        "value": "Spoločnosť s ručením obmedzeným",
+        "code": "112",
+        "codelistCode": "CL000056"
+      },
+      "validFrom": "2001-06-18"
+    }
+  ],
+  "establishment": "2001-06-18",
+  "termination": "2013-12-04",
+  "activities": [],
+  "statutoryBodies": [],
+  "stakeholders": [],
+  "legalStatuses": [
+    {
+      "value": {
+        "value": "Zaniknutá spoločnosť",
+        "code": "17",
+        "codelistCode": "CL010108"
+      },
+      "validFrom": "2013-12-04"
+    }
+  ],
+  "otherLegalFacts": [
+    {
+      "value": "Likvidácia: Vstup do likvidácie - dátum: 1.5.2013 Skončenie likvidácie - dátum: 30.9.2013",
+      "validFrom": "2013-12-04"
+    },
+    {
+      "value": "Právny dôvod výmazu zapísanej osoby z obchodného registra: Zapísaná osoba vymazaná z obchodného registra od: 4.12.2013 Právny dôvod výmazu: dobrovoľný výmaz",
+      "validFrom": "2013-12-04"
+    },
+    {
+      "value": "Zrušenie spoločnosti: Právny dôvod zrušenia: Rozhodnutím príslušného orgánu spoločnosti (družstva) o zrušení obchodnej spoločnosti (družstva) podľa § 68 ods.3 písm. b) Obchodného zákonníka.",
+      "validFrom": "2013-12-04"
+    },
+    {
+      "value": "Obchodná spoločnosť AIRCARGO SLOVAKIA s.r.o., v likvidácii, so sidlom Štefánikova 17, 811 05 Bratislava, IČO: 35 814 501, zapísaná v odd. Sro, vložke č. 55671/B, bola zrušená a vstúpila do likvidácie dňom 01.05.2013. Na základe konečnej správy likvidátora o priebehu likvidácie a účtovnej závierky, schválených rozhodnutím valného zhromaždenia a na základe súhlasu príslušného správcu dane, bola ukončená likvidácia ku dňu 30.09.2013. Obchodná spoločnosť AIRCARGO SLOVAKIA s.r.o., v likvidácii, so sidlom Štefánikova 17, 811 05 Bratislava, IČO: 35 814 501, zapísaná v odd. Sro, vložke č. 55671/B, sa vymazáva z obchodného registra v celom rozsahu dňom 04.12.2013.",
+      "validFrom": "2013-12-04"
+    }
+  ],
+  "authorizations": [
+    {
+      "value": "Likvidátor koná v mene spoločnosti samostatne, podľa § 72 Obchodného zákonníka.",
+      "validFrom": "2013-05-23"
+    }
+  ],
+  "equities": [],
+  "deposits": [],
+  "sourceRegister": {
+    "value": {
+      "value": "Obchodný register",
+      "code": "1",
+      "codelistCode": "CL010112"
+    },
+    "registrationOffices": [
+      {
+        "value": "Okresný súd Bratislava I",
+        "validFrom": "2001-06-18"
+      }
+    ],
+    "registrationNumbers": [
+      {
+        "value": "Sro/55671/B",
+        "validFrom": "2001-06-18"
+      }
+    ]
+  },
+  "license": "1. ŠÚ SR ako správca informačného systému RPO uplatňuje na použitie sprístupnených údajov z RPO uvedených v § 7 ods. 2 a § 7a ods. 4 zákona č. 272/2015 Z. z. o registri právnických osôb, podnikateľov a orgánov verejnej moci a o zmene a doplnení niektorých zákonov (ďalej len „zákon o registri právnických osôb“) medzinárodnú verejnú licenciu Creative Commons Attribution License (cc-by) 4.0 (ďalej len „verejná licencia“).\n2. Predmetom verejnej licencie sú sprístupnené údaje z RPO prostredníctvom webového sídla ŠÚ SR v zmysle § 7 ods. 2 a § 7a ods. 4 zákona o registri právnických osôb.\n3. ŠÚ SR udeľuje súhlas na použitie predmetu verejnej licencie a výkon licencovaných práv („licencia“) podľa vyššie citovanej verejnej licencie."
+}

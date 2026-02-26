@@ -155,7 +155,7 @@ c_sharp/
 | Source | Country | Type | Status | Notes |
 |--------|---------|------|--------|-------|
 | ARES_CZ | CZ | REST API | ✅ Working | 500 req/min limit |
-| ORSR_SK | SK | Web scraper | ✅ Working | 60 req/min limit |
+| ORSR_SK | SK | Web scraper | ✅ Full | Search + detail page, 60 req/min limit |
 | RPVS_SK | SK | REST API | ⚠️ Mock | Requires API key |
 | JUSTICE_CZ | CZ | None | ⚠️ Mock | No public API |
 | ESM_CZ | CZ | RESTRICTED | 🔒 AML only | Requires certification |
@@ -196,7 +196,7 @@ var vat = await service.VerifyVatNumberAsync("CZ06649114");
 
 **Czech:** `00006947` (Ministerstvo financí), `00216305` (Česká pošta), `06649114` (Prusa Research)
 
-**Slovak:** `35763491` (Slovenská sporiteľňa), `44103755` (Slovak Telekom), `31328356` (VÚB bank)
+**Slovak:** `35763491` (Slovenská sporiteľňa), `44103755` (Slovak Telekom), `31328356` (VÚB bank), `47559870` (ZELEX, s.r.o. - verified in ORSR)
 
 **Note:** AGROFERT a.s. (25932910) is NOT in ARES - returns 404.
 

@@ -1,18 +1,35 @@
 {
   "version": 2,
-  "dgSpecHash": "QgFiJ6TGPm8=",
+  "dgSpecHash": "+79mlA3bAQo=",
   "success": true,
-  "projectFilePath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SimplePlaywrightTest.csproj",
+  "projectFilePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
   "expectedPackageFiles": [
-    "/home/kornellewy-laptop/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/microsoft.playwright/1.40.0/microsoft.playwright.1.40.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/system.text.encodings.web/6.0.0/system.text.encodings.web.6.0.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/system.text.json/6.0.0/system.text.json.6.0.0.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/microsoft.netcore.app.ref/8.0.24/microsoft.netcore.app.ref.8.0.24.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.24/microsoft.aspnetcore.app.ref.8.0.24.nupkg.sha512",
-    "/home/kornellewy-laptop/.nuget/packages/microsoft.netcore.app.host.linux-x64/8.0.24/microsoft.netcore.app.host.linux-x64.8.0.24.nupkg.sha512"
+    "/home/kornellewy-laptop/.nuget/packages/system.text.json/8.0.4/system.text.json.8.0.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1510",
+      "level": "Warning",
+      "message": "PackageReference System.Text.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
+      "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    },
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
+      "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+      "warningLevel": 1,
+      "filePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+      "libraryId": "System.Text.Json",
+      "targetGraphs": [
+        "net10.0"
+      ]
+    }
+  ]
 }

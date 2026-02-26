@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj": {}
+    "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj": {}
   },
   "projects": {
-    "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj": {
+    "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+        "projectUniqueName": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
         "projectName": "SkCzScrapers",
-        "projectPath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
+        "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
         "packagesPath": "/home/kornellewy-laptop/.nuget/packages/",
-        "outputPath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/",
+        "outputPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kornellewy-laptop/.nuget/NuGet/NuGet.Config"

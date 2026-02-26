@@ -5,11 +5,13 @@ from typing import Optional, Dict, Any, List
 from pathlib import Path
 import hashlib
 import json
+import time
 from datetime import datetime
 
 from src.utils.http_client import HTTPClient
 from src.utils.json_handler import JSONHandler
 from src.utils.logger import get_logger
+from src.utils.logger_enhanced import ScraperLogger
 from config.constants import BASE_DIR, OUTPUT_DIR
 
 
@@ -36,7 +38,9 @@ class BaseScraper(ABC):
         Args:
             enable_snapshots: Whether to save raw response snapshots
         """
+        self.source_name = self.__class__.__name__.replace("Scraper", "").upper()
         self.logger = get_logger(self.__class__.__name__)
+        self.enhanced_logger = ScraperLogger(self.__class__.__name__)
         self.json_handler = JSONHandler()
         self.http_client: Optional[HTTPClient] = None
         self.enable_snapshots = enable_snapshots
@@ -45,6 +49,8 @@ class BaseScraper(ABC):
         self.snapshots_dir = BASE_DIR / "snapshots"
         if self.enable_snapshots:
             self.snapshots_dir.mkdir(parents=True, exist_ok=True)
+
+        self.logger.info(f"Initialized {self.source_name} scraper")
 
     @abstractmethod
     def search_by_id(self, identifier: str) -> Optional[Dict[str, Any]]:
@@ -103,10 +109,11 @@ class BaseScraper(ABC):
         Returns:
             Source identifier string
         """
-        return self.__class__.__name__.replace("Scraper", "").upper()
+        return self.source_name
 
     def close(self) -> None:
         """Clean up resources (HTTP connections, etc.)."""
+        self.logger.debug(f"Closing {self.source_name} scraper")
         if self.http_client:
             self.http_client.close()
 
@@ -117,6 +124,96 @@ class BaseScraper(ABC):
     def __exit__(self, exc_type, exc_val, exc_tb):
         """Context manager exit."""
         self.close()
+
+    # Enhanced logging methods for common operations
+
+    def log_request(self, method: str, url: str, **kwargs):
+        """Log HTTP request with context."""
+        self.enhanced_logger.log_request(method, url, scraper=self.source_name, **kwargs)
+
+    def log_response(self, url: str, status_code: int, duration_ms: float, **kwargs):
+        """Log HTTP response with context."""
+        self.enhanced_logger.log_response(url, status_code, duration_ms, scraper=self.source_name, **kwargs)
+
+    def log_parse_start(self, data_source: str, **kwargs):
+        """Log parse start."""
+        self.enhanced_logger.log_parse_start(data_source, scraper=self.source_name, **kwargs)
+
+    def log_parse_complete(self, data_source: str, items_found: int = 0, **kwargs):
+        """Log parse complete."""
+        self.enhanced_logger.log_parse_complete(data_source, items_found, scraper=self.source_name, **kwargs)
+
+    def log_maintenance(self, source: str = None, **kwargs):
+        """Log maintenance detected."""
+        source_name = source or self.source_name
+        self.enhanced_logger.log_maintenance(source_name, scraper=self.source_name, **kwargs)
+
+    def log_rate_limit(self, delay: float, **kwargs):
+        """Log rate limit delay."""
+        self.enhanced_logger.log_rate_limit(delay, scraper=self.source_name, **kwargs)
+
+    def log_mock_fallback(self, reason: str, **kwargs):
+        """Log mock data fallback."""
+        self.enhanced_logger.log_mock_fallback(self.source_name, reason, scraper=self.source_name, **kwargs)
+
+    def log_operation_start(self, operation: str, **context):
+        """Log operation start - returns context manager."""
+        return self.enhanced_logger.log_context(operation, scraper=self.source_name, **context)
+
+    def log_search_start(self, identifier: str = None, search_type: str = None):
+        """Log search operation start."""
+        self.logger.info(f"[{self.source_name}] Search started: {search_type or 'by_id'} = {identifier or 'N/A'}")
+
+    def log_search_complete(self, results_count: int = 0, identifier: str = None):
+        """Log search operation complete."""
+        if identifier:
+            self.logger.info(f"[{self.source_name}] Search complete for {identifier}: {results_count} result(s)")
+        else:
+            self.logger.info(f"[{self.source_name}] Search complete: {results_count} result(s)")
+
+    def log_save_result(self, filename: str, filepath: str = None):
+        """Log result save."""
+        self.logger.info(f"[{self.source_name}] Saved result: {filename}")
+
+    def log_error(self, operation: str, error: Exception, **context):
+        """Log error with context."""
+        self.logger.error(f"[{self.source_name}] {operation} error: {error}", extra={'context': context, 'scraper': self.source_name})
+
+    def log_warning(self, message: str, **context):
+        """Log warning with context."""
+        self.logger.warning(f"[{self.source_name}] {message}", extra={'context': context, 'scraper': self.source_name})
+
+    def log_debug(self, message: str, **context):
+        """Log debug message with context."""
+        self.logger.debug(f"[{self.source_name}] {message}", extra={'context': context, 'scraper': self.source_name})
+
+    def log_info(self, message: str, **context):
+        """Log info message with context."""
+        self.logger.info(f"[{self.source_name}] {message}", extra={'context': context, 'scraper': self.source_name})
+
+    def time_request(self, func):
+        """Decorator to time HTTP requests."""
+        def wrapper(*args, **kwargs):
+            start = time.time()
+            try:
+                result = func(*args, **kwargs)
+                duration_ms = (time.time() - start) * 1000
+
+                # Log response timing
+                if hasattr(result, 'status_code'):
+                    self.log_response(
+                        kwargs.get('url', 'unknown'),
+                        result.status_code,
+                        duration_ms
+                    )
+
+                return result
+            except Exception as e:
+                duration_ms = (time.time() - start) * 1000
+                self.logger.debug(f"Request failed after {duration_ms:.0f}ms: {e}")
+                raise
+
+        return wrapper
 
     def save_snapshot(self, data: Any, identifier: str, source: str) -> Optional[str]:
         """Save a raw data snapshot for audit trail.

@@ -1,0 +1,39 @@
+{
+  "entity": {
+    "ico_registry": "47559870",
+    "company_name_registry": "ZELEX, s.r.o.",
+    "legal_form": "Spoločnosť s ručením obmedzeným",
+    "legal_form_code": "112",
+    "status": "active",
+    "incorporation_date": "2013-12-05",
+    "registered_address": {
+      "street": "Kuraľany 49",
+      "city": "Kuraľany",
+      "postal_code": "93564",
+      "country_code": "SK"
+    }
+  },
+  "holders": [
+    {
+      "holder_type": "individual",
+      "role": "statutory_body",
+      "name": "Rudolf Varga",
+      "ownership_pct_direct": 0.0
+    },
+    {
+      "holder_type": "individual",
+      "role": "shareholder",
+      "name": "Rudolf Varga",
+      "ownership_pct_direct": 0.0
+    }
+  ],
+  "metadata": {
+    "source": "RPO_SK",
+    "register_name": "Register of Legal Entities (Register právnických osôb)",
+    "retrieved_at": "2026-02-23T11:38:09.948174Z",
+    "level": 0,
+    "is_mock": false,
+    "register_url": "https://api.statistics.sk/rpo/v1/entity/322455"
+  },
+  "scraped_at": "2026-02-23T11:38:09.950567Z"
+}
