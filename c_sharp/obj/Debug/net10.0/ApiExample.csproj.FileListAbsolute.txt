@@ -2,3 +2,8 @@
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfoInputs.cache
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfo.cs
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/ApiExample.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ApiExample.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ApiExample.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ApiExample.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ApiExample.sourcelink.json

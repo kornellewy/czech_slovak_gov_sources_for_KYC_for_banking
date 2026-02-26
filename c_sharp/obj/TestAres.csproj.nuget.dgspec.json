@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/TestAres.csproj": {}
+    "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/TestAres.csproj": {}
   },
   "projects": {
-    "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/TestAres.csproj": {
+    "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/TestAres.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/TestAres.csproj",
+        "projectUniqueName": "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/TestAres.csproj",
         "projectName": "TestAres",
-        "projectPath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/TestAres.csproj",
+        "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/TestAres.csproj",
         "packagesPath": "/home/kornellewy-laptop/.nuget/packages/",
-        "outputPath": "/home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/",
+        "outputPath": "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kornellewy-laptop/.nuget/NuGet/NuGet.Config"

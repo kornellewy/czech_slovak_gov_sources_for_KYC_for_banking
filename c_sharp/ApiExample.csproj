@@ -2,16 +2,33 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net10.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- Exclude all files except ARES and RPO related -->
     <Compile Remove="Program.cs" />
     <Compile Remove="TestAres.cs" />
     <Compile Remove="Scrapers.cs" />
     <Compile Remove="AgrofertTest.cs" />
+    <Compile Remove="PlaywrightBrowserClient.cs" />
+    <Compile Remove="SimplePlaywrightTest.cs" />
+    <Compile Remove="TestPlaywright.cs" />
+    <Compile Remove="IvesClient.cs" />
+    <Compile Remove="RuzClient.cs" />
+    <Compile Remove="ResClient.cs" />
+    <Compile Remove="VrClient.cs" />
+    <Compile Remove="JusticeClient.cs" />
+    <Compile Remove="CnbClient.cs" />
+    <Compile Remove="OrsrClient.cs" />
+    <Compile Remove="RpvsClient.cs" />
+    <Compile Remove="EsmClient.cs" />
+    <Compile Remove="FinancnaSpravaClient.cs" />
+    <Compile Remove="NbsClient.cs" />
+    <Compile Remove="**/PlaywrightTest/**" />
+    <Compile Remove="**/AresSubsourceTest/**" />
   </ItemGroup>
 
 </Project>

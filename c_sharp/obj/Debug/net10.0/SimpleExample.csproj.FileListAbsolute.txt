@@ -1,0 +1,15 @@
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/bin/Debug/net10.0/SimpleExample
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/bin/Debug/net10.0/SimpleExample.deps.json
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/bin/Debug/net10.0/SimpleExample.runtimeconfig.json
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/bin/Debug/net10.0/SimpleExample.dll
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/bin/Debug/net10.0/SimpleExample.pdb
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.sourcelink.json
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.dll
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/refint/SimpleExample.dll
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.pdb
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/SimpleExample.genruntimeconfig.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/ref/SimpleExample.dll

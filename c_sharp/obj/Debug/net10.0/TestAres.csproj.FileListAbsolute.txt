@@ -2,3 +2,8 @@
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfoInputs.cache
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfo.cs
 /home/kornellewy-laptop/Desktop/sk_cz_sources_sraper/c_sharp/obj/Debug/net10.0/TestAres.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/TestAres.GeneratedMSBuildEditorConfig.editorconfig
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfoInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/TestAres.AssemblyInfo.cs
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/TestAres.csproj.CoreCompileInputs.cache
+/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/obj/Debug/net10.0/TestAres.sourcelink.json

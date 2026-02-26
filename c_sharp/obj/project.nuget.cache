@@ -1,35 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+79mlA3bAQo=",
+  "dgSpecHash": "E3ZBgE6qWHQ=",
   "success": true,
-  "projectFilePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
-  "expectedPackageFiles": [
-    "/home/kornellewy-laptop/.nuget/packages/system.text.json/8.0.4/system.text.json.8.0.4.nupkg.sha512"
-  ],
-  "logs": [
-    {
-      "code": "NU1510",
-      "level": "Warning",
-      "message": "PackageReference System.Text.Json will not be pruned. Consider removing this package from your dependencies, as it is likely unnecessary.",
-      "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
-      "warningLevel": 1,
-      "filePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "message": "Package 'System.Text.Json' 8.0.4 has a known high severity vulnerability, https://github.com/advisories/GHSA-8g4q-xg66-9fp4",
-      "projectPath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
-      "warningLevel": 1,
-      "filePath": "/home/kornellewy-laptop/Desktop/code_projects/sk_cz_sources_sraper/c_sharp/SkCzScrapers.csproj",
-      "libraryId": "System.Text.Json",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "projectFilePath": "/home/kornellewy-laptop/Desktop/code_projects/czech_slovak_gov_sources_for_KYC_for_banking/c_sharp/SimpleExample.csproj",
+  "expectedPackageFiles": [],
+  "logs": []
 }

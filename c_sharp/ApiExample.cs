@@ -224,7 +224,7 @@ class ApiExample
         Console.WriteLine(new string('=', 60));
 
         // Use the RPO client directly
-        using var client = new Rpo.RpoClient();
+        var client = new Rpo.RpoClient();
 
         // Query ZELEX, s.r.o. - verified in RPO
         var result = await client.SearchByICOAsync("47559870");
